@@ -1,0 +1,45 @@
+{% extends "page-templates/_template.njk" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/prototypes/take-on-1/styles.css" />
+{% endblock %}
+
+
+{% from "components/header/_macro.njk" import onsHeader %}
+{% block header %}
+    {{
+        onsHeader({
+            "title": "Search",
+            "logoHref": "#",
+            "classes": "header--internal header--thin",
+            "logo": "ons-logo-white"
+        })
+    }}
+{% endblock %}
+
+
+{% from "components/phase-banner/_macro.njk" import onsPhaseBanner %}
+{% block bodyStart %}
+    {{
+        onsPhaseBanner({
+            "badge": "BETA",
+            "html": 'This is a work in progress'
+        })
+    }}
+{% endblock %}
+
+{% set page = {
+    "title": "Take-on prototype",
+    "footer": {
+        "OGLLink": {
+            "pre": 'All content is available under the',
+            "link": 'Open Government Licence v3.0',
+            "url": 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+            "post": ', except where otherwise stated'
+        }
+    }
+} %}
+
+{% block bodyEnd %}
+    <script src="{{ pageInfo.rootPath }}/scripts/index.js"></script>
+{% endblock %}

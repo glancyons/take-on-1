@@ -1,122 +1,81 @@
 ---
+title: Take-on
 group: Take-on
-title: Validate results
-version: 7.0.0
+version: 14.2.1
+layout: take-on-1/views/_master
 ---
 {% from "components/button/_macro.njk" import onsButton %}
 {% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
-{% from "components/header/_macro.njk" import onsHeader %}
-{% from "components/phase-banner/_macro.njk" import onsPhaseBanner %}
-{% from "components/footer/_macro.njk" import onsFooter %}
 {% from "components/input/_macro.njk" import onsInput %}
 {% from "components/panel/_macro.njk" import onsPanel %}
 
-{% block head %}
-    <link rel="stylesheet" href="/prototypes/take-on/styles.css" />
-{% endblock %}
+{% block main %}
 
-{% block header %}
     {{
-        onsHeader({
-            "title": "Check business survey forms",
-            "logoHref": "#",
-            "classes": "header--internal header--thin",
-            "logo": "ons-logo-white"
+        onsPanel({
+            body: "<h2>Lawrence Group Ltd</h2><p>Sand and gravel 0066, March 2019</p>"
         })
     }}
-{% endblock %}
 
-{% block bodyStart %}
-    {{
-        onsPhaseBanner({
-            "badge": "BETA",
-            "html": 'This is a work in progress'
-        })
-    }}
-{% endblock %}
+    <form class="u-mt-m">
 
-{% block content %}
+        {{
+            onsInput({
+                "id": "Q601",
+                "label": {
+                    "text": "Q601 Sand produced for asphalt (asphalting sand)",
+                    "value": "240000"
+                }
+            })
+        }}
+        <br>
 
+        <div class="panel panel--error panel--simple">
+          <div class="panel__body">
+            <p class="panel__error">
+              <strong>Check this</strong>
+            </p>
+            <p class="field">
+              <label class="label" for="number">Q146 Comment on the figures included in your return</label>
+              <input type="text" id="number" class="input input--text input-type__input input--w-30" value="It was too wet to quarry so the weights are lower" />
+            </p>
 
-{{
-    onsPanel({
-        body: "<h2>Lawrence Group Ltd</h2><p>Sand and gravel 0066, March 2019</p>"
-    })
-}}
+              <span class="checkboxes__items">
 
+                  <span class="checkbox ">
+                      <input
+                          type="checkbox"
+                          id="override1"
+                          class="checkbox__input js-checkbox "
+                          value="override1"
+                      >
+                      <label id="bacon-label" class="checkbox__label " for="override1">
+                          Override this check
+                      </label>
+                  </span>
 
+              </span>
 
-<form class="u-mt-m">
+          </div>
+        </div>
 
+        <br>
+        {{
+            onsInput({
+                "id": "Q147",
+                "label": {
+                    "text": "Q147 New pits or quarries brought into use since date of last return",
+                    "value": "6"
+                }
+            })
+        }}
 
-{{
-    onsInput({
-        "id": "Q601",
-        "label": {
-            "text": "Q601 Sand produced for asphalt (asphalting sand)",
-            "value": "240000"
-        }
-    })
-}}
-<br>
-
-<div class="panel panel--error panel--simple">
-  <div class="panel__body">
-    <p class="panel__error">
-      <strong>Check this</strong>
-    </p>
-    <p class="field">
-      <label class="label" for="number">Q146 Comment on the figures included in your return</label>
-      <input type="text" id="number" class="input input--text input-type__input input--w-30" value="It was too wet to quarry so the weights are lower" />
-    </p>
-
-      <span class="checkboxes__items">
-
-          <span class="checkbox ">
-              <input
-                  type="checkbox"
-                  id="override1"
-                  class="checkbox__input js-checkbox "
-                  value="override1"
-              >
-              <label id="bacon-label" class="checkbox__label " for="override1">
-                  Override this check
-              </label>
-          </span>
-
-      </span>
-
-  </div>
-</div>
-
-<br>
-{{
-    onsInput({
-        "id": "Q147",
-        "label": {
-            "text": "Q147 New pits or quarries brought into use since date of last return",
-            "value": "6"
-        }
-    })
-}}
-
-<br>
-{{
-    onsButton({
-        "text": 'Validate'
-    })
-}}
-
+        <br>
+        {{
+            onsButton({
+                "text": 'Validate'
+            })
+        }}
 
     </form>
-{% endblock %}
-
-{% block footer %}
-    {{
-          onsFooter()
-    }}
-{% endblock %}
-
-{% block bodyEnd %}
-    <script src="/prototypes/take-on/index.js"></script>
 {% endblock %}

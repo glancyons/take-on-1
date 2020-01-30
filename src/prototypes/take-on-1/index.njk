@@ -1,39 +1,14 @@
 ---
+title: Take-on
 group: Take-on
-title: Search
 version: 14.2.1
+layout: take-on-1/views/_master
 ---
 {% from "components/button/_macro.njk" import onsButton %}
 {% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
-{% from "components/header/_macro.njk" import onsHeader %}
-{% from "components/phase-banner/_macro.njk" import onsPhaseBanner %}
-{% from "components/footer/_macro.njk" import onsFooter %}
 
-{% block head %}
-    <link rel="stylesheet" href="/prototypes/take-on/styles.css" />
-{% endblock %}
 
-{% block header %}
-    {{
-        onsHeader({
-            "title": "Search",
-            "logoHref": "#",
-            "classes": "header--internal header--thin",
-            "logo": "ons-logo-white"
-        })
-    }}
-{% endblock %}
-
-{% block bodyStart %}
-    {{
-        onsPhaseBanner({
-            "badge": "BETA",
-            "html": 'This is a work in progress'
-        })
-    }}
-{% endblock %}
-
-{% block content %}
+{% block main %}
     <form class="u-mt-m" action="/prototypes/take-on-1/search-start.html">
 
         {{
@@ -96,14 +71,4 @@ version: 14.2.1
             })
         }}
     </form>
-{% endblock %}
-
-{% block footer %}
-    {{
-          onsFooter()
-    }}
-{% endblock %}
-
-{% block bodyEnd %}
-    <script src="/prototypes/take-on/index.js"></script>
 {% endblock %}
