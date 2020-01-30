@@ -1,0 +1,17 @@
+{% macro onsSingleCheckbox(params) %}
+
+    <span class="checkbox js-password-toggle-wrap checkbox--toggle u-mt-s">
+        <input
+            type="checkbox"
+            {% if params.id %}id="{{ params.id }}"{% endif %}
+            class="checkbox__input js-checkbox js-password-toggle to-u-bg-w"
+            value=""
+            {% if params.id %}name="{{ params.id }}"{% endif %}
+        >
+        <label id="password-toggle-label" class="checkbox__label to-u-bg" for="{{ params.id }}">
+            {% if params.id %}{{ params.label }}{% else %} Enter a label {% endif %}
+            {% if params.id %}{% else %} Enter an ID {% endif %}
+        </label>
+    </span>
+
+{% endmacro %}

@@ -30,6 +30,13 @@ layout: take-on-1/views/_master
         }}
 
 
+        {% from "components/panel/_macro.njk" import onsPanel %}
+        {% call onsPanel({
+                "type": "error"
+        }) %}
+        <p class="panel__error">
+          <strong>Check this</strong>
+        </p>
         {{
             onsInput({
                 "id": "Q146",
@@ -41,40 +48,21 @@ layout: take-on-1/views/_master
                 "label": {
                     "text": "Q146 Comment on the figures included in your return"
                 },
-                "value": "It was too wet to quarry so the weights are lower",
-                "error": {
-                        "text": "Check this"
-                }
+                "value": "It was too wet to quarry so the weights are lower"
             })
         }}
+        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
+        {{
+            onsSingleCheckbox({
+                "id": "Q147_override",
+                "label": "Override this check"
+            })
+        }}
+        {% endcall %}
 
-        <div class="panel panel--error panel--simple">
-          <div class="panel__body">
-            <p class="panel__error">
-              <strong>Check this</strong>
-            </p>
-            <p class="field">
-              <label class="label" for="number">Q146 Comment on the figures included in your return</label>
-              <input type="text" id="number" class="input input--text input-type__input input--w-30" value="It was too wet to quarry so the weights are lower" />
-            </p>
 
-              <span class="checkbox">
-                  <input
-                      type="checkbox"
-                      id="password-toggle"
-                      class="checkbox__input"
-                      value=""
-                       name="show-password"
-                  >
-                  <label id="password-toggle-label" class="checkbox__label " for="password-toggle">
-                      Show password
-                  </label>
-              </span>
 
-          </div>
-        </div>
 
-        <br>
         {{
             onsInput({
                 "id": "Q147",

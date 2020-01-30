@@ -4,19 +4,17 @@
     <link rel="stylesheet" href="{{ pageInfo.rootPath }}/styles/styles.css" />
 {% endblock %}
 
-
-{% from "components/header/_macro.njk" import onsHeader %}
 {% block header %}
-    {{
-        onsHeader({
-            "title": "Search",
-            "logoHref": "#",
-            "classes": "header--internal header--thin",
-            "logo": "ons-logo-white"
-        })
-    }}
+{% from "components/header/_macro.njk" import onsHeader %}
+{{
+    onsHeader({
+        "title": "Check business survey forms",
+        "logoHref": "#",
+        "classes": "header--internal header--thin",
+        "logo": "ons-logo-white"
+    })
+}}
 {% endblock %}
-
 
 {% from "components/phase-banner/_macro.njk" import onsPhaseBanner %}
 {% block bodyStart %}

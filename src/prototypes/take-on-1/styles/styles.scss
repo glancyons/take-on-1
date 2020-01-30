@@ -1,0 +1,8 @@
+// Remove white background for small checkbox label (password version)
+.to-u-bg::before {
+  background: none !important;
+}
+
+.to-u-bg-w {
+  background-color: #ffffff;
+}
