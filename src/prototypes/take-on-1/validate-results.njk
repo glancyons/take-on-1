@@ -28,7 +28,25 @@ layout: take-on-1/views/_master
                 }
             })
         }}
-        <br>
+
+
+        {{
+            onsInput({
+                "id": "Q146",
+                "type": "number",
+                "classes": "input--w-30",
+                "attributes": {
+                    "required": true
+                },
+                "label": {
+                    "text": "Q146 Comment on the figures included in your return"
+                },
+                "value": "It was too wet to quarry so the weights are lower",
+                "error": {
+                        "text": "Check this"
+                }
+            })
+        }}
 
         <div class="panel panel--error panel--simple">
           <div class="panel__body">
@@ -40,20 +58,17 @@ layout: take-on-1/views/_master
               <input type="text" id="number" class="input input--text input-type__input input--w-30" value="It was too wet to quarry so the weights are lower" />
             </p>
 
-              <span class="checkboxes__items">
-
-                  <span class="checkbox ">
-                      <input
-                          type="checkbox"
-                          id="override1"
-                          class="checkbox__input js-checkbox "
-                          value="override1"
-                      >
-                      <label id="bacon-label" class="checkbox__label " for="override1">
-                          Override this check
-                      </label>
-                  </span>
-
+              <span class="checkbox">
+                  <input
+                      type="checkbox"
+                      id="password-toggle"
+                      class="checkbox__input"
+                      value=""
+                       name="show-password"
+                  >
+                  <label id="password-toggle-label" class="checkbox__label " for="password-toggle">
+                      Show password
+                  </label>
               </span>
 
           </div>
