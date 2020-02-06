@@ -12,20 +12,25 @@ layout: take-on-1/views/_master
 {% block main %}
 
     <h1>
-      <span class="u-fs-m u-fw-n u-db">Survey 0066 </span>
-      <span class="u-db" title="Business ">Lawrence Group Ltd </span>
-      <span class="u-fs-m u-fw-n ">Ref 49900265143 </span>
-      <span class="u-fs-m u-fw-n u-db">Period 201903</span>
+    Lawrence Group Ltd
     </h1>
 
-    {% from "components/status/_macro.njk" import onsStatus %}
-    {# type: success, dead, error, info #}
-    {{
-        onsStatus({
-            "label": 'Checks required',
-            "type": 'error'
-        })
-    }}
+    {% set title = "Form details" %}
+    {% set tCols = 2 %}
+    {% set dCols = 12-tCols %}
+
+    <dl class="metadata metadata__list grid grid--gutterless u-cf u-mb-l" title="{{title}}" aria-label="{{title}}">
+      <dt class="metadata__term grid__col col-{{tCols}}@m">Survey:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m">0066</dd>
+      <dt class="metadata__term grid__col col-{{tCols}}@m">Reference:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m">49900265143</dd>
+      <dt class="metadata__term grid__col col-{{tCols}}@m">Period:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m">201903</dd>
+      <dt class="metadata__term grid__col col-{{tCols}}@m">Status:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m">
+        <span class="status status--error">Check needed</span>
+      </dd>
+    </dl>
 
     <hr class="u-mt-s">
 

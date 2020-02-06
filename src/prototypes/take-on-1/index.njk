@@ -7,68 +7,40 @@ layout: take-on-1/views/_master
 {% from "components/button/_macro.njk" import onsButton %}
 {% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
 
-
 {% block main %}
-    <form class="u-mt-m" action="/prototypes/take-on-1/search-start.html">
 
-        {{
-            onsCheckboxes({
-                "legend": "Search by",
-                "legendClasses": "u-fs-xl",
-                "checkboxesLabel": "Select all that apply",
-                "name": "search_types",
-                "checkboxes": [
-                    {
-                        "id": "reference",
-                        "label": {
-                            "text": "Reference"
-                        },
-                        "value": "reference"
-                    },
-                    {
-                        "id": "period",
-                        "label": {
-                            "text": "Period"
-                        },
-                        "value": "period"
-                    },
-                    {
-                        "id": "survey",
-                        "label": {
-                            "text": "Survey"
-                        },
-                        "value": "survey"
-                    },
-                    {
-                        "id": "receipt_date",
-                        "label": {
-                            "text": "Receipt date"
-                        },
-                        "value": "receipt_date"
-                    },
-                    {
-                        "id": "form_type",
-                        "label": {
-                            "text": "Form type"
-                        },
-                        "value": "form_type"
-                    },
-                    {
-                        "id": "form_id",
-                        "label": {
-                            "text": "Form Id"
-                        },
-                        "value": "form_id"
-                    }
-                ]
-            })
-        }}
+<h1>
+Take on prototypes and design tests
+</h1>
 
-        {{
-            onsButton({
-                "text": "Search",
-                "classes": "u-mt-l"
-            })
-        }}
-    </form>
+{% from "components/lists/_macro.njk" import onsList %}
+{{
+    onsList({
+        "classes": 'list--bare',
+        "itemsList": [
+            {
+                "url": 'form-head-opt1.html',
+                "text": 'Form head option 1 - H1'
+            },
+            {
+                "url": 'form-head-opt1a.html',
+                "text": 'Form head option 1a - H1 order change'
+            },
+            {
+                "url": 'form-head-opt2.html',
+                "text": 'Form head option 2 - metadata DL'
+            },
+            {
+                "url": 'form-head-opt3.html',
+                "text": 'Form head option 3 - metadata DL - reverse font weight'
+            },
+            {
+                "url": 'search-choice.html',
+                "text": 'Search choice'
+            }
+        ]
+    })
+}}
+
+
 {% endblock %}
