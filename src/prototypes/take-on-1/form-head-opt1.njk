@@ -12,20 +12,13 @@ layout: take-on-1/views/_master
 {% block main %}
 
     <h1>
-      <span class="u-fs-m u-fw-n u-db">Survey 0066 </span>
       <span class="u-db" title="Business ">Lawrence Group Ltd </span>
-      <span class="u-fs-m u-fw-n ">Ref 49900265143 </span>
+      <span class="u-fs-m u-fw-b u-db">Ref 49900265143 </span>
       <span class="u-fs-m u-fw-n u-db">Period 201903</span>
+      <span class="u-fs-m u-fw-n u-db">Survey 0066 </span>
     </h1>
 
-    {% from "components/status/_macro.njk" import onsStatus %}
-    {# type: success, dead, error, info #}
-    {{
-        onsStatus({
-            "label": 'Checks required',
-            "type": 'error'
-        })
-    }}
+    <span title="Status " class="status status--error u-db">Check needed</span>
 
     <hr class="u-mt-s">
 

@@ -19,18 +19,20 @@ layout: take-on-1/views/_master
     {% set tCols = 2 %}
     {% set dCols = 12-tCols %}
 
-    <dl class="metadata metadata__list grid grid--gutterless u-cf u-mb-l" title="{{title}}" aria-label="{{title}}">
-      <dt class="metadata__term grid__col col-{{tCols}}@m u-fw-n">Survey:</dt>
-      <dd class="metadata__value grid__col col-{{dCols}}@m u-fw-b">0066</dd>
+    <dl class="metadata metadata__list grid grid--gutterless u-cf u-mb-s" title="{{title}}" aria-label="{{title}}">
+
       <dt class="metadata__term grid__col col-{{tCols}}@m u-fw-n">Reference:</dt>
       <dd class="metadata__value grid__col col-{{dCols}}@m u-fw-b">49900265143</dd>
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m u-fw-n">Survey:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m u-fw-b">0066</dd>
+
       <dt class="metadata__term grid__col col-{{tCols}}@m u-fw-n">Period:</dt>
       <dd class="metadata__value grid__col col-{{dCols}}@m u-fw-b">201903</dd>
-      <dt class="metadata__term grid__col col-{{tCols}}@m u-fw-n">Status:</dt>
-      <dd class="metadata__value grid__col col-{{dCols}}@m u-fw-b">
-        <span class="status status--error">Check needed</span>
       </dd>
     </dl>
+
+    <span title="Status " class="status status--error u-db">Check needed</span>
 
     <hr class="u-mt-s">
 
