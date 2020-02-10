@@ -4,30 +4,19 @@
     <link rel="stylesheet" href="{{ pageInfo.rootPath }}/styles/styles.css" />
 {% endblock %}
 
-{% block header %}
-{% from "components/header/_macro.njk" import onsHeader %}
-{{
-    onsHeader({
-        "title": "Check business survey forms",
-        "logoHref": "/prototypes/take-on-1",
-        "classes": "header--internal header--thin",
-        "logo": "ons-logo-white"
-    })
-}}
-{% endblock %}
-
-{% from "components/phase-banner/_macro.njk" import onsPhaseBanner %}
-{% block bodyStart %}
-    {{
-        onsPhaseBanner({
-            "badge": "BETA",
-            "html": 'This is a work in progress'
-        })
-    }}
-{% endblock %}
-
-{% set page = {
+{% set pageConfig = {
     "title": "Take-on prototype",
+    "header": {
+        "title": "Check business survey forms",
+        "phase": {
+          "badge": 'Beta',
+          "html": 'Phase text'
+        },
+        "classes": "header--internal header--thin",
+        "logo": "ons-logo-white",
+        "logoAlt": "ONS",
+        "logoHref": "/prototypes/take-on-1"
+    },
     "footer": {
         "OGLLink": {
             "pre": 'All content is available under the',
@@ -37,22 +26,6 @@
         }
     }
 } %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {% block bodyEnd %}
     <script src="{{ pageInfo.rootPath }}/scripts/index.js"></script>

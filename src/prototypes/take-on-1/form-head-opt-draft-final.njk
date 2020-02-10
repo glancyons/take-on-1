@@ -1,0 +1,100 @@
+---
+title: Check needed - Lawrence Group Ltd - survey 0066 - 201903
+group: Take-on
+version: 14.4.0
+layout: take-on-1/views/_master
+---
+{% from "components/button/_macro.njk" import onsButton %}
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{% from "components/input/_macro.njk" import onsInput %}
+{% from "components/panel/_macro.njk" import onsPanel %}
+
+{% block main %}
+
+    <h1>
+    Lawrence Group Ltd
+    </h1>
+
+    {% set title = "Form details" %}
+    {% set tCols = 2 %}
+    {% set dCols = 12-tCols %}
+    {% set mclass = "u-mt-no" %}
+
+    <dl class="metadata metadata__list grid grid--gutterless u-cf u-mb-s" title="{{title}}" aria-label="{{title}}">
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Reference:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">49900265143</dd>
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Survey:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">0066</dd>
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Period:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">201903</dd>
+      </dd>
+    </dl>
+
+    <p class="u-bb u-pb-s"><span title="Status " class="status status--error">Check needed</span></p>
+
+    <form class="u-mt-m">
+
+        {{
+            onsInput({
+                "id": "Q601",
+                "label": {
+                    "text": "Q601 Sand produced for asphalt (asphalting sand)",
+                    "value": "240000"
+                }
+            })
+        }}
+
+
+        {% from "components/panel/_macro.njk" import onsPanel %}
+        {% call onsPanel({
+                "type": "error"
+        }) %}
+        <p class="panel__error">
+          <strong>Check this</strong>
+        </p>
+        {{
+            onsInput({
+                "id": "Q146",
+                "type": "number",
+                "classes": "input--w-30",
+                "attributes": {
+                    "required": true
+                },
+                "label": {
+                    "text": "Q146 Comment on the figures included in your return"
+                },
+                "value": "It was too wet to quarry so the weights are lower"
+            })
+        }}
+        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
+        {{
+            onsSingleCheckbox({
+                "id": "Q147_override",
+                "label": "Override this check"
+            })
+        }}
+        {% endcall %}
+
+
+        {{
+            onsInput({
+                "id": "Q147",
+                "label": {
+                    "text": "Q147 New pits or quarries brought into use since date of last return",
+                    "value": "6"
+                }
+            })
+        }}
+
+        <br>
+        {{
+            onsButton({
+                "text": 'Validate'
+            })
+        }}
+
+    </form>
+{% endblock %}
