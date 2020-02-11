@@ -52,9 +52,12 @@ layout: take-on-1/views/_master
         {% call onsPanel({
                 "type": "error"
         }) %}
-        <p class="panel__error">
-          <strong>Check this</strong>
-        </p>
+        <fieldset>
+          <legend>
+              <p class="panel__error">
+                <strong>Respondent entered a comment - read the comment on the scan</strong>
+              </p>
+          </legend>
         {{
             onsInput({
                 "id": "Q146",
@@ -76,6 +79,7 @@ layout: take-on-1/views/_master
                 "label": "Override this check"
             })
         }}
+        </fieldset>
         {% endcall %}
 
 
