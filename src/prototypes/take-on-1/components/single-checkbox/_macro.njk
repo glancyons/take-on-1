@@ -1,6 +1,6 @@
 {% macro onsSingleCheckbox(params) %}
 
-    <span class="checkbox js-password-toggle-wrap checkbox--toggle u-mt-s">
+    <span class="checkbox js-password-toggle-wrap checkbox--toggle {{ params.spanclass }}">
         <input
             type="checkbox"
             {% if params.id %}id="{{ params.id }}"{% endif %}
