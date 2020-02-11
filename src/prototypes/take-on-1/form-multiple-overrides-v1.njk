@@ -35,17 +35,7 @@ layout: take-on-1/views/_master
 
     <p class="u-bb u-pb-s"><span title="Status " class="status status--error">Check needed</span></p>
 
-    <form class="u-mt-m">
-
-        {{
-            onsButton({
-                "type": 'button',
-                "id": "overrideAll",
-                "text": 'Override all',
-                "classes": 'btn--secondary btn--small u-mb-m'
-            })
-        }}
-        <input type="hidden" id="isChkd" value="false">
+    <form class="u-mt-m" id="overrideForm">
 
         {{
             onsInput({
