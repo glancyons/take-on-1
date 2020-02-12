@@ -7,10 +7,11 @@
             class="checkbox__input js-checkbox js-password-toggle to-u-bg-w"
             value=""
             {% if params.id %}name="{{ params.id }}"{% endif %}
+            {% if params.checked %} checked="checked"{% endif %}
         >
         <label id="password-toggle-label" class="checkbox__label to-u-bg" for="{{ params.id }}">
             {% if params.label %}{{ params.label }}{% else %} Enter a label {% endif %}
-            {% if params.accessibleLabel %}<span class="u-vh"> {{ params.accessibleLabel | lower }}</span>{% else %} Enter an accessible label {% endif %}
+            {% if params.accessibleLabel %}<span class="u-vh"> {{ params.accessibleLabel | lower }}</span>{% endif %}
         </label>
     </span>
 
