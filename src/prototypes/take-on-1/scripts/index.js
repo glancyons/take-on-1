@@ -7,7 +7,7 @@ $(document).ready(function() {
   var allText = 'Override all';
   var noneText = 'Remove all overrides';
   var buttonHTML =
-    '<button type="button" class="btn btn--secondary btn--small u-mb-m" id="overrideAll"><span class="btn__inner">' +
+    '<button type="button" class="btn btn--secondary btn--small u-mb-m" id="overrideAll" aria-live="polite"><span class="btn__inner">' +
     allText +
     '</span></button>';
 
