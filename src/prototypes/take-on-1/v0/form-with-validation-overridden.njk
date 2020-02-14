@@ -32,9 +32,9 @@ layout: take-on-1/views/_master
       <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">201903</dd>
     </dl>
 
-    <p class="u-bb u-pb-s"><span title="Status " class="status status--error">Check needed</span></p>
+    <p class="u-bb u-pb-s"><span title="Status " class="status status--success">Clear - overridden</span></p>
 
-    <form class="u-mt-m" id="overrideForm" action="/prototypes/take-on-1/v0/form-with-validation-overridden.html">
+    <form class="u-mt-m" id="overrideForm">
 
 
 <!-- ###################################################################### -->
@@ -62,41 +62,36 @@ layout: take-on-1/views/_master
         }}
 
 
+<!-- OVERRIDDEN ######ß##################################################### -->
 
-<!-- VALIDATIONS ########################################################## -->
         {% from "components/panel/_macro.njk" import onsPanel %}
         {% call onsPanel({
-                "type": "error"
+                "type": "info"
         }) %}
         <fieldset>
           <legend class="u-vh">
               Q147 validations and overrides
           </legend>
 
-
         {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
-
-        <p class="panel__error u-mb-no">
-          <strong>Value is larger than expected</strong>
-        </p>
         {{
             onsSingleCheckbox({
-                "id": "Q147_override_1",
-                "label": "Override",
+                "id": "Q147_override_3",
+                "label": "Override 'value is larger than expected'",
                 "spanclass": "u-mt-no u-mb-s",
-                "accessibleLabel": "Value is larger than expected"
+                "checked": true
             })
         }}
 
-        <p class="panel__error u-mb-no">
-          <strong>This has changed significantly since the last submission</strong>
+        <p class="u-mb-no">
+
         </p>
         {{
             onsSingleCheckbox({
-                "id": "Q147_override_2",
-                "label": "Override",
+                "id": "Q147_override_4",
+                "label": "Override 'this has changed significantly since the last submission'",
                 "spanclass": "u-mt-no u-mb-s",
-                "accessibleLabel": "This has changed significantly since the last submission"
+                "checked": true
             })
         }}
 
@@ -117,7 +112,6 @@ layout: take-on-1/views/_master
 
         </fieldset>
         {% endcall %}
-
 
 
 <!-- ###################################################################### -->
