@@ -6,14 +6,34 @@ layout: take-on-1/views/_master
 ---
 {% from "components/button/_macro.njk" import onsButton %}
 {% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{% from "components/lists/_macro.njk" import onsList %}
 
 {% block main %}
 
 <h1>
-Take on prototypes and design tests
+  Take on prototypes and design tests
 </h1>
 
-{% from "components/lists/_macro.njk" import onsList %}
+<h2>
+  v0 prototype
+</h2>
+
+{{
+    onsList({
+        "classes": 'list--bare',
+        "itemsList": [
+            {
+                "url": '/prototypes/take-on-1/v0/search-choice.html',
+                "text": 'Search choice'
+            }
+        ]
+    })
+}}
+
+<h2>
+  Sample pages for sprint 47
+</h2>
+
 {{
     onsList({
         "classes": 'list--bare',
@@ -45,10 +65,6 @@ Take on prototypes and design tests
             {
                 "url": '/prototypes/take-on-1/form-head-opt-final.html',
                 "text": 'Form head option - draft final'
-            },
-            {
-                "url": '/prototypes/take-on-1/search-choice.html',
-                "text": 'Search choice'
             }
         ]
     })

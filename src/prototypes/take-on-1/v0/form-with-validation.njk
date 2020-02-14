@@ -1,0 +1,194 @@
+---
+title: Check needed - Lawrence Group Ltd - survey 0066 - 201903
+group: Take-on
+version: 14.4.0
+layout: take-on-1/views/_master
+---
+{% from "components/button/_macro.njk" import onsButton %}
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{% from "components/input/_macro.njk" import onsInput %}
+{% from "components/panel/_macro.njk" import onsPanel %}
+
+{% block main %}
+
+    <h1>
+    Lawrence Group Ltd
+    </h1>
+
+    {% set title = "Form details" %}
+    {% set tCols = 2 %}
+    {% set dCols = 12-tCols %}
+    {% set mclass = "u-mt-no" %}
+
+    <dl class="metadata metadata__list grid grid--gutterless u-cf u-mb-s" title="{{title}}" aria-label="{{title}}">
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Reference:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">49900265143</dd>
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Survey:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">Quarterly Survey of Building Materials Sand and Gravel (marine dredged) 0066</dd>
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Period:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">201903</dd>
+    </dl>
+
+    <p class="u-bb u-pb-s"><span title="Status " class="status status--error">Check needed</span></p>
+
+    <form class="u-mt-m" id="overrideForm">
+
+
+<!-- ###################################################################### -->
+
+        {{
+            onsInput({
+                "id": "Q601",
+                "label": {
+                    "text": "Q601 Sand produced for asphalt (asphalting sand)"
+                },
+                "value": "240000",
+                "classes": "input--w-10"
+            })
+        }}
+
+
+<!-- ###################################################################### -->
+        {% from "components/panel/_macro.njk" import onsPanel %}
+        {% call onsPanel({
+                "type": "error"
+        }) %}
+        <fieldset>
+          <legend class="u-vh">
+              Q147 validations and overrides
+          </legend>
+
+
+        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
+
+        <p class="panel__error u-mb-no">
+          <strong>Value is larger than expected</strong>
+        </p>
+        {{
+            onsSingleCheckbox({
+                "id": "Q147_override_1",
+                "label": "Override",
+                "spanclass": "u-mt-no u-mb-s",
+                "accessibleLabel": "Value is larger than expected"
+            })
+        }}
+
+        <p class="panel__error u-mb-no">
+          <strong>This has changed significantly since the last submission</strong>
+        </p>
+        {{
+            onsSingleCheckbox({
+                "id": "Q147_override_2",
+                "label": "Override",
+                "spanclass": "u-mt-no u-mb-s",
+                "accessibleLabel": "This has changed significantly since the last submission"
+            })
+        }}
+
+        {{
+            onsInput({
+                "id": "Q146a",
+                "type": "number",
+                "classes": "input--w-10",
+                "attributes": {
+                    "required": true
+                },
+                "label": {
+                    "text": "Q529 Sand produced for hourglasses"
+                },
+                "value": "176100"
+            })
+        }}
+
+        </fieldset>
+        {% endcall %}
+
+<!-- ###################################################################### -->
+
+        {{
+            onsInput({
+                "id": "Q602",
+                "label": {
+                    "text": "Q602 Sand produced for use in mortar (building or soft sand)"
+                },
+                "value": "62390",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+
+        {% from "components/panel/_macro.njk" import onsPanel %}
+        {% call onsPanel({
+                "type": "info"
+        }) %}
+        <fieldset>
+          <legend class="u-vh">
+              Q147 validations and overrides
+          </legend>
+
+        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
+        {{
+            onsSingleCheckbox({
+                "id": "Q147_override_3",
+                "label": "Override 'value is larger than expected'",
+                "spanclass": "u-mt-no u-mb-s",
+                "checked": true
+            })
+        }}
+
+        <p class="u-mb-no">
+
+        </p>
+        {{
+            onsSingleCheckbox({
+                "id": "Q147_override_4",
+                "label": "Override 'this has changed significantly since the last submission'",
+                "spanclass": "u-mt-no u-mb-s",
+                "checked": true
+            })
+        }}
+
+        {{
+            onsInput({
+                "id": "Q146b",
+                "type": "number",
+                "classes": "input--w-10",
+                "attributes": {
+                    "required": true
+                },
+                "label": {
+                    "text": "Q723 Quarter inch to dust limestone aggregate for roadstone"
+                },
+                "value": "176100"
+            })
+        }}
+
+        </fieldset>
+        {% endcall %}
+
+<!-- ###################################################################### -->
+
+        {{
+            onsInput({
+                "id": "Q147b",
+                "label": {
+                    "text": "Q147 New pits or quarries brought into use since date of last return"
+                },
+                "value": "6",
+                "classes": "input--w-10"
+            })
+        }}
+
+        <br>
+        {{
+            onsButton({
+                "text": 'Save and validate'
+            })
+        }}
+
+    </form>
+{% endblock %}
