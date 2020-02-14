@@ -1,5 +1,7 @@
 {% extends "page-templates/_template.njk" %}
 
+{% set containerClasses = "container--wide" %}  {# container--wide (1280px) container--full-width (fw) #}
+
 {% block head %}
     <link rel="stylesheet" href="{{ pageInfo.rootPath }}/styles/styles.css" />
 
@@ -13,6 +15,7 @@
 {% set pageConfig = {
     "cdn": "14.4.0",
     "title": "Take-on prototype",
+    "wide": true,
     "header": {
         "title": "Check business survey forms",
         "classes": "header--internal header--thin",
@@ -22,13 +25,28 @@
     },
     "phase": {
       "badge": "BETA",
-      "html": 'This is a work in progress'
+      "html": 'This is a work in progress',
+      "wide": true
     },
     "footer": {
         "OGLLink": false,
         "poweredBy": true
     }
 } %}
+
+
+{% block pageContent %}
+    {% block preMain %}{% endblock %}
+    <div class="page__container container {{ containerClasses }}">
+        <div class="grid">
+            <div class="grid__col col-{{ pageWidthCols if pageWidthCols else "8" }}@m">
+                <main id="main-content" class="page__main {{ pageClasses }}">
+                    {% block main %}{% endblock %}
+                </main>
+            </div>
+        </div>
+    </div>
+{% endblock %}
 
 {% block bodyEnd %}
     <script src="{{ pageInfo.rootPath }}/scripts/index.js"></script>
