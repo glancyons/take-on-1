@@ -32,7 +32,7 @@ layout: take-on-1/views/_master
       <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">201903</dd>
     </dl>
 
-    <p class="u-bb u-pb-s"><span title="Status " class="status status--error">Check needed</span></p>
+    <span title="Status " class="status status--error u-bb u-pb-s u-db">Check needed</span>
 
     <form class="u-mt-m" id="overrideForm" action="/prototypes/take-on-1/v0/form-with-validation-overridden.html">
 
@@ -103,11 +103,7 @@ layout: take-on-1/views/_master
         {{
             onsInput({
                 "id": "Q601",
-                "type": "number",
                 "classes": "input--w-10",
-                "attributes": {
-                    "required": true
-                },
                 "label": {
                     "text": "Q601 Sand produced for asphalt (asphalting sand)"
                 },
