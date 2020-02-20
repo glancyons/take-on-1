@@ -4,8 +4,8 @@ group: Take-on
 version: 14.4.0
 layout: take-on-1/views/_master
 ---
-{% set pageWidthCols="8" %}
 
+{% set pageWidthCols="8" %}
 
 {% from "components/button/_macro.njk" import onsButton %}
 {% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
@@ -35,9 +35,11 @@ layout: take-on-1/views/_master
       <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">201903</dd>
     </dl>
 
-    <p class="u-bb u-pb-s"><span title="Status " class="status status--success">Clear - overridden</span></p>
+    <span title="Status " class="status status--error u-bb u-pb-s u-db">Check needed</span>
 
-    <form class="u-mt-m" id="overrideFormNoJSoverride">
+    <form class="u-mt-m" id="overrideFormNoJSoverride" action="/prototypes/take-on-1/v0/form-with-validation-overridden.html">
+
+
 
 
 <!-- ###################################################################### -->
@@ -65,24 +67,29 @@ layout: take-on-1/views/_master
         }}
 
 
-<!-- OVERRIDDEN ######ß##################################################### -->
 
+<!-- VALIDATIONS ########################################################## -->
         {% from "components/panel/_macro.njk" import onsPanel %}
         {% call onsPanel({
-                "type": "info"
+                "type": "error"
         }) %}
         <fieldset>
           <legend class="u-vh">
               Q147 validations and overrides
           </legend>
 
+
         {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
+
+        <p class="panel__error u-mb-no">
+          <strong>Value is larger than expected</strong>
+        </p>
         {{
             onsSingleCheckbox({
-                "id": "Q147_override_3",
-                "label": "Override 'value is larger than expected'",
+                "id": "Q147_override_1",
+                "label": "Override",
                 "spanclass": "u-mt-no u-mb-s",
-                "checked": true
+                "accessibleLabel": "Value is larger than expected"
             })
         }}
 
@@ -108,6 +115,7 @@ layout: take-on-1/views/_master
 
         </fieldset>
         {% endcall %}
+
 
 
 <!-- ###################################################################### -->
@@ -206,8 +214,27 @@ layout: take-on-1/views/_master
             })
         }}
 
+<hr>
 
+<!-- ###################################################################### -->
 
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{{
+    onsCheckboxes({
+        "legend": "",
+        "checkboxesLabel": "",
+        "checkboxes": [
+            {
+                "id": "override-all",
+                "label": {
+                    "text": "Override all"
+                },
+                "value": "override-all",
+                "classes": "input--w-10"
+            }
+        ]
+    })
+}}
 <!-- ###################################################################### -->
 
         {{

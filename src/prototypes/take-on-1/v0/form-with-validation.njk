@@ -37,7 +37,9 @@ layout: take-on-1/views/_master
 
     <span title="Status " class="status status--error u-bb u-pb-s u-db">Check needed</span>
 
-    <form class="u-mt-m" id="overrideForm" action="/prototypes/take-on-1/v0/form-with-validation-overridden.html">
+    <form class="u-mt-m" id="overrideFormNoJSoverride" action="/prototypes/take-on-1/v0/form-with-validation-part.html">
+
+
 
 
 <!-- ###################################################################### -->
@@ -215,20 +217,62 @@ layout: take-on-1/views/_master
             })
         }}
 
+<hr>
 
+<!-- ###################################################################### -->
 
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{{
+    onsCheckboxes({
+        "legend": "",
+        "checkboxesLabel": "",
+        "checkboxes": [
+            {
+                "id": "override-all",
+                "label": {
+                    "text": "Override all"
+                },
+                "value": "override-all",
+                "classes": "input--w-10"
+            }
+        ]
+    })
+}}
 <!-- ###################################################################### -->
 
         {{
             onsButton({
-                "text": "Save and validate",
-                "classes": "u-mt-l"
+                "text": "Save",
+                "classes": "u-mt-l btn--small"
             })
         }}
 
-        <span class="u-dib u-ml-m u-mt-xl">
+        {{
+            onsButton({
+                "text": "Validate",
+                "classes": "u-mt-l btn--small"
+            })
+        }}
+
+        {{
+            onsButton({
+                "text": "Override",
+                "classes": "u-mt-l btn--small"
+            })
+        }}
+
+        {{
+            onsButton({
+                "text": "Exit",
+                "classes": "u-mt-l btn--small"
+            })
+        }}
+
+        <!--
+          <span class="u-dib u-ml-m u-mt-xl">
           <a href="/prototypes/take-on-1/v0/search-results.html">Cancel and return to search</a>
         </span>
+        -->
 
     </form>
 {% endblock %}
