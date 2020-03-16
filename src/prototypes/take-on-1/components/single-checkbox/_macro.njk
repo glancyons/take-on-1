@@ -13,6 +13,20 @@
             {% if params.label %}{{ params.label }}{% else %} Enter a label {% endif %}
             {% if params.accessibleLabel %}<span class="u-vh"> {{ params.accessibleLabel | lower }}</span>{% endif %}
         </label>
+
+        {% if params.reason %}
+            <span class="checkbox__other u-p-no" id="other-checkbox-other-wrap">
+                <label class="label u-fs-s--b" for="other-textbox">Reason to accept or edit value</label>
+                <input
+                type="text"
+                id="other-textbox"
+                class="input input--text input-type__input  input--w-auto "
+                name="other-answer"
+                />
+            </span>
+
+        {% endif %}
+
     </span>
 
 {% endmacro %}

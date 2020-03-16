@@ -10,3 +10,53 @@
 .panel--group {
   border: 1px solid #888888;
 }
+
+// Bar chart element
+.to-u-bar {
+  background-color: #1d70b8;
+  display: inline-block;
+  padding: 8px 0;
+  margin: 0 0 0 0;
+}
+
+.to-u-bar-grid {
+  background-color: #1d70b8;
+  display: block;
+  padding: 0;
+  height: 4px;
+  margin: 0 0 2px 0;
+}
+
+.to-u-bar-warning {
+  background-color: #d0021b;
+}
+
+.to-u-cell-barchart {
+  vertical-align: middle;
+  width: 70%;
+}
+
+.to-u-current {
+  font-weight: bold;
+}
+
+.to-u-period {
+  width: 20%;
+}
+
+.to-u-amount {
+  width: 10%;
+  text-align: right;
+}
+
+.to-u-row-year .table__cell {
+  border-bottom: 2px solid #595959;
+}
+
+.to-u-grid {
+  width: auto;
+}
+
+table.to-u-grid tr:nth-child(4) td.to-u-year1 {
+  font-weight: bold;
+}
