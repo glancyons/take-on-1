@@ -66,6 +66,11 @@ layout: take-on-1/views/_master
     Lawrence Group Ltd
     </h1>
 
+    <!-- <p>
+      {% set number = "76235423111" %}
+      {{ number | replace(r/(\d{3})$/gm, ',$1', 1) }}
+    </p> -->
+
 
     {% set title = "Form details" %}
     {% set tCols = 2 %}
@@ -396,33 +401,19 @@ layout: take-on-1/views/_master
 }}
 <!-- ###################################################################### -->
 
-        {{
-            onsButton({
-                "text": "Save",
-                "classes": "u-mt-l btn--small"
-            })
-        }}
+          {{
+              onsButton({
+                  "text": "Save and validate",
+                  "classes": "u-mt-l btn--small"
+              })
+          }}
 
-        {{
-            onsButton({
-                "text": "Validate",
-                "classes": "u-mt-l btn--small"
-            })
-        }}
-
-        {{
-            onsButton({
-                "text": "Override",
-                "classes": "u-mt-l btn--small"
-            })
-        }}
-
-        {{
-            onsButton({
-                "text": "Exit",
-                "classes": "u-mt-l btn--small"
-            })
-        }}
+          {{
+              onsButton({
+                  "text": "Override",
+                  "classes": "u-mt-l btn--small"
+              })
+          }}
 
         <!--
           <span class="u-dib u-ml-m u-mt-xl">
