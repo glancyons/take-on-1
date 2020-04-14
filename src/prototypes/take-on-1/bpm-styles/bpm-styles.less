@@ -959,7 +959,7 @@ MAP - end */
 
 
 /* ====================================================== */
-/* added by Martin Glancy 27 March 2020 */
+/* Added by Martin Glancy 14 April 2020 */
 /* ====================================================== */
 
 /* Import ONS standard font Open Sans */
@@ -967,9 +967,22 @@ MAP - end */
 
 /* NEW CLASSES =========================== */
 
+/* Create class for page container */
+.bpm-container {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    }
+
 /* Create class for main heading */
-.bpm-heading-1 { font-size: 3rem !important; margin: 0 0 1rem; line-height: 1.4;}
-.text-xs { font-size:inherit !important; }  /* Override small text size in text element */
+.bpm-heading-1 {
+    font-size: 3rem !important;
+    margin: 0 0 1rem;
+    line-height: 1.4;
+    }
 
 /* Create classes for input widths */
 /* TODO - set these to correct widths */
@@ -980,10 +993,14 @@ MAP - end */
 
 /* CSS OVERRIDES ========================= */
 
+/* Override small text size in text element */
+.text-xs {
+    font-size:inherit !important;
+    }
+
 /* Focus highlight should be ONS yellow border ============================= */
 .spark-ui .form-control.focus,
-.spark-ui .form-control:focus
- {
+.spark-ui .form-control:focus {
     border:none !important;
     outline: 1px solid #222 !important;
     outline-offset: -2px !important;
@@ -993,10 +1010,16 @@ MAP - end */
 
 .radio3 input:focus,
 .checkbox3 input[type="checkbox"]:focus,
-.checkbox3 span.checkboxFocus
- {
+.checkbox3 span.checkboxFocus {
     border:none !important;
     outline:none !important;
+    outline: 1px solid #222 !important;
+    outline-offset: -2px !important;
+    -webkit-box-shadow: 0 0 0 3px #fd0 !important;
+    box-shadow: 0 0 0 3px #fd0 !important;
+}
+
+.btn-primary:focus {
     outline: 1px solid #222 !important;
     outline-offset: -2px !important;
     -webkit-box-shadow: 0 0 0 3px #fd0 !important;
@@ -1021,24 +1044,24 @@ MAP - end */
 
 .Single_Select>.form-group>.input>select {
     width:50rem;
-}
+    }
 
 .Single_Select>.form-group>.input::after {
     font-size: 18px;
     left: 48rem;
-}
+    }
 
 .Single_Select select [disabled='disabled']
 .Single_Select select option [disabled='disabled'] {
     color: #00003f;
     opacity: 1.0;
-}
+    }
 
 /* Radio button ============================= */
 .Radio_Button_Group .radio3:last-child,
 .Radio_Button_Group .checkbox3:last-child {
     padding-bottom: 1rem !important;
-}
+    }
 
 .Radio_Button_Group .radio3,
 .Radio_Button_Group .checkbox3 {
@@ -1047,7 +1070,7 @@ MAP - end */
     padding: 1rem !important;
     margin-bottom: 0.5rem !important;
     display: block !important;
-}
+    }
 
 /* Text areas ============================= */
 textarea.form-control {
@@ -1061,7 +1084,7 @@ textarea.form-control {
     font-size: @bpm-font-size-base !important;
     line-height: normal !important;
     resize: vertical;
-}
+    }
 
 /* Submit button ============================= */
 .btn {
@@ -1071,7 +1094,7 @@ textarea.form-control {
     margin-top: 2rem !important;
     font-size:1.0em !important;
     font-weight: 600 !important;
-}
+    }
 
 /* Collapsible panel ============================= */
 .spark-ui .panel,
@@ -1084,32 +1107,32 @@ textarea.form-control {
     color: #4263c2;
     text-decoration:underline;
     font-weight: 700;
-}
+    }
 
 .panel-group .panel-heading+.panel-collapse .panel-body {
     border: none !important;
     border-color: #ccc !important;
     border-top-width: 0 !important;
     border-left: 5px solid #ccc !important;
-}
+    }
 
 .Collapsible_Panel .panel-body {
     border: none;
     border-left: 5px solid #ccc;
     padding-left: 1.3em;
-}
+    }
 
 .Collapsible_Panel .panel-body .control-label {
     font-weight: 400;
-}
+    }
 
 .accordion-toggle:after {
     padding: 9px 0px 9px 35px;
-}
+    }
 
 .accordion-toggle:after {
     content:"" !important;
-}
+    }
 
 .accordion-toggle:before {
     color: #004669;
@@ -1122,21 +1145,21 @@ textarea.form-control {
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-}
+    }
 
 .accordion-toggle:before {
     content: "\f107";
-}
+    }
 
 .accordion-toggle.collapsed:before {
     content: "\f105";
-}
+    }
 
 .accordion-toggle.collapsed:hover, .accordion-toggle:hover {
     background: none !important;
     color: inherit !important;
     text-decoration: inherit !important;
-}
+    }
 
 .accordion-toggle:focus {
     outline: none;
@@ -1145,7 +1168,7 @@ textarea.form-control {
 /* Info panel ============================= */
 .panel-info {
     width: 30em !important;
-}
+    }
 
 .panel-info.panel-dark>.panel-heading {
     background: #eff0f9 !important;
@@ -1154,11 +1177,11 @@ textarea.form-control {
     border-left: 8px solid #033e58 !important;
     color: #222 !important;
     border-color: #033e58 !important;
-}
+    }
 
 .bpm-info .panel-info.panel-dark>.panel-heading {
     border-color: #033e58 !important;
-}
+    }
 
 
 /* Error styling ============================= */
@@ -1177,17 +1200,16 @@ textarea.form-control {
 .has-error .validationError,
 .has-error .tooltip-arrow,
 .has-error .tooltip-inner {
-      all: unset !important;
-}
+    all: unset !important;
+    }
 
 .has-error .form-group:before,
 .has-error .form-group:after,
 .has-error.form-group:before,
-.has-error.form-group:after
- {
+.has-error.form-group:after {
     display: none !important;
     content: none !important;
-}
+    }
 
 .form-group.has-error {
 	padding: 1rem 2em 1rem 1rem;
@@ -1201,16 +1223,16 @@ textarea.form-control {
 }
 
 .form-group.has-error .form-control-feedback {
-	display: none !important;
-}
+    display: none !important;
+    }
 
 .form-group.has-error .tooltip.top .tooltip-arrow {
-	display: none !important;
-}
+    display: none !important;
+    }
 
 .form-group.has-error .tooltip.alignRight>.tooltip-arrow {
-	display:none !important;
-}
+    display:none !important;
+    }
 
 .form-group.has-error .tooltip-inner {
     font-size: 18px !important;
@@ -1221,19 +1243,18 @@ textarea.form-control {
     text-decoration: none !important;
     background-color: transparent !important;
     border: none !important;
-}
+    }
 
 .form-group.has-error .tooltip.validationError {
-	display:block !important;
-}
+    display:block !important;
+    }
 
 .form-group.has-error .tooltip.top {
-	top:0 !important;
-	padding: 6px !important;
-	margin-top: 0px !important;
-}
+    top:0 !important;
+    padding: 6px !important;
+    margin-top: 0px !important;
+    }
 
 
 
 /* ONS overrides end ============================= */
-        
