@@ -959,7 +959,7 @@ MAP - end */
 
 
 /* ====================================================== */
-/* added by Martin Glancy 27 March 2020 */
+/* Added by Martin Glancy 14 April 2020 */
 /* ====================================================== */
 
 /* Import ONS standard font Open Sans */
@@ -984,11 +984,6 @@ MAP - end */
     line-height: 1.4;
     }
 
-/* Override small text size in text element */
-.text-xs {
-    font-size:inherit !important;
-    }
-
 /* Create classes for input widths */
 /* TODO - set these to correct widths */
 .bpm-input--w-5 input { width: 10rem; }
@@ -997,6 +992,11 @@ MAP - end */
 
 
 /* CSS OVERRIDES ========================= */
+
+/* Override small text size in text element */
+.text-xs {
+    font-size:inherit !important;
+    }
 
 /* Focus highlight should be ONS yellow border ============================= */
 .spark-ui .form-control.focus,
@@ -1013,6 +1013,13 @@ MAP - end */
 .checkbox3 span.checkboxFocus {
     border:none !important;
     outline:none !important;
+    outline: 1px solid #222 !important;
+    outline-offset: -2px !important;
+    -webkit-box-shadow: 0 0 0 3px #fd0 !important;
+    box-shadow: 0 0 0 3px #fd0 !important;
+}
+
+.btn-primary:focus {
     outline: 1px solid #222 !important;
     outline-offset: -2px !important;
     -webkit-box-shadow: 0 0 0 3px #fd0 !important;
