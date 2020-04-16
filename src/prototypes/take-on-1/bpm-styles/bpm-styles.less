@@ -15,82 +15,82 @@
 
 /* Neutral colors */
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
-@bpm-neutral-darkest:                      #0d1111;                                                    //|EEM|
+@bpm-neutral-darkest:                      @bpm-text-color;                                            //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010020","type":"color"}|DE|
-@bpm-neutral-darker:                       #2d3737;                                                    //|EEM|
+@bpm-neutral-darker:                       @bpm-text-color;                                            //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010030","type":"color"}|DE|
-@bpm-neutral-dark:                         #3c4646;                                                    //|EEM|
+@bpm-neutral-dark:                         @bpm-text-color;                                            //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010040","type":"color"}|DE|
-@bpm-neutral:                              #586464;                                                    //|EEM|
+@bpm-neutral:                              #595959;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010050","type":"color"}|DE|
 @bpm-neutral-light:                        #6d7777;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010060","type":"color"}|DE|
-@bpm-neutral-lighter:                      #c8d2d2;                                                    //|EEM|
+@bpm-neutral-lighter:                      @bpm-border-normal;                                         //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010070","type":"color"}|DE|
-@bpm-neutral-lightest:                     #dfe9e9;                                                    //|EEM|
+@bpm-neutral-lightest:                     @bpm-border-normal;                                         //|EEM|
 
 /* Brand colors */
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010080","type":"color","targetPane":["SP"]}|DE|
-@bpm-color-primary-light:                  lighten(desaturate(spin(@bpm-color-primary, 6), 5%), 15%);  //|EEM|
+@bpm-color-primary-light:                  #3b7a9e;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010081","type":"color"}|DE|
-@bpm-color-primary:                        #325C80;                                                    //|EEM|
+@bpm-color-primary:                        #033e58;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010082","type":"color","targetPane":["SP"]}|DE|
-@bpm-color-primary-dark:                   darken(desaturate(spin(@bpm-color-primary, -5), 1%), 9%);   //|EEM|
+@bpm-color-primary-dark:                   @bpm-color-primary;                                         //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010083","type":"color","targetPane":["SP"]}|DE|
-@bpm-color-primary-darker:                 darken(desaturate(spin(@bpm-color-primary, -2), 1%), 15%);  //|EEM|
+@bpm-color-primary-darker:                 @bpm-color-primary;                                         //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010090","type":"color","targetPane":["SP"]}|DE|
-@bpm-color-info-light:                     lighten(@bpm-color-info, 11%);                              //|EEM|
+@bpm-color-info-light:                     @bpm-color-info;                                            //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010091","type":"color"}|DE|
 @bpm-color-info:                           #eff0f9;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010092","type":"color","targetPane":["SP"]}|DE|
 @bpm-color-info-dark:                      #033e58;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010093","type":"color","targetPane":["SP"]}|DE|
-@bpm-color-info-darker:                    #033e58;                                                    //|EEM|
+@bpm-color-info-darker:                    @bpm-color-info-dark;                                       //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010100","type":"color","targetPane":["SP"]}|DE|
-@bpm-color-success-light:                  lighten(@bpm-color-success, 9%);                            //|EEM|
+@bpm-color-success-light:                  @bpm-color-success;                                         //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010101","type":"color"}|DE|
-@bpm-color-success:                        #c8f08f;                                                    //|EEM|
+@bpm-color-success:                        #edf4f0;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010102","type":"color","targetPane":["SP"]}|DE|
-@bpm-color-success-dark:                   darken(desaturate(spin(@bpm-color-success, -6), 7%), 15%);  //|EEM|
+@bpm-color-success-dark:                   #0f8243;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010103","type":"color","targetPane":["SP"]}|DE|
-@bpm-color-success-darker:                 darken(desaturate(spin(@bpm-color-success, -3), 5%), 29%);  //|EEM|
+@bpm-color-success-darker:                 @bpm-color-success-dark;                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010110","type":"color","targetPane":["SP"]}|DE|
-@bpm-color-warning-light:                  lighten(@bpm-color-warning, 9%);                            //|EEM|
+@bpm-color-warning-light:                  lighten(@bpm-color-warning, 35%);                           //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010111","type":"color"}|DE|
-@bpm-color-warning:                        #fde876;                                                    //|EEM|
+@bpm-color-warning:                        #fd0;                                                       //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010112","type":"color","targetPane":["SP"]}|DE|
-@bpm-color-warning-dark:                   darken(desaturate(@bpm-color-warning, 1%), 20%);            //|EEM|
+@bpm-color-warning-dark:                   @bpm-color-warning;                                         //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010113","type":"color","targetPane":["SP"]}|DE|
-@bpm-color-warning-darker:                 darken(desaturate(spin(@bpm-color-warning, -2), 3%), 25%);  //|EEM|
+@bpm-color-warning-darker:                 @bpm-color-warning;                                         //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010120","type":"color"}|DE|
-@bpm-color-alert-light:                    lighten(saturate(spin(@bpm-color-alert, -9), 20%), 53%);    //|EEM|
+@bpm-color-alert-light:                    #fbecec;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010121","type":"color"}|DE|
-@bpm-color-alert:                          #ad1625;                                                    //|EEM|
+@bpm-color-alert:                          #d0021b;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010122","type":"color","targetPane":["SP"]}|DE|
-@bpm-color-alert-dark:                     darken(desaturate(spin(@bpm-color-alert, -5), 1%), 9%);     //|EEM|
+@bpm-color-alert-dark:                     @bpm-color-alert;                                           //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010123","type":"color","targetPane":["SP"]}|DE|
-@bpm-color-alert-darker:                   darken(desaturate(spin(@bpm-color-alert, -2), 1%), 15%);    //|EEM|
+@bpm-color-alert-darker:                   @bpm-color-alert;                                           //|EEM|
 
 /* Scaffolding */
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010140","type":"color"}|DE|
-@bpm-body-bg:                              #fff;                                                       //|EEM|
+@bpm-body-bg:                              #ffffff;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010143","type":"color","targetPane":["SP"]}|DE|
-@bpm-modal-bg:                             fade(@bpm-neutral-darkest, 35%);                            //|EEM|
+@bpm-modal-bg:                             @bpm-border-normal;                                         //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010145","type":"color","targetPane":["SP"]}|DE|
 @bpm-fill-darker:                          #586464;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010146","type":"color","targetPane":["SP"]}|DE|
-@bpm-fill-normal:                          #fff;                                                       //|EEM|
+@bpm-fill-normal:                          #ffffff;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010148","type":"color","targetPane":["SP"]}|DE|
-@bpm-border-normal:                        lighten(@bpm-neutral, 2%);                                  //|EEM|
+@bpm-border-normal:                        #cccccc;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010150","type":"color"}|DE|
-@bpm-link-color:                           @bpm-color-primary;                                         //|EEM|
+@bpm-link-color:                           #4263c2;                                                    //|EEM|
 @bpm-link-hover-color:                     darken( @bpm-link-color, 15%);
 @bpm-link-decoration:                      none;
 @bpm-link-hover-decoration:                underline;
 
 /* Typography */
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010160","type":"color"}|DE|
-@bpm-text-color:                           #000203;                                                    //|EEM|
+@bpm-text-color:                           #222222;                                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010170","type":"font-family"}|DE|
 @bpm-font-family-sans-serif:               'Open Sans', 'Helvetica Neue',Helvetica, Arial, sans-serif;//|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010180","type":"text"}|DE|
@@ -503,9 +503,9 @@
                                                                                          //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060194","type":"color","targetPane":["SP"]}|DE|
 @bpm-section-alert-content-bg:             @bpm-fill-normal;                             //|EEM|
                                                                                          //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060196","type":"color","targetPane":["SP"]}|DE|
-@bpm-section-alert-border:                 @bpm-section-alert-accent-bg;                 //|EEM|
+@bpm-section-alert-border:                 @bpm-color-alert;                             //|EEM|
                                                                                          //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060198","type":"color","targetPane":["SP"]}|DE|
-@bpm-section-alert-accent-bg:              darken(@bpm-color-alert-light, 10%);          //|EEM|
+@bpm-section-alert-accent-bg:              @bpm-color-alert;                             //|EEM|
                                                                                          //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060200","type":"text"}|DE|
 @bpm-section-header-border-radius:         @bpm-border-radius-base;                      //|EEM|
                                                                                          //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060210","type":"color"}|DE|
@@ -527,7 +527,7 @@
                                                                                          //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070020","type":"color"}|DE|
 @bpm-table-bg:                             transparent;                                  //|EEM|
                                                                                          //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070030","type":"color"}|DE|
-@bpm-table-bg-accent:                      #f5f9f9;                                      //|EEM|
+@bpm-table-bg-accent:                      #f0f0f0;                                      //|EEM|
                                                                                          //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070040","type":"color"}|DE|
 @bpm-table-bg-hover:                       @bpm-neutral-lightest;                        //|EEM|
                                                                                          //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070050","type":"color"}|DE|
@@ -643,21 +643,21 @@
 @bpm-tabs-height:                          38px;                                                       //|EEM|
 /* Notes */
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080510","type":"color","targetPane":["SP"]}|DE|
-@bpm-note-default-bg:                      @bpm-neutral-lightest;                                      //|EEM|
+@bpm-note-default-bg:                      @bpm-color-info-light;                                      //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080520","type":"color","targetPane":["SP"]}|DE|
-@bpm-note-default-accent-bg:               @bpm-neutral-dark;                                          //|EEM|
+@bpm-note-default-accent-bg:               @bpm-color-info-dark;                                       //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080530","type":"color","targetPane":["SP"]}|DE|
-@bpm-note-default-color:                   lighten(@bpm-text-color, 10%);                              //|EEM|
+@bpm-note-default-color:                   @bpm-color-info-dark;                                       //|EEM|
 
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080540","type":"color","targetPane":["SP"]}|DE|
-@bpm-note-primary-bg:                      lighten(@bpm-color-primary-light, 20%);                     //|EEM|
+@bpm-note-primary-bg:                      @bpm-color-info-light;                                      //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080550","type":"color","targetPane":["SP"]}|DE|
-@bpm-note-primary-accent-bg:               @bpm-color-primary-dark;                                    //|EEM|
+@bpm-note-primary-accent-bg:               @bpm-color-info-dark;                                       //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080560","type":"color","targetPane":["SP"]}|DE|
-@bpm-note-primary-color:                   @bpm-text-color-primary;                                    //|EEM|
+@bpm-note-primary-color:                   @bpm-color-info-dark;                                       //|EEM|
 
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080570","type":"color","targetPane":["SP"]}|DE|
-@bpm-note-info-bg:                         darken(@bpm-color-info-light, 5%);                          //|EEM|
+@bpm-note-info-bg:                         @bpm-color-info-light;                                      //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080580","type":"color","targetPane":["SP"]}|DE|
 @bpm-note-info-accent-bg:                  @bpm-color-info-dark;                                       //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080590","type":"color","targetPane":["SP"]}|DE|
@@ -668,25 +668,25 @@
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080610","type":"color","targetPane":["SP"]}|DE|
 @bpm-note-success-accent-bg:               @bpm-color-success-dark;                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080620","type":"color","targetPane":["SP"]}|DE|
-@bpm-note-success-color:                   darken(@bpm-text-color-success, 30%);                       //|EEM|
+@bpm-note-success-color:                   @bpm-color-success-dark;                                    //|EEM|
 
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080630","type":"color","targetPane":["SP"]}|DE|
 @bpm-note-warning-bg:                      @bpm-color-warning-light;                                   //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080640","type":"color","targetPane":["SP"]}|DE|
 @bpm-note-warning-accent-bg:               @bpm-color-warning-dark;                                    //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080650","type":"color","targetPane":["SP"]}|DE|
-@bpm-note-warning-color:                   darken(@bpm-text-color-warning, 25%);                       //|EEM|
+@bpm-note-warning-color:                   @bpm-text-color;                                            //|EEM|
 
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080660","type":"color","targetPane":["SP"]}|DE|
 @bpm-note-alert-bg:                        @bpm-color-alert-light;                                     //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080670","type":"color","targetPane":["SP"]}|DE|
 @bpm-note-alert-accent-bg:                 @bpm-color-alert-dark;                                      //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080680","type":"color","targetPane":["SP"]}|DE|
-@bpm-note-alert-color:                     darken(@bpm-text-color-alert,5%);                           //|EEM|
+@bpm-note-alert-color:                     @bpm-color-alert-dark;                                      //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080690","type":"text","targetPane":["SP"]}|DE|
 @bpm-note-border-width:                    8px;                                                        //|EEM|
                                                                                                        //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080700","type":"text","targetPane":["SP"]}|DE|
-@bpm-badge-border-radius:                  10px;                                                       //|EEM|
+@bpm-badge-border-radius:                  8px;                                                        //|EEM|
 
 
 /* Progress bars */
