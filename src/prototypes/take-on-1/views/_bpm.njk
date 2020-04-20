@@ -7,12 +7,35 @@
 
   <title>Process Portal - Work</title>
 
+  <link rel="stylesheet" href="{{ pageInfo.rootPath }}/styles/bpm.css" />
+
 </head>
 
 <body>
 
+  <div id="bpm_container">
 
-{% block main %}{% endblock %}
+    <div id="bpm_leftcol">
+      {% block username %}{% endblock %}
+      {% block leftmenu %}{% endblock %}
+    </div><!-- //bpm_leftcol -->
+
+    <div id="bpm_rightcol">
+
+      <div id="bpm_header">
+        {% block headertext %}{% endblock %}
+      </div><!-- //bpm_header -->
+
+      <div id="bpm_page">
+        {% block page %}{% endblock %}
+      </div><!-- //bpm_page -->
+
+    </div><!-- //bpm_rightcol -->
+
+  </div><!-- //bpm_container -->
+
+
+
 
 
 </body>

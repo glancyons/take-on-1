@@ -2,18 +2,45 @@
 title: Check needed - Process Portal - Work
 group: Take-on
 version: 14.4.0
-layout: take-on-1/views/_bpm.njk
+layout: take-on-1/views/_bpm
 ---
 
-{% block main %}
+{% block username %}
+  Martin Glancy
+{% endblock %}
 
+{% block leftmenu %}
+  Item 1<br>
+  Item 2
+{% endblock %}
+
+{% block headertext %}
+  Step: Check errors
+{% endblock %}
+
+{% block page %}
   <h1>
     Heading 1
   </h1>
-
   <p>
     Paragraph
   </p>
 
+
+  {% from "prototypes/take-on-1/components/bpm-portal-task/_macro.njk" import bpmPortalTask %}
+  {{
+      bpmPortalTask({
+          "subject": "Check errors",
+          "instancename": "Error check: 4572",
+          "status": "Received",
+          "priority": "Medium"
+      })
+  }}
+
+
+  {{ params. }} |
+  {{ params. }} |
+  {{ params.status }} |
+  {{ params. }}
 
 {% endblock %}
