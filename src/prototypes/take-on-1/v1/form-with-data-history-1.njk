@@ -1,0 +1,435 @@
+---
+title: Check needed - Lawrence Group Ltd - survey 0066 - 201903
+group: Take-on
+version: 14.4.0
+layout: take-on-1/views/_master
+---
+
+{% set pageWidthCols="8" %}
+
+{% from "components/button/_macro.njk" import onsButton %}
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{% from "components/input/_macro.njk" import onsInput %}
+{% from "components/panel/_macro.njk" import onsPanel %}
+
+
+{% macro toTableRowList( period, amount, maximum, rowclass='', current='not' ) %}
+    <tr class="table__row {{rowclass}}">
+      <td class="table__cell to-u-period{{ " to-u-current" if (current=='current') }}">
+        {{ period }}
+      </td>
+      <td class="table__cell to-u-amount{{ " to-u-current" if (current=='current') }}">
+        {{ amount | addCommas }}
+      </td>
+      <td class="table__cell to-u-cell-barchart">
+        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar" style="width: {{ (amount/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (amount/maximum)*100 }}%</span></div>
+      </td>
+    </tr>
+{% endmacro %}
+
+
+{% macro toTableRowGrid( period, year1, year2, year3, year4, maximum ) %}
+    <tr class="table__row">
+
+      <td class="table__cell">
+        {{ period }}
+      </td>
+      <td class="table__cell to-u-year1">
+        {{ year1 | addCommas }}
+      </td>
+      <td class="table__cell">
+        {{ year2 | addCommas }}
+      </td>
+      <td class="table__cell">
+        {{ year3 | addCommas }}
+      </td>
+      <td class="table__cell">
+        {{ year4 | addCommas }}
+      </td>
+      <td class="table__cell to-u-cell-barchart">
+        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar-grid" style="width: {{ (year1/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (year1/maximum)*100 }}%</span></div>
+
+        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar-grid" style="width: {{ (year2/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (year2/maximum)*100 }}%</span></div>
+
+        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar-grid" style="width: {{ (year3/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (year3/maximum)*100 }}%</span></div>
+
+        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar-grid" style="width: {{ (year4/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (year4/maximum)*100 }}%</span></div>
+      </td>
+
+    </tr>
+{% endmacro %}
+
+
+{% block main %}
+
+    <h1>
+    Lawrence Group Ltd
+    </h1>
+
+    <!-- <p>
+      {% set number = "76235423111" %}
+      {{ number | replace(r/(\d{3})$/gm, ',$1', 1) }}
+    </p> -->
+
+
+    {% set title = "Form details" %}
+    {% set tCols = 2 %}
+    {% set dCols = 12-tCols %}
+    {% set mclass = "u-mt-no" %}
+
+    <dl class="metadata metadata__list grid grid--gutterless u-cf u-mb-s" title="{{title}}" aria-label="{{title}}">
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Reference:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">49900265143</dd>
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Survey:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">Quarterly Survey of Building Materials Sand and Gravel (marine dredged) 0066</dd>
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Period:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">202003</dd>
+
+            <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Email:</dt>
+            <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}"><a href="mailto:sales@lawrence-group.co.uk?subject=Sand and Gravel survey 2020-03">sales@lawrence-group.co.uk</a></dd>
+
+            <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Skype call:</dt>
+            <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}"><a href="tel:+442920180243">029 2018 0243</a>
+            </dd>
+
+            <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Contact times:</dt>
+            <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">Fridays only after 1pm</dd>
+    </dl>
+
+    <span title="Status " class="status status--error u-bb u-pb-s u-db">Check needed</span>
+
+    <form class="u-mt-m" id="overrideFormNoJSoverride" action="/prototypes/take-on-1/v0/form-with-validation-overridden.html">
+
+
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q146",
+                "label": {
+                    "text": "Q146 Comment on the figures included in your return"
+                },
+                "value": "2",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q147",
+                "label": {
+                    "text": "Q147 New pits or quarries brought into use since date of last return"
+                },
+                "value": "2",
+                "classes": "input--w-10"
+            })
+        }}
+
+
+
+<!-- VALIDATIONS ########################################################## -->
+        {% from "components/panel/_macro.njk" import onsPanel %}
+        {% call onsPanel({
+                "type": "error"
+        }) %}
+        <fieldset>
+          <legend class="u-vh">
+              Q601 validations and overrides
+          </legend>
+
+
+        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
+
+        <p class="panel__error u-mb-no">
+          <strong>This is 41,000 more than the previous period <br>and 1,700 more than the same period last year</strong>
+        </p>
+        {{
+            onsSingleCheckbox({
+                "id": "Q147_override_1",
+                "label": "Override",
+                "spanclass": "u-mt-no u-mb-s",
+                "accessibleLabel": "This is 59,000 less than the last period and 9,800 less than the same period last year",
+                "reason": "yes"
+            })
+        }}
+
+        {{
+            onsInput({
+                "id": "Q601",
+                "classes": "input--w-10",
+                "label": {
+                    "text": "Q601 Sand produced for asphalt (asphalting sand)"
+                },
+                "value": "75600"
+            })
+        }}
+
+        {% set collapsibleHTML = '
+
+<table id="basic-table" class="table">
+  <thead class="table__head">
+    <tr class="table__row">
+      <th scope="col" class="table__header to-u-period">Period</th>
+      <th scope="col" class="table__header to-u-amount">Amount</th>
+      <th scope="col" class="table__header to-u-cell-barchart">Percentage of maximum</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">' +
+
+
+      '<!--     ( period, amount, maximum, rowclass, current ) -->' +
+
+      toTableRowList("202003", 75600, 81540, "to-u-row-year", "current" ) +
+
+      toTableRowList("201912", 34600, 81540 ) +
+      toTableRowList("201909", 81540, 81540 ) +
+      toTableRowList("201906", 69540, 81540 ) +
+      toTableRowList("201903", 73090, 81540, "to-u-row-year" ) +
+
+      toTableRowList("201812", 41500, 81540 ) +
+      toTableRowList("201809", 74359, 81540 ) +
+      toTableRowList("201806", 72310, 81540 ) +
+      toTableRowList("201803", 78540, 81540, "to-u-row-year" ) +
+
+      toTableRowList("201712", 32500, 81540 ) +
+      toTableRowList("201709", 80540, 81540 ) +
+      toTableRowList("201706", 71540, 81540 ) +
+      toTableRowList("201703", 77650, 81540, "to-u-row-year" ) +
+
+    '</tbody>
+</table>
+        '%}
+
+        {% from "components/collapsible/_macro.njk" import onsCollapsible %}
+        {{
+            onsCollapsible({
+                "id": "collapsible",
+                "title": "Previous data for Q601",
+                "titleTag": "h2",
+                "content": collapsibleHTML,
+                "button": {
+                    "close": "Hide this",
+                    "contextSuffix": "content"
+                }
+            })
+        }}
+
+        </fieldset>
+        {% endcall %}
+
+<!-- ###################################################################### -->
+
+        {{
+            onsInput({
+                "id": "Q602",
+                "label": {
+                    "text": "Q602 Sand produced for use in mortar (building or soft sand)"
+                },
+                "value": "123000",
+                "classes": "input--w-10"
+            })
+        }}
+
+
+<!-- VALIDATIONS ########################################################## -->
+        {% from "components/panel/_macro.njk" import onsPanel %}
+        {% call onsPanel({
+                "type": "error"
+        }) %}
+        <fieldset>
+          <legend class="u-vh">
+              Q603 validations and overrides
+          </legend>
+
+
+        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
+
+        <p class="panel__error u-mb-no">
+          <strong>This is 41,000 more than the previous period <br>and 1,700 more than the same period last year</strong>
+        </p>
+        {{
+            onsSingleCheckbox({
+                "id": "Q147_override_1",
+                "label": "Override",
+                "spanclass": "u-mt-no u-mb-s",
+                "accessibleLabel": "This is 59,000 less than the last period and 9,800 less than the same period last year",
+                "reason": "yes"
+            })
+        }}
+
+        {{
+            onsInput({
+                "id": "Q603",
+                "classes": "input--w-10",
+                "label": {
+                    "text": "Q603 Sand produced for concreting (sharp sand)"
+                },
+                "value": "75600"
+            })
+        }}
+
+        {% set collapsibleHTML = '
+
+<table id="basic-table" class="table to-u-grid">
+  <thead class="table__head">
+    <tr class="table__row">
+      <th scope="col" class="table__header">Period</th>
+      <th scope="col" class="table__header">2020</th>
+      <th scope="col" class="table__header">2019</th>
+      <th scope="col" class="table__header">2018</th>
+      <th scope="col" class="table__header">2017</th>
+      <th scope="col" class="table__header">Chart</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">' +
+
+
+      '<!--         ( period, year1, year2, year3, year4, maximum ) -->' +
+
+      toTableRowGrid("12", "",     34600, 41500, 32500, 81540  ) +
+      toTableRowGrid("09", "",     81540, 74359, 80540, 81540  ) +
+      toTableRowGrid("06", "",     69540, 72310, 71540, 81540  ) +
+      toTableRowGrid("03", 75600, 73090, 78540, 77650, 81540  ) +
+
+    '</tbody>
+</table>
+        '%}
+
+        {% from "components/collapsible/_macro.njk" import onsCollapsible %}
+        {{
+            onsCollapsible({
+                "id": "collapsible",
+                "title": "Previous data for Q603",
+                "titleTag": "h2",
+                "content": collapsibleHTML,
+                "button": {
+                    "close": "Hide this",
+                    "contextSuffix": "content"
+                }
+            })
+        }}
+
+        </fieldset>
+        {% endcall %}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q604",
+                "label": {
+                    "text": "Q604 Gravel coated with bituminous binder (on or off site)"
+                },
+                "value": "345000",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q605",
+                "label": {
+                    "text": "Q605 Gravel produced for concrete aggregate (including sand/gravel mixes)"
+                },
+                "value": "345000",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q606",
+                "label": {
+                    "text": "Q606 Other screened and graded gravels"
+                },
+                "value": "15000",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q607",
+                "label": {
+                    "text": "Q607 Sand and gravel used for constructional fill"
+                },
+                "value": "12000",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q608",
+                "label": {
+                    "text": "Q608 TOTALS"
+                },
+                "value": "1345000",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q9001",
+                "label": {
+                    "text": "Q9001 Derived Total of all sand and gravel (Q601 + Q602 + Q603 + Q604 + Q605 + Q606 + Q607)"
+                },
+                "value": "1345000",
+                "classes": "input--w-10"
+            })
+        }}
+
+<hr>
+
+<!-- ###################################################################### -->
+
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{{
+    onsCheckboxes({
+        "legend": "",
+        "checkboxesLabel": "",
+        "checkboxes": [
+            {
+                "id": "override-all",
+                "label": {
+                    "text": "Override all"
+                },
+                "value": "override-all",
+                "classes": "input--w-10"
+            }
+        ]
+    })
+}}
+<!-- ###################################################################### -->
+
+          {{
+              onsButton({
+                  "text": "Save and validate",
+                  "classes": "u-mt-l btn--small"
+              })
+          }}
+
+          {{
+              onsButton({
+                  "text": "Override",
+                  "classes": "u-mt-l btn--small"
+              })
+          }}
+
+        <!--
+          <span class="u-dib u-ml-m u-mt-xl">
+          <a href="/prototypes/take-on-1/v0/search-results.html">Cancel and return to search</a>
+        </span>
+        -->
+
+    </form>
+{% endblock %}

@@ -1,0 +1,84 @@
+---
+title: Take-on
+group: Take-on
+version: 14.2.1
+layout: take-on-1/views/_master
+---
+{% set pageWidthCols="12" %}
+
+{% from "components/button/_macro.njk" import onsButton %}
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{% from "components/input/_macro.njk" import onsInput %}
+
+
+{% block main %}
+    <form class="u-mt-m" action="/prototypes/take-on-1/v0/search-results.html">
+
+<div class="grid">
+  <div class="grid__col col-3@m">
+    <div class="pl-grid-col">
+
+        {{
+            onsInput({
+                "id": "Reference",
+                "label": {
+                    "text": "Reference"
+                },
+                "value": "",
+                "classes": "input--w-10"
+            })
+        }}
+
+    </div>
+  </div>
+  <div class="grid__col col-3@m ">
+    <div class="pl-grid-col">
+
+        {{
+            onsInput({
+                "id": "Period",
+                "label": {
+                    "text": "Period"
+                },
+                "value": "",
+                "classes": "input--w-10"
+            })
+        }}
+
+    </div>
+  </div>
+  <div class="grid__col col-3@m ">
+    <div class="pl-grid-col">
+
+        {{
+            onsInput({
+                "id": "Survey",
+                "label": {
+                    "text": "Survey"
+                },
+                "value": "",
+                "classes": "input--w-10"
+            })
+        }}
+
+    </div>
+  </div>
+  <div class="grid__col col-3@m ">
+    <div class="pl-grid-col">
+
+        {{
+            onsButton({
+                "text": "Search",
+                "classes": "u-mt-l"
+            })
+        }}
+
+    </div>
+  </div>
+
+</div>
+
+
+
+    </form>
+{% endblock %}

@@ -1,0 +1,140 @@
+---
+title: Take-on
+group: Take-on
+version: 14.2.1
+layout: take-on-1/views/_master
+---
+{% set pageWidthCols="12" %}
+
+
+{% from "components/button/_macro.njk" import onsButton %}
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{% from "components/input/_macro.njk" import onsInput %}
+
+
+{% block main %}
+    <form class="u-mt-m" action="/prototypes/take-on-1/v0/form-with-validation.html">
+
+<div class="grid">
+  <div class="grid__col col-3@m">
+    <div class="pl-grid-col">
+
+        {{
+            onsInput({
+                "id": "Reference",
+                "label": {
+                    "text": "Reference"
+                },
+                "value": "49900012765",
+                "classes": "input--w-10"
+            })
+        }}
+
+    </div>
+  </div>
+  <div class="grid__col col-3@m ">
+    <div class="pl-grid-col">
+
+        {{
+            onsInput({
+                "id": "Period",
+                "label": {
+                    "text": "Period"
+                },
+                "value": "201903",
+                "classes": "input--w-10"
+            })
+        }}
+
+    </div>
+  </div>
+  <div class="grid__col col-3@m ">
+    <div class="pl-grid-col">
+
+        {{
+            onsInput({
+                "id": "Survey",
+                "label": {
+                    "text": "Survey"
+                },
+                "value": "0066",
+                "classes": "input--w-10"
+            })
+        }}
+
+    </div>
+  </div>
+  <div class="grid__col col-3@m ">
+    <div class="pl-grid-col">
+
+        {{
+            onsButton({
+                "text": "Search",
+                "classes": "u-mt-l"
+            })
+        }}
+
+    </div>
+  </div>
+
+</div>
+
+<!-- ####################################################################### -->
+
+{% from "components/table/_macro.njk" import onsTable %}
+{{
+    onsTable({
+        "id": "search-results",
+        "ths": [
+            {"value": "Action"},{"value": "Reference"},{"value": "Period"},{"value": "Survey"},{"value": "Name"},{"value": "Form ID"},{"value": "Status"},{"value": "SIC"},{"value": "Employment"},{"value": "Turnover"}
+        ],
+        "trs": [
+            {
+                "tds": [
+                    {"form": {
+                        "button": {
+                          "text": "View Form"
+                          }
+                      }
+                    },
+                    {"value": "49900012765"},{"value": "201903"},{"value": "0066"},{"value": "Long and Sons"},{"value": "1"},{"value": "Form Saved"},{"value": "41100"},{"value": "41100"},{"value": "99999"}
+              ]
+            },
+            {
+                "tds": [
+                    {"form": {
+                        "button": {
+                          "text": "View Form"
+                          }
+                      }
+                    },
+                    {"value": "49900012765"},{"value": "201903"},{"value": "0066"},{"value": "James-Johnson"},{"value": "1"},{"value": "Form Saved"},{"value": "41100"},{"value": "41100"},{"value": "99999"}
+              ]
+            },
+            {
+                "tds": [
+                    {"form": {
+                        "button": {
+                          "text": "View Form"
+                          }
+                      }
+                    },
+                    {"value": "49900012765"},{"value": "201903"},{"value": "0066"},{"value": "Lawrence Group Ltd"},{"value": "1"},{"value": "Form Saved"},{"value": "41100"},{"value": "41100"},{"value": "99999"}
+              ]
+            }
+        ]
+    })
+}}
+
+<hr style="border-top: 10px solid #f0f0f0;">
+
+{{
+    onsButton({
+        "text": "Next",
+        "classes": "u-mt-l"
+    })
+}}
+
+
+    </form>
+{% endblock %}

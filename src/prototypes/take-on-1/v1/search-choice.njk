@@ -1,0 +1,76 @@
+---
+title: Take-on
+group: Take-on
+version: 14.2.1
+layout: take-on-1/views/_master
+---
+{% from "components/button/_macro.njk" import onsButton %}
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+
+
+{% block main %}
+    <form class="u-mt-m" action="/prototypes/take-on-1/v0/search-start.html">
+
+        {{
+            onsCheckboxes({
+                "legend": "Search by",
+                "legendClasses": "u-fs-xl",
+                "checkboxesLabel": "Select all that apply",
+                "name": "search_types",
+                "checkboxes": [
+                    {
+                        "id": "reference",
+                        "label": {
+                            "text": "Reference"
+                        },
+                        "value": "reference"
+                    },
+                    {
+                        "id": "period",
+                        "label": {
+                            "text": "Period"
+                        },
+                        "value": "period"
+                    },
+                    {
+                        "id": "survey",
+                        "label": {
+                            "text": "Survey"
+                        },
+                        "value": "survey"
+                    },
+                    {
+                        "id": "receipt_date",
+                        "label": {
+                            "text": "Receipt date"
+                        },
+                        "value": "receipt_date"
+                    },
+                    {
+                        "id": "form_type",
+                        "label": {
+                            "text": "Form type"
+                        },
+                        "value": "form_type"
+                    },
+                    {
+                        "id": "form_id",
+                        "label": {
+                            "text": "Form Id"
+                        },
+                        "value": "form_id"
+                    }
+                ]
+            })
+        }}
+
+        {{
+            onsButton({
+                "text": "Search this",
+                "classes": "u-mt-l"
+            })
+        }}
+    </form>
+
+
+{% endblock %}

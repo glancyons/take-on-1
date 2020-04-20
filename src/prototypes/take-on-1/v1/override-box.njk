@@ -1,0 +1,54 @@
+---
+title: Take-on
+group: Take-on
+version: 14.2.1
+layout: take-on-1/views/_master
+---
+{% from "components/button/_macro.njk" import onsButton %}
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+
+
+{% block main %}
+    <form class="u-mt-m" action="/prototypes/take-on-1/v0/search-start.html">
+
+        {{
+            onsCheckboxes({
+                "legend": "",
+                "legendClasses": "",
+                "checkboxesLabel": "",
+                "name": "overrides",
+                "checkboxes": [
+                    {
+                        "id": "Q0601",
+                        "label": {
+                            "text": 'Override question 0601<br>
+                                    <span class="u-fw-b">This has changed significantly since the last submission</span>
+                                    <span class="u-vh"><br>Validation ID: 6620<br></span>
+                                    <span class="u-vh">Formula: 4325 != 0 AND ( 4325 = 0 OR 0 = 0 ) AND abs(4325 - 0) > 0<br></span>
+                                    <span class="u-vh">Triggered: True</span>'
+                        },
+                        "value": "null"
+                    }
+
+                ]
+            })
+        }}
+
+
+    </form>
+
+    <p>  </p>
+        <p>  </p>
+        <hr>
+
+        <pre>
+          Override question {QuestionNumber}&lt;br&gt;
+          &lt;span class="u-fw-b"&gt;{Plain validation message}&lt;/span&gt;
+          &lt;span class="u-vh"&gt;&lt;br&gt;Validation ID: {ValidationID}&lt;br>&lt;/span&gt;
+          &lt;span class="u-vh"&gt;Formula: {formula}&lt;br>&lt;/span&gt;
+          &lt;span class="u-vh"&gt;Triggered: {triggered}&lt;/span&gt;
+        </pre>
+
+
+
+{% endblock %}
