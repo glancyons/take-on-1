@@ -1,4 +1,4 @@
-{% macro bpmPortalTask( subject, instance, status, priority, link, rowclass="odd" ) %}
+{% macro bpmPortalTask( subject, instance, status, name, allocated, priority, link, rowclass="odd" ) %}
 
 {% set instanceID = "45" + [1,2,3,4,5,6,7,8,9] | random + [1,2,3,4,5,6,7,8,9] | random %}
 
@@ -7,6 +7,8 @@
   <td class="subject"><a href="{{ link }}">Step: {{ subject }}</a></td>
   <td class="instance"><a href="{{ link }}">{{ instance }}: {{ instanceID }}</a></td>
   <td class="status">{{ status }}</td>
+  <td class="name">{{ name }}</td>
+  <td class="allocated">{{ allocated }}</td>
   <td class="priority">{{ priority }}</td>
 </tr>
 
