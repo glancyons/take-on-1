@@ -73,10 +73,18 @@ layout: take-on-1/views/_iframe_master
 </div>
 
 
-<p class="u-bb u-pb-s"><span title="Status " class="status status--error">Check needed</span></p>
+
+    <p class="u-bb u-pb-s"><span title="Status " class="status status--success">Clear - overridden</span></p>
+
+    <form class="u-mt-m" id="overrideFormNoJSoverride" action="/prototypes/take-on-1/v1/bpm-portal.html">
 
 
-    <form class="u-mt-m" id="overrideFormNoJSoverride" action="/prototypes/take-on-1/v1/rsi-form-errors-1-override.html">
+          {{
+              onsButton({
+                  "text": "Return to work list",
+                  "classes": "u-mb-l btn--small"
+              })
+          }}
 
 
 
@@ -108,22 +116,15 @@ layout: take-on-1/views/_iframe_master
 <!-- VALIDATIONS ########################################################## -->
         {% from "components/panel/_macro.njk" import onsPanel %}
         {% call onsPanel({
-                "type": "error"
+                "type": "info"
         }) %}
         <fieldset>
           <legend class="u-vh">
               Q20 validations and overrides
           </legend>
 
-
-        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
-
-        <p class="panel__error u-mb-no">
-          <strong>This total is not equal to the calculated total</strong>
-        </p>
-
         {{
-            radioPair( "Legend", "Q20_override_1", "Accept", "Edit response" )
+            radioPair( "Legend", "Q20_override_1", "Accept total is not equal to the calculated total", "Edit response", true, false )
         }}
 
         {{
@@ -167,25 +168,18 @@ layout: take-on-1/views/_iframe_master
         }}
 
 
-
 <!-- VALIDATIONS ########################################################## -->
         {% from "components/panel/_macro.njk" import onsPanel %}
         {% call onsPanel({
-                "type": "error"
+                "type": "info"
         }) %}
         <fieldset>
           <legend class="u-vh">
               Q22 validations and overrides
           </legend>
 
-
-        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
-
-        <p class="panel__error u-mb-no">
-          <strong>This is 41,000 more than the previous period <br>and 1,700 more than the same period last year</strong>
-        </p>
         {{
-            radioPair( "Legend", "Q22_override_1", "Accept", "Edit response" )
+            radioPair( "Legend", "Q22_override_1", "Accept 'This is 41,000 more than the previous period'", "Edit response", true, false )
         }}
 
         {{
@@ -196,56 +190,6 @@ layout: take-on-1/views/_iframe_master
                     "text": "Q22 Alcohol, confectionery, tobacco"
                 },
                 "value": "54000"
-            })
-        }}
-
-        {% set collapsibleHTML = '
-
-<table id="basic-table-1" class="table">
-  <thead class="table__head">
-    <tr class="table__row">
-      <th scope="col" class="table__header to-u-period">Period</th>
-      <th scope="col" class="table__header to-u-amount">Amount</th>
-      <th scope="col" class="table__header to-u-cell-barchart">Percentage of maximum</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">' +
-
-
-      '<!--     ( period, amount, maximum, rowclass, current ) -->' +
-
-      toTableRowList("202003", 54000, 54000, "to-u-row-year", "current" ) +
-
-      toTableRowList("201912", 13000, 54000 ) +
-      toTableRowList("201909", 50000, 54000 ) +
-      toTableRowList("201906", 43000, 54000 ) +
-      toTableRowList("201903", 52000, 54000, "to-u-row-year" ) +
-
-      toTableRowList("201812", 17000, 54000 ) +
-      toTableRowList("201809", 46500, 54000 ) +
-      toTableRowList("201806", 46000, 54000 ) +
-      toTableRowList("201803", 48000, 54000, "to-u-row-year" ) +
-
-      toTableRowList("201712", 21000, 54000 ) +
-      toTableRowList("201709", 43700, 54000 ) +
-      toTableRowList("201706", 46000, 54000 ) +
-      toTableRowList("201703", 49000, 54000, "to-u-row-year" ) +
-
-    '</tbody>
-</table>
-        '%}
-
-        {% from "components/collapsible/_macro.njk" import onsCollapsible %}
-        {{
-            onsCollapsible({
-                "id": "collapsible-1",
-                "title": "Previous data for Q22",
-                "titleTag": "h2",
-                "content": collapsibleHTML,
-                "button": {
-                    "close": "Hide this",
-                    "contextSuffix": "content"
-                }
             })
         }}
 
@@ -281,21 +225,15 @@ layout: take-on-1/views/_iframe_master
 <!-- VALIDATIONS ########################################################## -->
         {% from "components/panel/_macro.njk" import onsPanel %}
         {% call onsPanel({
-                "type": "error"
+                "type": "info"
         }) %}
         <fieldset>
           <legend class="u-vh">
-              Q22 validations and overrides
+              Q25 validations and overrides
           </legend>
 
-
-        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
-
-        <p class="panel__error u-mb-no">
-          <strong>This is 7,000 more than the previous period <br>and 500 more than the same period last year</strong>
-        </p>
         {{
-            radioPair( "Legend", "Q25_override_1", "Accept", "Edit response" )
+            radioPair( "Legend", "Q25_override_1", "Accept 'This is 7,000 more than the previous period'", "Edit response", true, false )
         }}
 
         {{
@@ -306,47 +244,6 @@ layout: take-on-1/views/_iframe_master
                 },
                 "value": "8000",
                 "classes": "input--w-10"
-            })
-        }}
-
-        {% set collapsibleHTML = '
-
-<table id="basic-table-2" class="table to-u-grid">
-  <thead class="table__head">
-    <tr class="table__row">
-      <th scope="col" class="table__header">Period</th>
-      <th scope="col" class="table__header">2020</th>
-      <th scope="col" class="table__header">2019</th>
-      <th scope="col" class="table__header">2018</th>
-      <th scope="col" class="table__header">2017</th>
-      <th scope="col" class="table__header">Chart</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">' +
-
-
-      '<!--         ( period, year1, year2, year3, year4, maximum ) -->' +
-
-      toTableRowGrid("12", "",     1000, 1600, 1800, 8000  ) +
-      toTableRowGrid("09", "",     6300, 7100, 6200, 8000  ) +
-      toTableRowGrid("06", "",     7100, 6900, 6500, 8000  ) +
-      toTableRowGrid("03", 8000,   7500, 6900, 7100, 8000  ) +
-
-    '</tbody>
-</table>
-        '%}
-
-        {% from "components/collapsible/_macro.njk" import onsCollapsible %}
-        {{
-            onsCollapsible({
-                "id": "collapsible-2",
-                "title": "Previous data for Q25",
-                "titleTag": "h2",
-                "content": collapsibleHTML,
-                "button": {
-                    "close": "Hide this",
-                    "contextSuffix": "content"
-                }
             })
         }}
 
@@ -381,7 +278,7 @@ layout: take-on-1/views/_iframe_master
 <!-- VALIDATIONS ########################################################## -->
         {% from "components/panel/_macro.njk" import onsPanel %}
         {% call onsPanel({
-                "type": "error"
+                "type": "info"
         }) %}
         <fieldset>
           <legend class="u-vh">
@@ -391,16 +288,13 @@ layout: take-on-1/views/_iframe_master
 
         {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
 
-        <p class="panel__error u-mb-no">
-          <strong>Check the response to this question</strong>
-        </p>
-
         {{
             onsSingleCheckbox({
                 "id": "Q146a_override_1",
-                "label": "Checked",
+                "label": "Checked 'did significant turnover changes occur'",
                 "spanclass": "u-mt-no u-mb-s",
-                "accessibleLabel": "Check the response to this question"
+                "accessibleLabel": "Check the response to this question",
+                "checked": true
             })
         }}
 
@@ -515,40 +409,22 @@ layout: take-on-1/views/_iframe_master
             })
         }}
 
-<hr>
+
 
 <!-- ###################################################################### -->
 
-{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
-{{
-    onsCheckboxes({
-        "legend": "",
-        "checkboxesLabel": "",
-        "checkboxes": [
-            {
-                "id": "override-all",
-                "label": {
-                    "text": "Override all"
-                },
-                "value": "override-all",
-                "classes": "input--w-10"
-            }
-        ]
-    })
-}}
-<!-- ###################################################################### -->
 
           {{
               onsButton({
                   "text": "Save and validate",
-                  "classes": "u-mt-l btn--small"
+                  "classes": "u-mt-l btn--small btn--secondary"
               })
           }}
-
 
           <span class="u-dib u-ml-m u-mt-l">
             <a href="/prototypes/take-on-1/v1/bpm-portal.html">Cancel and return to work list</a>
           </span>
+
 
     </form>
 {% endblock %}

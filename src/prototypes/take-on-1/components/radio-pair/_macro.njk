@@ -1,0 +1,47 @@
+{% macro radioPair( legend, name, label1, label2, label1checked=false, label2checked=false ) %}
+
+{% set input1id = label1 | replace(" ", "") | replace(",", "") | replace("'", "") | lower %}
+{% set input1id = input1id+name %}
+
+{% set input2id = label2 | replace(" ", "") | replace(",", "") | replace("'", "") | lower %}
+{% set input2id = input2id+name %}
+
+  <fieldset class="fieldset">
+    <legend class="fieldset__legend u-vh">{{ legend }}
+    </legend>
+    <div class="radios__items to-u-radios-pair">
+      <p class="radios__item">
+        <span class="radio">
+                          <input
+                              type="radio"
+                              id="{{ input1id }}"
+                              class="radio__input js-radio "
+                              value="{{ name }}"
+                              name="{{ name }}"
+                              {{ "checked" if label1checked }}
+                          >
+                          <label class="radio__label" for="{{ input1id }}">
+                              {{ label1 }}
+                          </label>
+                      </span>
+      </p>
+
+      <p class="radios__item">
+        <span class="radio">
+                          <input
+                              type="radio"
+                              id="{{ input2id }}"
+                              class="radio__input js-radio "
+                              value="{{ label2 }}"
+                              name="{{ name }}"
+                              {{ "checked" if label2checked }}
+                          >
+                          <label class="radio__label" for="{{ input2id }}">
+                              {{ label2 }}
+                          </label>
+                      </span>
+      </p>
+    </div>
+  </fieldset>
+
+{% endmacro %}

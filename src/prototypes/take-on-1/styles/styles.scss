@@ -60,3 +60,32 @@
 table.to-u-grid tr:nth-child(4) td.to-u-year1 {
   font-weight: bold;
 }
+
+.panel--error .fieldset + .field,
+.panel--info .fieldset + .field {
+  margin-top: 0.2rem;
+}
+
+.to-u-radios-pair {
+  .radios__item {
+    min-width: 1em;
+  }
+  .radio__label {
+    padding-left: 1.8rem;
+  }
+  .radio__label:before {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .radio__input {
+    left: 0;
+  }
+  .radio__input:checked + .radio__label:before {
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+  }
+}

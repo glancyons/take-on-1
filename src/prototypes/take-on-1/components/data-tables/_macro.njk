@@ -7,7 +7,7 @@
         {{ amount | addCommas }}
       </td>
       <td class="table__cell to-u-cell-barchart">
-        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar" style="width: {{ (amount/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (amount/maximum)*100 }}%</span></div>
+        <div role="figure" aria-describedby="period-tr-{{period}}" class="to-u-bar" style="width: {{ (amount/maximum)*100 }}%;"><span id="period-tr-{{period}}" class="u-vh">{{ (amount/maximum)*100 }}%</span></div>
       </td>
     </tr>
 {% endmacro %}
@@ -32,13 +32,13 @@
         {{ year4 | addCommas }}
       </td>
       <td class="table__cell to-u-cell-barchart">
-        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar-grid" style="width: {{ (year1/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (year1/maximum)*100 }}%</span></div>
+        <div role="figure" aria-describedby="period-tg-1-{{period}}" class="to-u-bar-grid" style="width: {{ (year1/maximum)*100 }}%;"><span id="period-tg-1-{{period}}" class="u-vh">{{ (year1/maximum)*100 }}%</span></div>
 
-        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar-grid" style="width: {{ (year2/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (year2/maximum)*100 }}%</span></div>
+        <div role="figure" aria-describedby="period-tg-2-{{period}}" class="to-u-bar-grid" style="width: {{ (year2/maximum)*100 }}%;"><span id="period-tg-2-{{period}}" class="u-vh">{{ (year2/maximum)*100 }}%</span></div>
 
-        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar-grid" style="width: {{ (year3/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (year3/maximum)*100 }}%</span></div>
+        <div role="figure" aria-describedby="period-tg-3-{{period}}" class="to-u-bar-grid" style="width: {{ (year3/maximum)*100 }}%;"><span id="period-tg-3-{{period}}" class="u-vh">{{ (year3/maximum)*100 }}%</span></div>
 
-        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar-grid" style="width: {{ (year4/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (year4/maximum)*100 }}%</span></div>
+        <div role="figure" aria-describedby="period-tg-4-{{period}}" class="to-u-bar-grid" style="width: {{ (year4/maximum)*100 }}%;"><span id="period-tg-4-{{period}}" class="u-vh">{{ (year4/maximum)*100 }}%</span></div>
       </td>
 
     </tr>
