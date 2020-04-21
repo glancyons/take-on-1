@@ -43,7 +43,6 @@ body {
 #bpm_rightcol {
   width: 100%;
   height: 100%;
-  border-bottom: 10px solid #f0f0ee;
 }
 
 #bpm_header {
@@ -59,11 +58,90 @@ body {
 }
 
 #bpm_header_centre {
-  font-size: 1.5em;
+  height: 60px;
+  background-image: url('/prototypes/take-on-1/img/bg-header-centre-icon.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  h1 {
+    font-size: 1.6em;
+    padding-top: 0px;
+  }
 }
 
 #bpm_header_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  #bpm_task_count {
+    font-size: 2em;
+  }
+  #bpm_task_total {
+    font-size: 0.9em;
+    padding: 0 20px 0 10px;
+  }
+  #bpm_task_summary {
+    border-left: 1px solid #ffffff;
+    padding: 0 20px;
+    line-height: 1;
+  }
 }
 
 #bpm_page {
+}
+
+#bpm_task_table {
+  border-collapse: collapse;
+  width: 100%;
+  th {
+    text-align: left;
+    color: #000203;
+    padding: 4px 4px;
+    border: 1px solid #d4d4d4;
+    font-weight: 700;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eee), color-stop(1, #fff));
+    /*
+    background: -ms-linear-gradient(bottom, #eee, #fff);
+    background: -moz-linear-gradient(center bottom, #eee 0, #fff 100%);
+    background: -o-linear-gradient(#fff, #eee);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+    */
+    span.order {
+      display: inline-block;
+      width: 10px;
+      background-image: url('/prototypes/take-on-1/img/bg-task-order-icon.png');
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+  }
+  td {
+    color: #000203;
+    padding: 2px 4px;
+    border-right: 1px solid #d4d4d4;
+  }
+  td.icon {
+    background-color: #f0f0ee;
+    padding: 0 2px;
+  }
+  td.subject {
+    width: 25%;
+  }
+  td.instance {
+    width: 25%;
+  }
+  td.status {
+    width: 25%;
+  }
+  td.priority {
+    width: 25%;
+  }
+  a {
+    text-decoration: none;
+    color: #000203;
+  }
+  tr.odd {
+    background-color: #ffffff;
+  }
+  tr.even {
+    background-color: #f0f0ee;
+  }
 }

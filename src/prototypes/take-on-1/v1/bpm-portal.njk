@@ -20,25 +20,36 @@ layout: take-on-1/views/_bpm
   Work
 {% endblock %}
 
+{% block taskcount %}
+  8
+{% endblock %}
+
+{% block ontrack %}
+  8
+{% endblock %}
+
 {% block page %}
-  <h1>
-    Heading 1
-  </h1>
-  <p>
-    Paragraph
-  </p>
-
-
-
 
   {% from "prototypes/take-on-1/components/bpm-portal-task/_macro.njk" import bpmPortalTask %}
   {{
-      bpmPortalTask({
-          "subject": "Step: Check errors",
-          "instance": "Error check: 4572",
-          "status": "Received",
-          "priority": "Medium"
-      })
+      bpmPortalTask(
+          "Check errors",
+          "Error check: 4572",
+          "Received",
+          "Medium",
+          "#",
+          "odd"
+      )
   }}
+    {{
+        bpmPortalTask(
+            "Check errors",
+            "Error check: 1234",
+            "Received",
+            "Medium",
+            "#",
+            "even"
+        )
+    }}
 
 {% endblock %}

@@ -29,17 +29,46 @@
         </div><!-- //bpm_header -->
 
         <div id="bpm_header_centre">
-          {% block headertext %}{% endblock %}
+          <h1>{% block headertext %}{% endblock %}</h1>
         </div><!-- //bpm_header -->
 
         <div id="bpm_header_right">
-          Right
+          <div id="bpm_task_count">
+            {% block taskcount %}{% endblock %}
+          </div>
+          <div id="bpm_task_total">
+            Total<br>
+            Open
+          </div>
+          <div id="bpm_task_summary">
+            {% block ontrack %}{% endblock %} On Track<br>
+            0 At Risk<br>
+            0 Overdue
+          </div>
+          <div id="bpm_task_menu">
+            <img src="{{ pageInfo.rootPath }}/img/bg-header-menu-right.png">
+          </div>
+
+
         </div><!-- //bpm_header -->
 
       </div><!-- //bpm_header -->
 
       <div id="bpm_page">
-        {% block page %}{% endblock %}
+
+        <table id="bpm_task_table">
+          <tr>
+            <th></th>
+            <th>Task subject</th>
+            <th>Instance name</th>
+            <th>Task status</th>
+            <th>Priority</th>
+          </tr>
+
+          {% block page %}{% endblock %}
+          
+        </table>
+
       </div><!-- //bpm_page -->
 
     </div><!-- //bpm_rightcol -->
