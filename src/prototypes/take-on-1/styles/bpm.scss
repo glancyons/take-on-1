@@ -16,6 +16,28 @@ body {
   background-color: #231f20;
   color: #ffffff;
   width: 265px;
+  height: 99%;
+
+  ul {
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      a {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+        padding: 8px 8px 8px 42px;
+        background-color: #505a5a;
+        border-top: solid 1px #61686a;
+        background-image: url('/prototypes/take-on-1/img/bg-left-menu-icon.png');
+        background-repeat: no-repeat;
+        background-position: 5px center;
+      }
+    }
+  }
 }
 
 #bpm_rightcol {
@@ -25,9 +47,22 @@ body {
 }
 
 #bpm_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #325c80;
   color: #ffffff;
   height: 60px;
+}
+
+#bpm_header_left {
+}
+
+#bpm_header_centre {
+  font-size: 1.5em;
+}
+
+#bpm_header_right {
 }
 
 #bpm_page {

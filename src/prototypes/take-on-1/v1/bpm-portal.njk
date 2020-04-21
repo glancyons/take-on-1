@@ -10,12 +10,14 @@ layout: take-on-1/views/_bpm
 {% endblock %}
 
 {% block leftmenu %}
-  Item 1<br>
-  Item 2
+  <ul>
+    <li><a href="#">Check errors</a></li>
+    <li><a href="#">Start results</a></li>
+  </ul>
 {% endblock %}
 
 {% block headertext %}
-  Step: Check errors
+  Work
 {% endblock %}
 
 {% block page %}
@@ -27,10 +29,12 @@ layout: take-on-1/views/_bpm
   </p>
 
 
+
+
   {% from "prototypes/take-on-1/components/bpm-portal-task/_macro.njk" import bpmPortalTask %}
   {{
       bpmPortalTask({
-          "subject": "Check errors",
+          "subject": "Step: Check errors",
           "instance": "Error check: 4572",
           "status": "Received",
           "priority": "Medium"

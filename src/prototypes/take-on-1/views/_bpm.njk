@@ -16,14 +16,26 @@
   <div id="bpm_container">
 
     <div id="bpm_leftcol">
-      {% block username %}{% endblock %}
+      <img src="{{ pageInfo.rootPath }}/img/bg-left-menu-top.png" />
       {% block leftmenu %}{% endblock %}
     </div><!-- //bpm_leftcol -->
 
     <div id="bpm_rightcol">
 
       <div id="bpm_header">
-        {% block headertext %}{% endblock %}
+
+        <div id="bpm_header_left">
+          <img src="{{ pageInfo.rootPath }}/img/bg-header-menu-left.png" />
+        </div><!-- //bpm_header -->
+
+        <div id="bpm_header_centre">
+          {% block headertext %}{% endblock %}
+        </div><!-- //bpm_header -->
+
+        <div id="bpm_header_right">
+          Right
+        </div><!-- //bpm_header -->
+
       </div><!-- //bpm_header -->
 
       <div id="bpm_page">
