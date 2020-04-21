@@ -1,0 +1,496 @@
+---
+title: Check needed - Tresco Stores Ltd - survey 0023 - 202004
+group: Take-on
+version: 14.4.0
+layout: take-on-1/views/_iframe_master
+---
+
+{% set pageWidthCols="8" %}
+
+{% from "components/button/_macro.njk" import onsButton %}
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{% from "components/input/_macro.njk" import onsInput %}
+{% from "components/panel/_macro.njk" import onsPanel %}
+
+{% from "prototypes/take-on-1/components/data-tables/_macro.njk" import toTableRowList %}
+{% from "prototypes/take-on-1/components/data-tables/_macro.njk" import toTableRowGrid %}
+
+
+{% block headertext %}
+  Step: Check errors
+{% endblock %}
+
+
+{% block main %}
+
+<p>Stuff: {{ render | dump }}</p>
+
+
+    <h1>
+    Tresco Stores Ltd
+    </h1>
+
+    {% set title = "Form details" %}
+    {% set tCols = 3 %}
+    {% set dCols = 12-tCols %}
+    {% set mclass = "u-mt-no" %}
+
+    {% set emailAddress = "b.smith@tresco-stores.co.uk" %}
+
+
+<div class="grid">
+  <div class="grid__col col-6@m">
+
+    <dl class="metadata metadata__list grid grid--gutterless u-cf u-mb-s" title="{{title}}" aria-label="{{title}}">
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Reference:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">49900265143</dd>
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Survey:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">Retail Sales Index (RSI) 023</dd>
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Period:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">202003</dd>
+
+    </dl>
+  </div>
+  <div class="grid__col col-6@m">
+
+    <dl class="metadata metadata__list grid grid--gutterless u-cf u-mb-s" title="{{title}}" aria-label="{{title}}">
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Email:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}"><a href="mailto:{{ emailAddress }}?subject=Sand and Gravel survey 2020-03">{{ emailAddress }}</a></dd>
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Skype call:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}"><a href="tel:+442920180243">029 2018 0243</a>
+      </dd>
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Contact times:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">Fridays only after 1pm</dd>
+
+    </dl>
+  </div>
+</div>
+
+
+
+    <span title="Status " class="status status--error u-bb u-pb-s u-db">Check needed</span>
+
+    <form class="u-mt-m" id="overrideFormNoJSoverride" action="/prototypes/take-on-1/v0/form-with-validation-overridden.html">
+
+
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q5002",
+                "label": {
+                    "text": "Q5002 Reference period start date"
+                },
+                "value": "2020-03-01",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q5001",
+                "label": {
+                    "text": "Q5001 Reference period end date"
+                },
+                "value": "2020-03-31",
+                "classes": "input--w-10"
+            })
+        }}
+
+
+<!-- VALIDATIONS ########################################################## -->
+        {% from "components/panel/_macro.njk" import onsPanel %}
+        {% call onsPanel({
+                "type": "error"
+        }) %}
+        <fieldset>
+          <legend class="u-vh">
+              Q20 validations and overrides
+          </legend>
+
+
+        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
+
+        <p class="panel__error u-mb-no">
+          <strong>This total is not equal to the calculated total</strong>
+        </p>
+        {{
+            onsSingleCheckbox({
+                "id": "Q147_override_1",
+                "label": "Override",
+                "spanclass": "u-mt-no u-mb-s",
+                "accessibleLabel": "This total is not equal to the derived total"
+            })
+        }}
+
+        {{
+            onsInput({
+                "id": "Q20",
+                "label": {
+                    "text": "Q20 Total retail turnover"
+                },
+                "value": "310000",
+                "classes": "input--w-10"
+            })
+        }}
+
+        </fieldset>
+        {% endcall %}
+
+
+<!-- ###################################################################### -->
+
+        {{
+            onsInput({
+                "id": "Q8000",
+                "label": {
+                    "text": "Q8000 Calculated total (Q21+Q22+Q23+Q24+Q25+Q26+Q27)"
+                },
+                "value": "301000",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q21",
+                "label": {
+                    "text": "Q21 Food sales"
+                },
+                "value": "184000",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q22",
+                "label": {
+                    "text": "Q22 Alcohol, confectionery, tobacco"
+                },
+                "value": "54000",
+                "classes": "input--w-10"
+            })
+        }}
+
+
+
+
+<!-- VALIDATIONS ########################################################## -->
+        {% from "components/panel/_macro.njk" import onsPanel %}
+        {% call onsPanel({
+                "type": "error"
+        }) %}
+        <fieldset>
+          <legend class="u-vh">
+              Q22 validations and overrides
+          </legend>
+
+
+        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
+
+        <p class="panel__error u-mb-no">
+          <strong>This is 41,000 more than the previous period <br>and 1,700 more than the same period last year</strong>
+        </p>
+        {{
+            onsSingleCheckbox({
+                "id": "Q147_override_1",
+                "label": "Override",
+                "spanclass": "u-mt-no u-mb-s",
+                "accessibleLabel": "This is 41,000 more than the previous period <br>and 2,000 more than the same period last year",
+                "reason": "yes"
+            })
+        }}
+
+        {{
+            onsInput({
+                "id": "Q22",
+                "classes": "input--w-10",
+                "label": {
+                    "text": "Q22 Alcohol, confectionery, tobacco"
+                },
+                "value": "54000"
+            })
+        }}
+
+        {% set collapsibleHTML = '
+
+<table id="basic-table" class="table">
+  <thead class="table__head">
+    <tr class="table__row">
+      <th scope="col" class="table__header to-u-period">Period</th>
+      <th scope="col" class="table__header to-u-amount">Amount</th>
+      <th scope="col" class="table__header to-u-cell-barchart">Percentage of maximum</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">' +
+
+
+      '<!--     ( period, amount, maximum, rowclass, current ) -->' +
+
+      toTableRowList("202003", 54000, 54000, "to-u-row-year", "current" ) +
+
+      toTableRowList("201912", 13000, 54000 ) +
+      toTableRowList("201909", 50000, 54000 ) +
+      toTableRowList("201906", 43000, 54000 ) +
+      toTableRowList("201903", 52000, 54000, "to-u-row-year" ) +
+
+      toTableRowList("201812", 17000, 54000 ) +
+      toTableRowList("201809", 46500, 54000 ) +
+      toTableRowList("201806", 46000, 54000 ) +
+      toTableRowList("201803", 48000, 54000, "to-u-row-year" ) +
+
+      toTableRowList("201712", 21000, 54000 ) +
+      toTableRowList("201709", 43700, 54000 ) +
+      toTableRowList("201706", 46000, 54000 ) +
+      toTableRowList("201703", 49000, 54000, "to-u-row-year" ) +
+
+    '</tbody>
+</table>
+        '%}
+
+        {% from "components/collapsible/_macro.njk" import onsCollapsible %}
+        {{
+            onsCollapsible({
+                "id": "collapsible",
+                "title": "Previous data for Q22",
+                "titleTag": "h2",
+                "content": collapsibleHTML,
+                "button": {
+                    "close": "Hide this",
+                    "contextSuffix": "content"
+                }
+            })
+        }}
+
+        </fieldset>
+        {% endcall %}
+
+
+
+
+
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q23",
+                "label": {
+                    "text": "Q23 Clothing and footwear"
+                },
+                "value": "13000",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q24",
+                "label": {
+                    "text": "Q24 Household goods"
+                },
+                "value": "8000",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q25",
+                "label": {
+                    "text": "Q25 Other sales"
+                },
+                "value": "8000",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q27",
+                "label": {
+                    "text": "Q27 Automotive fuel"
+                },
+                "value": "8000",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q26",
+                "label": {
+                    "text": "Q26 Internet sales"
+                },
+                "value": "67000",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q146a",
+                "label": {
+                    "text": "Q146a Did significant turnover changes occur?"
+                },
+                "value": "Yes",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q146b",
+                "label": {
+                    "text": "Q146b In-store / online promotions"
+                },
+                "value": "In-store / online promotions",
+                "classes": "input--w-10"
+            })
+        }}
+
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q146c",
+                "label": {
+                    "text": "Q146c Special events"
+                },
+                "value": "Special events (e.g. sporting events)",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q146d",
+                "label": {
+                    "text": "Q146d Calendar events"
+                },
+                "value": " ",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q146e",
+                "label": {
+                    "text": "Q146e Weather"
+                },
+                "value": "Weather",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q146f",
+                "label": {
+                    "text": "Q146f Store closures"
+                },
+                "value": " ",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q146g",
+                "label": {
+                    "text": "Q146f Store openings"
+                },
+                "value": " ",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q146h",
+                "label": {
+                    "text": "Q146h Other"
+                },
+                "value": " ",
+                "classes": "input--w-10"
+            })
+        }}
+
+<!-- ###################################################################### -->
+        {{
+            onsInput({
+                "id": "Q146",
+                "label": {
+                    "text": "Q146 Comment about reason for turnover changes"
+                },
+                "value": "We ran some special promotions and easter events. As a result we saw an increase in online sales. However there was a rainy third weekend which depressed later sales.",
+                "classes": "input--w-10"
+            })
+        }}
+
+<hr>
+
+<!-- ###################################################################### -->
+
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{{
+    onsCheckboxes({
+        "legend": "",
+        "checkboxesLabel": "",
+        "checkboxes": [
+            {
+                "id": "override-all",
+                "label": {
+                    "text": "Override all"
+                },
+                "value": "override-all",
+                "classes": "input--w-10"
+            }
+        ]
+    })
+}}
+<!-- ###################################################################### -->
+
+          {{
+              onsButton({
+                  "text": "Save and validate",
+                  "classes": "u-mt-l btn--small"
+              })
+          }}
+
+          {{
+              onsButton({
+                  "text": "Override",
+                  "classes": "u-mt-l btn--small"
+              })
+          }}
+
+        <!--
+          <span class="u-dib u-ml-m u-mt-xl">
+          <a href="/prototypes/take-on-1/v0/search-results.html">Cancel and return to search</a>
+        </span>
+        -->
+
+    </form>
+{% endblock %}

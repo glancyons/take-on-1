@@ -74,8 +74,17 @@
           </tr>
 
           {% block page %}{% endblock %}
-
+          
         </table>
+
+          <div id="pagination">
+            <table id="bpm_pagination_table">
+              <tr>
+                <td class="pageitems"><img src="{{ pageInfo.rootPath }}/img/bg-footer-pager-left.png"></td>
+                <td class="pagecount">1 -8 of 8 items</td>
+              </tr>
+            </table>
+          </div>
 
       </div><!-- //bpm_page -->
 

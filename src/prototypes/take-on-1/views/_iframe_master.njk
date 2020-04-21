@@ -1,0 +1,60 @@
+{% extends "page-templates/_template.njk" %}
+
+{% set containerClasses = "container--wide" %}  {# container--wide (1280px) container--full-width (fw) #}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ pageInfo.rootPath }}/styles/styles.css" />
+    <link rel="stylesheet" href="{{ pageInfo.rootPath }}/styles/iframe_styles.css" />
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+{% endblock %}
+
+{% set pageConfig = {
+    "cdn": "17.0.0",
+    "title": "Check errors",
+    "wide": true,
+    "header": false,
+    "footer": false
+} %}
+
+{% block pageContent %}
+
+
+<div id="bpm_header">
+
+  <div id="bpm_header_left">
+    <img src="{{ pageInfo.rootPath }}/img/bg-header-menu-left.png" />
+  </div><!-- //bpm_header -->
+
+  <div id="bpm_header_centre">
+    <h1>{% block headertext %}{% endblock %}</h1>
+  </div><!-- //bpm_header_centre -->
+
+  <div id="bpm_header_right">
+    <div id="bpm_task_menu">
+      <img src="{{ pageInfo.rootPath }}/img/bg-header-menu-right.png">
+    </div>
+  </div><!-- //bpm_header_right -->
+</div><!-- //bpm_header -->
+
+
+
+    {% block preMain %}{% endblock %}
+    <div class="page__container container {{ containerClasses }}">
+        <div class="grid">
+            <div class="grid__col col-{{ pageWidthCols if pageWidthCols else "8" }}@m">
+                <main id="main-content" class="page__main {{ pageClasses }}">
+                    {% block main %}{% endblock %}
+                </main>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block bodyEnd %}
+    <script src="{{ pageInfo.rootPath }}/scripts/index.js"></script>
+{% endblock %}

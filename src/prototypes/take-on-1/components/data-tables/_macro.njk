@@ -1,0 +1,45 @@
+{% macro toTableRowList( period, amount, maximum, rowclass='', current='not' ) %}
+    <tr class="table__row {{rowclass}}">
+      <td class="table__cell to-u-period{{ " to-u-current" if (current=='current') }}">
+        {{ period }}
+      </td>
+      <td class="table__cell to-u-amount{{ " to-u-current" if (current=='current') }}">
+        {{ amount | addCommas }}
+      </td>
+      <td class="table__cell to-u-cell-barchart">
+        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar" style="width: {{ (amount/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (amount/maximum)*100 }}%</span></div>
+      </td>
+    </tr>
+{% endmacro %}
+
+
+{% macro toTableRowGrid( period, year1, year2, year3, year4, maximum ) %}
+    <tr class="table__row">
+
+      <td class="table__cell">
+        {{ period }}
+      </td>
+      <td class="table__cell to-u-year1">
+        {{ year1 | addCommas }}
+      </td>
+      <td class="table__cell">
+        {{ year2 | addCommas }}
+      </td>
+      <td class="table__cell">
+        {{ year3 | addCommas }}
+      </td>
+      <td class="table__cell">
+        {{ year4 | addCommas }}
+      </td>
+      <td class="table__cell to-u-cell-barchart">
+        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar-grid" style="width: {{ (year1/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (year1/maximum)*100 }}%</span></div>
+
+        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar-grid" style="width: {{ (year2/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (year2/maximum)*100 }}%</span></div>
+
+        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar-grid" style="width: {{ (year3/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (year3/maximum)*100 }}%</span></div>
+
+        <div role="figure" aria-describedby="period{{period}}" class="to-u-bar-grid" style="width: {{ (year4/maximum)*100 }}%;"><span id="period{{period}}" class="u-vh">{{ (year4/maximum)*100 }}%</span></div>
+      </td>
+
+    </tr>
+{% endmacro %}

@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+  <title>Process Portal - Claim task</title>
+
+  <link rel="stylesheet" href="{{ pageInfo.rootPath }}/styles/bpm.css" />
+
+</head>
+
+<body class="modalwindow">
+
+  <div id="bpm_modal_container">
+
+    <div id="bpm_modal">
+      <span class="modalstep">{% block modalstep %}{% endblock %}</span>
+      <span class="modalinstance">{% block modalinstance %}{% endblock %}</span>
+      <span class="modallink"><a href="{% block modallink %}{% endblock %}"><img src="{{ pageInfo.rootPath }}/img/spacer.gif" width="95" height="35"></a></span>
+    </div>
+
+  </div>
+
+</body>
+</html>
