@@ -56,17 +56,25 @@
 
       <div id="bpm_page">
 
+        <table id="bpm_search_table">
+          <tr>
+            <td class="searchtext">Enter search text...</td>
+            <td class="searchicon"><img src="{{ pageInfo.rootPath }}/img/bg-search-icon.png"></td>
+            <td class="searchiconmultiple"><img src="{{ pageInfo.rootPath }}/img/bg-search-icon-multiple.png"></td>
+          </tr>
+        </table>
+
         <table id="bpm_task_table">
           <tr>
             <th></th>
-            <th>Task subject</th>
-            <th>Instance name</th>
-            <th>Task status</th>
-            <th>Priority</th>
+            <th>Task subject <span class="order"> </span></th>
+            <th>Instance name <span class="order"> </span></th>
+            <th>Task status <span class="order"> </span></th>
+            <th>Priority <span class="order"> </span></th>
           </tr>
 
           {% block page %}{% endblock %}
-          
+
         </table>
 
       </div><!-- //bpm_page -->

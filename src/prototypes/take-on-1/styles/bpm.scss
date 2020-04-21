@@ -1,6 +1,11 @@
 /* Import ONS standard font Open Sans */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
@@ -89,6 +94,26 @@ body {
 #bpm_page {
 }
 
+#bpm_search_table {
+  border-collapse: collapse;
+  width: 100%;
+  td {
+    border: 1px solid #d4d4d4;
+  }
+  td.searchtext {
+    color: #afafaf;
+    padding-left: 10px;
+    font-size: 0.9em;
+    width: 100%;
+  }
+  td.searchicon {
+    width: 20px;
+  }
+  td.searchiconmultiple {
+    width: 20px;
+  }
+}
+
 #bpm_task_table {
   border-collapse: collapse;
   width: 100%;
@@ -107,10 +132,12 @@ body {
     */
     span.order {
       display: inline-block;
-      width: 10px;
+      width: 30px;
+      height: 15px;
+      float: right;
       background-image: url('/prototypes/take-on-1/img/bg-task-order-icon.png');
       background-repeat: no-repeat;
-      background-position: right center;
+      background-position: right 30%;
     }
   }
   td {

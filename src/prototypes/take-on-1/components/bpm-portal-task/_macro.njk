@@ -1,11 +1,13 @@
 {% macro bpmPortalTask( subject, instance, status, priority, link, rowclass="odd" ) %}
 
+{% set instanceID = "45" + [1,2,3,4,5,6,7,8,9] | random + [1,2,3,4,5,6,7,8,9] | random %}
+
 <tr class="{{ rowclass }}">
   <td class="icon"><a href="{{ link }}"><img src="/prototypes/take-on-1/img/bg-task-icon.png"></a></td>
-  <td class="subject"><a href="{{ link }}">Step: {{ subject }}</a><span class="order"> </span></td>
-  <td class="instance"><a href="{{ link }}">{{ instance }}</a><span class="order"> </span></td>
-  <td class="status">{{ status }}<span class="order"> </span></td>
-  <td class="priority">{{ priority }}<span class="order"> </span></td>
+  <td class="subject"><a href="{{ link }}">Step: {{ subject }}</a></td>
+  <td class="instance"><a href="{{ link }}">{{ instance }}: {{ instanceID }}</a></td>
+  <td class="status">{{ status }}</td>
+  <td class="priority">{{ priority }}</td>
 </tr>
 
 {% endmacro %}
