@@ -162,7 +162,13 @@ layout: take-on-1/views/_iframe_master
           <strong>This is 41,000 more than the previous period <br>and 1,700 more than the same period last year</strong>
         </p>
         {{
-            radioPair( "Legend", "Q22_override_1", "Accept", "Edit response" )
+            onsSingleCheckbox({
+                "id": "Q22_override_1",
+                "label": "Override",
+                "spanclass": "u-mt-no u-mb-s",
+                "accessibleLabel": "This is 41,000 more than the previous period <br>and 1,700 more than the same period last year",
+                "reason": "yes"
+            })
         }}
 
         {{
@@ -272,7 +278,13 @@ layout: take-on-1/views/_iframe_master
           <strong>This is 7,000 more than the previous period <br>and 500 more than the same period last year</strong>
         </p>
         {{
-            radioPair( "Legend", "Q25_override_1", "Accept", "Edit response" )
+            onsSingleCheckbox({
+                "id": "Q25_override_1",
+                "label": "Override",
+                "spanclass": "u-mt-no u-mb-s",
+                "accessibleLabel": "This is 7,000 more than the previous period <br>and 500 more than the same period last year",
+                "reason": "yes"
+            })
         }}
 
         {{
@@ -495,7 +507,14 @@ layout: take-on-1/views/_iframe_master
 
           {{
               onsButton({
-                  "text": "Save and validate",
+                  "text": "Save edits and validate",
+                  "classes": "u-mt-l btn--small"
+              })
+          }}
+
+          {{
+              onsButton({
+                  "text": "Save overrides",
                   "classes": "u-mt-l btn--small"
               })
           }}
