@@ -15,14 +15,11 @@ layout: take-on-1/views/_iframe_master
 {% from "prototypes/take-on-1/components/data-tables/_macro.njk" import toTableRowList %}
 {% from "prototypes/take-on-1/components/data-tables/_macro.njk" import toTableRowGrid %}
 
-
 {% block headertext %}
   Step: Check errors
 {% endblock %}
 
-
 {% block main %}
-
 
     <h1>
     Tresco Stores Ltd
@@ -34,7 +31,6 @@ layout: take-on-1/views/_iframe_master
     {% set mclass = "u-mt-no" %}
 
     {% set emailAddress = "b.smith@tresco-stores.co.uk" %}
-
 
 <div class="grid">
   <div class="grid__col col-6@m">
@@ -70,13 +66,9 @@ layout: take-on-1/views/_iframe_master
   </div>
 </div>
 
-
 <p class="u-pb-s"><span title="Status " class="status status--error">Check needed</span></p>
 
-
     <form class="u-mt-m" id="overrideFormNoJSoverride" action="/prototypes/take-on-1/v1/rsi-form-errors-1-override.html">
-
-
 
     <table id="basic-table" class="table">
       <thead class="table__head">
@@ -90,7 +82,8 @@ layout: take-on-1/views/_iframe_master
       </thead>
       <tbody class="table__body">
 
-    {% from "prototypes/take-on-1/components/error-row/_macro.njk" import errorRow %}
+
+{% from "prototypes/take-on-1/components/error-row/_macro.njk" import errorRow %}
 
     {{ errorRow( "Q5002", "Reference period start date", "2020-03-01", "", "" ) }}
 
@@ -104,269 +97,36 @@ layout: take-on-1/views/_iframe_master
 
     {{ errorRow( "Q22", "Alcohol, confectionery, tobacco", "54000", "This has changed significantly since the last submission", "Override" ) }}
 
+    {{ errorRow( "Q23", "Clothing and footwear", "13000", "", "" ) }}
+
+    {{ errorRow( "Q24", "Household goods", "8000", "", "" ) }}
+
+    {{ errorRow( "Q25", "Other sales", "8000", "This has changed significantly since the last submission", "Override" ) }}
+
+    {{ errorRow( "Q27", "Automotive fuel", "8000", "", "" ) }}
+
+    {{ errorRow( "Q26", "Internet sales", "67000", "", "" ) }}
+
+    {{ errorRow( "Q146a", "Did significant turnover changes occur?", "67000", "Check the response to this question", "Override" ) }}
+
+    {{ errorRow( "Q146b", "Reason: in-store / online promotions", "Yes", "", "" ) }}
+
+    {{ errorRow( "Q146c", "Reason: special events", "Yes", "", "" ) }}
+
+    {{ errorRow( "Q146d", "Reason: calendar events", "No", "", "" ) }}
+
+    {{ errorRow( "Q146e", "Reason: weather", "Yes", "", "" ) }}
+
+    {{ errorRow( "Q146f", "Reason: store closures", "No", "", "" ) }}
+
+    {{ errorRow( "Q146g", "Reason: store openings", "No", "", "" ) }}
+
+    {{ errorRow( "Q146h", "Reason: other", "No", "", "" ) }}
+
+    {{ errorRow( "Q146", "Comment about reason for turnover changes", "We ran some special promotions and easter events. As a result we saw an increase in online sales. However there was a rainy third weekend which depressed later sales.", "", "" ) }}
 
       </tbody>
     </table>
-
-
-
-
-
-
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q23",
-                "label": {
-                    "text": "Q23 Clothing and footwear"
-                },
-                "value": "13000",
-                "classes": "input--w-10"
-            })
-        }}
-
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q24",
-                "label": {
-                    "text": "Q24 Household goods"
-                },
-                "value": "8000",
-                "classes": "input--w-10"
-            })
-        }}
-
-
-<!-- VALIDATIONS ########################################################## -->
-        {% from "components/panel/_macro.njk" import onsPanel %}
-        {% call onsPanel({
-                "type": "error"
-        }) %}
-        <fieldset>
-          <legend class="u-vh">
-              Q25 validations and overrides
-          </legend>
-
-
-        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
-
-        <p class="panel__error u-mb-no">
-          <strong>This has changed significantly since the last submission</strong>
-        </p>
-        {{
-            onsSingleCheckbox({
-                "id": "Q25_override_1",
-                "label": "Override",
-                "spanclass": "u-mt-no u-mb-s",
-                "accessibleLabel": "This has changed significantly since the last submission",
-                "reason": "yes"
-            })
-        }}
-
-        {{
-            onsInput({
-                "id": "Q25",
-                "label": {
-                    "text": "Q25 Other sales"
-                },
-                "value": "8000",
-                "classes": "input--w-10"
-            })
-        }}
-
-        </fieldset>
-        {% endcall %}
-
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q27",
-                "label": {
-                    "text": "Q27 Automotive fuel"
-                },
-                "value": "8000",
-                "classes": "input--w-10"
-            })
-        }}
-
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q26",
-                "label": {
-                    "text": "Q26 Internet sales"
-                },
-                "value": "67000",
-                "classes": "input--w-10"
-            })
-        }}
-
-
-<!-- VALIDATIONS ########################################################## -->
-        {% from "components/panel/_macro.njk" import onsPanel %}
-        {% call onsPanel({
-                "type": "error"
-        }) %}
-        <fieldset>
-          <legend class="u-vh">
-              Q146a validations and overrides
-          </legend>
-
-
-        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
-
-        <p class="panel__error u-mb-no">
-          <strong>Check the response to this question</strong>
-        </p>
-
-        {{
-            onsSingleCheckbox({
-                "id": "Q146a_override_1",
-                "label": "Override",
-                "spanclass": "u-mt-no u-mb-s",
-                "accessibleLabel": "Check the response to this question"
-            })
-        }}
-
-        {{
-            onsInput({
-                "id": "Q146a",
-                "label": {
-                    "text": "Q146a Did significant turnover changes occur?"
-                },
-                "value": "Yes",
-                "classes": "input--w-10"
-            })
-        }}
-
-        </fieldset>
-        {% endcall %}
-
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q146b",
-                "label": {
-                    "text": "Q146b Reason: in-store / online promotions"
-                },
-                "value": "Yes",
-                "classes": "input--w-10"
-            })
-        }}
-
-
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q146c",
-                "label": {
-                    "text": "Q146c Reason: special events"
-                },
-                "value": "Yes",
-                "classes": "input--w-10"
-            })
-        }}
-
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q146d",
-                "label": {
-                    "text": "Q146d Reason: calendar events"
-                },
-                "value": "No",
-                "classes": "input--w-10"
-            })
-        }}
-
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q146e",
-                "label": {
-                    "text": "Q146e Reason: weather"
-                },
-                "value": "Yes",
-                "classes": "input--w-10"
-            })
-        }}
-
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q146f",
-                "label": {
-                    "text": "Q146f Reason: store closures"
-                },
-                "value": "No",
-                "classes": "input--w-10"
-            })
-        }}
-
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q146g",
-                "label": {
-                    "text": "Q146f Reason: store openings"
-                },
-                "value": "No",
-                "classes": "input--w-10"
-            })
-        }}
-
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q146h",
-                "label": {
-                    "text": "Q146h Reason: other"
-                },
-                "value": "No",
-                "classes": "input--w-10"
-            })
-        }}
-
-<!-- ###################################################################### -->
-
-{% from "components/textarea/_macro.njk" import onsTextarea %}
-{{
-    onsTextarea({
-        "id": "Q146",
-        "name": "feedback",
-        "label": {
-            "text": "Q146 Comment about reason for turnover changes"
-        },
-        "value": "We ran some special promotions and easter events. As a result we saw an increase in online sales. However there was a rainy third weekend which depressed later sales.",
-        "classes": "input--w-50"
-    })
-}}
-
-
-<hr>
-
-<!-- ###################################################################### -->
-
-{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
-{{
-    onsCheckboxes({
-        "legend": "",
-        "checkboxesLabel": "",
-        "checkboxes": [
-            {
-                "id": "override-all",
-                "label": {
-                    "text": "Override all"
-                },
-                "value": "override-all",
-                "classes": "input--w-10"
-            }
-        ]
-    })
-}}
-<!-- ###################################################################### -->
-
 
 
 

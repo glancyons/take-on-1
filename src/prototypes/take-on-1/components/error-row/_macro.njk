@@ -1,19 +1,53 @@
-{% macro errorRow( number, question, response, error, action ) %}
-  <tr class="table__row {{}}">
-    <td class="table__cell">
+{% macro errorRow( number, question, response, error, action, reason="yes" ) %}
+  <tr class="table__row {{ "panel--error" if error!="" }}">
+    <td class="table__cell" style="width:5%">
       {{ number }}
     </td>
-    <td class="table__cell ">
-      {{ question }}
+    <td class="table__cell" style="width:20%">
+      <label class="label" for="text-{{ number }}">{{ question }}</label>
     </td>
-    <td class="table__cell table__cell--numeric u-fw-b">
-      {{ response }}
+    <td class="table__cell u-fw-b" style="width:20%">
+      <input type="text" id="text-{{ number }}" class="input input--text input-type__input input--w-10" value="{{ response }}" />
     </td>
-    <td class="table__cell ">
+    <td class="table__cell panel__error u-fw-b" style="width:20%">
       {{ error }}
     </td>
-    <td class="table__cell ">
-      {{ action }}
+    <td class="table__cell">
+
+
+
+{% if error!="" %}
+
+      <span class="checkbox js-password-toggle-wrap checkbox--toggle {{ spanclass }}">
+          <input
+              type="checkbox"
+              id="cb-{{ number }}"
+              class="checkbox__input js-checkbox js-password-toggle to-u-bg-w"
+              value=""
+              name="name-{{ number }}"
+              {% if checked %} checked="checked"{% endif %}
+          >
+          <label id="sm_chk_{{ number }}" class="checkbox__label to-u-bg" for="cb-{{ number }}">
+              {{ action }}
+          </label>
+
+          {% if reason %}
+              <span class="checkbox__other u-p-no" id="other-checkbox-other-wrap">
+                  <label class="label u-fs-s--b" for="other-textbox">Reason to accept or edit value</label>
+                  <input
+                  type="text"
+                  id="other-textbox"
+                  class="input input--text input-type__input  input--w-auto "
+                  name="other-answer"
+                  />
+              </span>
+
+          {% endif %}
+
+      </span>
+
+{% endif %}
+
     </td>
   </tr>
 {% endmacro %}

@@ -26,6 +26,18 @@ layout: take-on-1/views/_iframe_master
 {% from "prototypes/take-on-1/components/radio-pair/_macro.njk" import radioPair %}
 
 
+
+{% from "components/panel/_macro.njk" import onsPanel %}
+{{
+    onsPanel({
+        "type": "success",
+        "id": "success-id",
+        "body": "<p>The form has been updated. Its status is now clear - overridden.</p>",
+        "classes": "u-mb-m"
+    })
+}}
+
+
     <h1>
     Tresco Stores Ltd
     </h1>
