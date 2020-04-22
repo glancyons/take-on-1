@@ -1,3 +1,19 @@
+// Get query string
+$(document).ready(function() {
+  var queries = {};
+  $.each(document.location.search.substr(1).split('&'), function(c, q) {
+    var i = q.split('=');
+    queries[i[0].toString()] = i[1].toString();
+  });
+  console.log(queries);
+  var companyName = decodeURIComponent(queries.c);
+  companyName = companyName.replace(/\+/g, ' ');
+  $('h1.companyName').text(companyName);
+  $('#c').val(companyName);
+  var theURL = $('.modallink a').attr('href');
+  $('.modallink a').attr('href', theURL + '?c=' + queries.c);
+});
+
 // Toggles reason with radio buttons.
 // Code is not production ready or tested.
 // v0.1 22 April 2020

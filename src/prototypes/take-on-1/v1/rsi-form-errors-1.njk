@@ -26,12 +26,12 @@ layout: take-on-1/views/_iframe_master
 {% from "prototypes/take-on-1/components/radio-pair/_macro.njk" import radioPair %}
 
 
-    <h1>
+    <h1 class="companyName">
     Tresco Stores Ltd
     </h1>
 
     {% set title = "Form details" %}
-    {% set tCols = 3 %}
+    {% set tCols = 4 %}
     {% set dCols = 12-tCols %}
     {% set mclass = "u-mt-no" %}
 
@@ -78,7 +78,7 @@ layout: take-on-1/views/_iframe_master
 
     <form class="u-mt-m" id="overrideFormNoJSoverride" action="/prototypes/take-on-1/v1/rsi-form-errors-1-override.html">
 
-
+<input id="c" type="hidden" name="c" value="">
 
 <!-- ###################################################################### -->
         {{
