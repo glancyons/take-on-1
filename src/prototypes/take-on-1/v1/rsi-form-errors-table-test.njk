@@ -5,7 +5,7 @@ version: 14.4.0
 layout: take-on-1/views/_iframe_master
 ---
 
-{% set pageWidthCols="8" %}
+{% set pageWidthCols="12" %}
 
 {% from "components/button/_macro.njk" import onsButton %}
 {% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
@@ -22,8 +22,6 @@ layout: take-on-1/views/_iframe_master
 
 
 {% block main %}
-
-{% from "prototypes/take-on-1/components/radio-pair/_macro.njk" import radioPair %}
 
 
     <h1>
@@ -65,7 +63,7 @@ layout: take-on-1/views/_iframe_master
       <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}"><a href="tel:+442920180243">029 2018 0243</a>
       </dd>
 
-      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Contact preference:</dt>
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Contact times:</dt>
       <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">Fridays only after 1pm</dd>
 
     </dl>
@@ -73,140 +71,46 @@ layout: take-on-1/views/_iframe_master
 </div>
 
 
-
-    <p class="u-bb u-pb-s"><span title="Status " class="status status--success">Clear - overridden</span></p>
-
-    <form class="u-mt-m" id="overrideFormNoJSoverride" action="/prototypes/take-on-1/v1/bpm-portal.html">
+<p class="u-pb-s"><span title="Status " class="status status--error">Check needed</span></p>
 
 
-          {{
-              onsButton({
-                  "text": "Return to work list",
-                  "classes": "u-mb-l btn--small"
-              })
-          }}
+    <form class="u-mt-m" id="overrideFormNoJSoverride" action="/prototypes/take-on-1/v1/rsi-form-errors-1-override.html">
 
 
 
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q5002",
-                "label": {
-                    "text": "Q5002 Reference period start date"
-                },
-                "value": "2020-03-01",
-                "classes": "input--w-10"
-            })
-        }}
+    <table id="basic-table" class="table">
+      <thead class="table__head">
+        <tr class="table__row">
+          <th scope="col" class="table__header ">Number</th>
+          <th scope="col" class="table__header ">Question</th>
+          <th scope="col" class="table__header ">Response</th>
+          <th scope="col" class="table__header ">Errors</th>
+          <th scope="col" class="table__header ">Action</th>
+        </tr>
+      </thead>
+      <tbody class="table__body">
 
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q5001",
-                "label": {
-                    "text": "Q5001 Reference period end date"
-                },
-                "value": "2020-03-31",
-                "classes": "input--w-10"
-            })
-        }}
+    {% from "prototypes/take-on-1/components/error-row/_macro.njk" import errorRow %}
 
+    {{ errorRow( "Q5002", "Reference period start date", "2020-03-01", "", "" ) }}
 
-<!-- VALIDATIONS ########################################################## -->
-        {% from "components/panel/_macro.njk" import onsPanel %}
-        {% call onsPanel({
-                "type": "info"
-        }) %}
-        <fieldset>
-          <legend class="u-vh">
-              Q20 validations and overrides
-          </legend>
+    {{ errorRow( "Q5001", "Reference period end date", "2020-03-31", "", "" ) }}
 
-        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
-        {{
-            onsSingleCheckbox({
-                "id": "Q20_override_1",
-                "label": "Override 'total is not equal to the calculated total'",
-                "spanclass": "u-mt-no u-mb-s",
-                "checked": true
-            })
-        }}
+    {{ errorRow( "Q20", "Total retail turnover", "310000", "This total is not equal to the calculated total", "Override" ) }}
 
-        {{
-            onsInput({
-                "id": "Q20",
-                "label": {
-                    "text": "Q20 Total retail turnover"
-                },
-                "value": "310000",
-                "classes": "input--w-10"
-            })
-        }}
+    {{ errorRow( "Q8000", "Calculated total (Q21+Q22+Q23+Q24+Q25+Q26+Q27)", "310000", "", "" ) }}
 
-        </fieldset>
-        {% endcall %}
+    {{ errorRow( "Q21", "Food sales", "184000", "", "" ) }}
+
+    {{ errorRow( "Q22", "Alcohol, confectionery, tobacco", "54000", "This has changed significantly since the last submission", "Override" ) }}
 
 
-<!-- ###################################################################### -->
-
-        {{
-            onsInput({
-                "id": "Q8000",
-                "label": {
-                    "text": "Q8000 Calculated total (Q21+Q22+Q23+Q24+Q25+Q26+Q27)"
-                },
-                "value": "301000",
-                "classes": "input--w-10"
-            })
-        }}
-
-<!-- ###################################################################### -->
-        {{
-            onsInput({
-                "id": "Q21",
-                "label": {
-                    "text": "Q21 Food sales"
-                },
-                "value": "184000",
-                "classes": "input--w-10"
-            })
-        }}
+      </tbody>
+    </table>
 
 
-<!-- VALIDATIONS ########################################################## -->
-        {% from "components/panel/_macro.njk" import onsPanel %}
-        {% call onsPanel({
-                "type": "info"
-        }) %}
-        <fieldset>
-          <legend class="u-vh">
-              Q22 validations and overrides
-          </legend>
 
-        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
-        {{
-            onsSingleCheckbox({
-                "id": "Q22_override_1",
-                "label": "Override 'this has changed significantly sice the last submission'",
-                "spanclass": "u-mt-no u-mb-s",
-                "checked": true
-            })
-        }}
 
-        {{
-            onsInput({
-                "id": "Q22",
-                "classes": "input--w-10",
-                "label": {
-                    "text": "Q22 Alcohol, confectionery, tobacco"
-                },
-                "value": "54000"
-            })
-        }}
-
-        </fieldset>
-        {% endcall %}
 
 
 <!-- ###################################################################### -->
@@ -237,7 +141,7 @@ layout: take-on-1/views/_iframe_master
 <!-- VALIDATIONS ########################################################## -->
         {% from "components/panel/_macro.njk" import onsPanel %}
         {% call onsPanel({
-                "type": "info"
+                "type": "error"
         }) %}
         <fieldset>
           <legend class="u-vh">
@@ -246,12 +150,17 @@ layout: take-on-1/views/_iframe_master
 
 
         {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
+
+        <p class="panel__error u-mb-no">
+          <strong>This has changed significantly since the last submission</strong>
+        </p>
         {{
             onsSingleCheckbox({
                 "id": "Q25_override_1",
-                "label": "Override 'this has changed significantly sice the last submission'",
+                "label": "Override",
                 "spanclass": "u-mt-no u-mb-s",
-                "checked": true
+                "accessibleLabel": "This has changed significantly since the last submission",
+                "reason": "yes"
             })
         }}
 
@@ -297,7 +206,7 @@ layout: take-on-1/views/_iframe_master
 <!-- VALIDATIONS ########################################################## -->
         {% from "components/panel/_macro.njk" import onsPanel %}
         {% call onsPanel({
-                "type": "info"
+                "type": "error"
         }) %}
         <fieldset>
           <legend class="u-vh">
@@ -307,17 +216,18 @@ layout: take-on-1/views/_iframe_master
 
         {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
 
+        <p class="panel__error u-mb-no">
+          <strong>Check the response to this question</strong>
+        </p>
 
-        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
         {{
             onsSingleCheckbox({
                 "id": "Q146a_override_1",
-                "label": "Override 'check this response'",
+                "label": "Override",
                 "spanclass": "u-mt-no u-mb-s",
-                "checked": true
+                "accessibleLabel": "Check the response to this question"
             })
         }}
-
 
         {{
             onsInput({
@@ -433,20 +343,51 @@ layout: take-on-1/views/_iframe_master
     })
 }}
 
+
+<hr>
+
 <!-- ###################################################################### -->
+
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{{
+    onsCheckboxes({
+        "legend": "",
+        "checkboxesLabel": "",
+        "checkboxes": [
+            {
+                "id": "override-all",
+                "label": {
+                    "text": "Override all"
+                },
+                "value": "override-all",
+                "classes": "input--w-10"
+            }
+        ]
+    })
+}}
+<!-- ###################################################################### -->
+
+
 
 
           {{
               onsButton({
                   "text": "Save edits and validate",
-                  "classes": "u-mt-l btn--small btn--secondary"
+                  "classes": "u-mt-l btn--small"
               })
           }}
+
+          {{
+              onsButton({
+                  "text": "Save overrides",
+                  "classes": "u-mt-l btn--small"
+              })
+          }}
+
 
           <span class="u-dib u-ml-m u-mt-l">
             <a href="/prototypes/take-on-1/v1/bpm-portal.html">Cancel and return to work list</a>
           </span>
-
 
     </form>
 {% endblock %}

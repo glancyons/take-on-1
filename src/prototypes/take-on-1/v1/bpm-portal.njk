@@ -35,7 +35,7 @@ layout: take-on-1/views/_bpm
       bpmPortalTask( "Check errors", "Error check", "Received", "Tresco Stores Ltd", " ", "Medium", "/prototypes/take-on-1/v1/bpm-modal.html", "odd" )
   }}
   {{
-      bpmPortalTask( "Check errors", "Error check", "Allocated", "Liddl PLC", "Sarah Tream", "Medium", "#", "even" )
+      bpmPortalTask( "Check errors", "Error check", "Received", "Liddl PLC", "Sarah Tream", "Medium", "#", "even" )
   }}
   {{
       bpmPortalTask( "Check errors", "Error check", "Received", "Tresco Stores Ltd", " ", "Medium", "/prototypes/take-on-1/v1/bpm-modal.html", "odd" )
@@ -53,7 +53,20 @@ layout: take-on-1/views/_bpm
       bpmPortalTask( "Check errors", "Error check", "Received", "Tresco Stores Ltd", " ", "Medium", "/prototypes/take-on-1/v1/bpm-modal.html", "odd" )
   }}
   {{
-      bpmPortalTask( "Check errors", "Error check", "Received", "Tresco Stores Ltd", " ", "Medium", "/prototypes/take-on-1/v1/bpm-modal.html", "even" )
+      bpmPortalTask( "Check errors", "Error check", "Closed", "Tresco Stores Ltd", " ", "Low", "#", "even" )
   }}
 
 {% endblock %}
+
+<!-- STATUSES IN BPM
+
+Actioned     Task is closed.
+Closed       Task is closed.
+Deleted      Task was deleted.
+Forwarded    Task was forwarded.
+New          Task was created by and assigned to the current user.
+Received     Task was created by and assigned to some user or role.
+Replied      Task was replied.
+Sent         Task was sent.
+
+  -->
