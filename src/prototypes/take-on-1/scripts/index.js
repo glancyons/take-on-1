@@ -1,3 +1,21 @@
+// Toggles reason with radio buttons.
+// Code is not production ready or tested.
+// v0.1 22 April 2020
+// Author: Martin Glancy
+
+$(document).ready(function() {
+  // Hide all the other text boxes on load
+  $('.radio__other').toggleClass('u-vh');
+
+  // Show text box if user clicks either preceeding radio
+  $('.js-textbox-toggle').click(function() {
+    $(this)
+      .parents('.fieldset')
+      .next('.radio__other')
+      .removeClass('u-vh');
+  });
+});
+
 // Adds a button to check and uncheck all override checkboxes.
 // Code is not production ready or tested.
 // v0.1 11 Feb 2020

@@ -12,36 +12,48 @@
     <div class="radios__items to-u-radios-pair">
       <p class="radios__item">
         <span class="radio">
-                          <input
-                              type="radio"
-                              id="{{ input1id }}"
-                              class="radio__input js-radio "
-                              value="{{ name }}"
-                              name="{{ name }}"
-                              {{ "checked" if label1checked }}
-                          >
-                          <label class="radio__label" for="{{ input1id }}">
-                              {{ label1 }}
-                          </label>
-                      </span>
+          <input
+              type="radio"
+              id="{{ input1id }}"
+              class="radio__input js-radio js-textbox-toggle"
+              value="{{ name }}"
+              name="{{ name }}"
+              {{ "checked" if label1checked }}
+              aria-controls="other-checkbox-other-wrap" aria-haspopup="true"
+          >
+          <label class="radio__label" for="{{ input1id }}">
+              {{ label1 }}
+          </label>
+        </span>
       </p>
 
       <p class="radios__item">
         <span class="radio">
-                          <input
-                              type="radio"
-                              id="{{ input2id }}"
-                              class="radio__input js-radio "
-                              value="{{ label2 }}"
-                              name="{{ name }}"
-                              {{ "checked" if label2checked }}
-                          >
-                          <label class="radio__label" for="{{ input2id }}">
-                              {{ label2 }}
-                          </label>
-                      </span>
+          <input
+              type="radio"
+              id="{{ input2id }}"
+              class="radio__input js-radio js-textbox-toggle"
+              value="{{ label2 }}"
+              name="{{ name }}"
+              {{ "checked" if label2checked }}
+              aria-controls="other-checkbox-other-wrap" aria-haspopup="true"
+          >
+          <label class="radio__label" for="{{ input2id }}">
+              {{ label2 }}
+          </label>
+        </span>
       </p>
     </div>
   </fieldset>
+
+  <span class="radio__other" id="other-checkbox-other-wrap">
+      <label class="label u-fs-s--b" for="other-textbox-{{ input1id }}">Reason to accept or edit value</label>
+      <input
+      type="text"
+      id="other-textbox-{{ input1id }}"
+      class="input input--text input-type__input input--w-auto "
+      name="other-answer"
+      />
+  </span>
 
 {% endmacro %}
