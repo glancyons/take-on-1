@@ -123,14 +123,8 @@ layout: take-on-1/views/_iframe_master
               Q20 validations and overrides
           </legend>
 
-        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
         {{
-            onsSingleCheckbox({
-                "id": "Q20_override_1",
-                "label": "Override 'total is not equal to the calculated total'",
-                "spanclass": "u-mt-no u-mb-s",
-                "checked": true
-            })
+            radioPair( "Legend", "Q20_override_1", "Accept total is not equal to the calculated total", "Edit response", true, false )
         }}
 
         {{
@@ -184,14 +178,8 @@ layout: take-on-1/views/_iframe_master
               Q22 validations and overrides
           </legend>
 
-        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
         {{
-            onsSingleCheckbox({
-                "id": "Q22_override_1",
-                "label": "Override 'this has changed significantly sice the last submission'",
-                "spanclass": "u-mt-no u-mb-s",
-                "checked": true
-            })
+            radioPair( "Legend", "Q22_override_1", "Accept 'This is 41,000 more than the previous period'", "Edit response", true, false )
         }}
 
         {{
@@ -244,15 +232,8 @@ layout: take-on-1/views/_iframe_master
               Q25 validations and overrides
           </legend>
 
-
-        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
         {{
-            onsSingleCheckbox({
-                "id": "Q25_override_1",
-                "label": "Override 'this has changed significantly sice the last submission'",
-                "spanclass": "u-mt-no u-mb-s",
-                "checked": true
-            })
+            radioPair( "Legend", "Q25_override_1", "Accept 'This is 7,000 more than the previous period'", "Edit response", true, false )
         }}
 
         {{
@@ -307,17 +288,15 @@ layout: take-on-1/views/_iframe_master
 
         {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
 
-
-        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
         {{
             onsSingleCheckbox({
                 "id": "Q146a_override_1",
-                "label": "Override 'check this response'",
+                "label": "Checked 'did significant turnover changes occur'",
                 "spanclass": "u-mt-no u-mb-s",
+                "accessibleLabel": "Check the response to this question",
                 "checked": true
             })
         }}
-
 
         {{
             onsInput({
