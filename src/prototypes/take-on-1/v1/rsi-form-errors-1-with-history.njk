@@ -159,14 +159,14 @@ layout: take-on-1/views/_iframe_master
         {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
 
         <p class="panel__error u-mb-no">
-          <strong>This is 41,000 more than the previous period <br>and 1,700 more than the same period last year</strong>
+          <strong>This is 41,000 more than the previous period <br>and 5,000 more than the same period last year</strong>
         </p>
         {{
             onsSingleCheckbox({
                 "id": "Q22_override_1",
                 "label": "Override",
                 "spanclass": "u-mt-no u-mb-s",
-                "accessibleLabel": "This is 41,000 more than the previous period <br>and 1,700 more than the same period last year",
+                "accessibleLabel": "This is 41,000 more than the previous period <br>and 5,000 more than the same period last year",
                 "reason": "yes"
             })
         }}
@@ -197,22 +197,23 @@ layout: take-on-1/views/_iframe_master
 
       '<!--     ( period, amount, maximum, rowclass, current ) -->' +
 
-      toTableRowList("202003", 54000, 54000, "to-u-row-year", "current" ) +
+      toTableRowList("202003", 54000, 54000, "current" ) +
 
-      toTableRowList("201912", 13000, 54000 ) +
-      toTableRowList("201909", 50000, 54000 ) +
-      toTableRowList("201906", 43000, 54000 ) +
-      toTableRowList("201903", 52000, 54000, "to-u-row-year" ) +
+      toTableRowList("202002", 13000, 54000 ) +
+      toTableRowList("202001", 50000, 54000 ) +
+      toTableRowList("201912", 43000, 54000 ) +
 
-      toTableRowList("201812", 17000, 54000 ) +
-      toTableRowList("201809", 46500, 54000 ) +
-      toTableRowList("201806", 46000, 54000 ) +
-      toTableRowList("201803", 48000, 54000, "to-u-row-year" ) +
+      toTableRowList("201911", 52000, 54000 ) +
+      toTableRowList("201910", 17000, 54000 ) +
+      toTableRowList("201909", 46500, 54000 ) +
 
-      toTableRowList("201712", 21000, 54000 ) +
-      toTableRowList("201709", 43700, 54000 ) +
-      toTableRowList("201706", 46000, 54000 ) +
-      toTableRowList("201703", 49000, 54000, "to-u-row-year" ) +
+      toTableRowList("201908", 46000, 54000 ) +
+      toTableRowList("201907", 48000, 54000 ) +
+      toTableRowList("201906", 21000, 54000 ) +
+
+      toTableRowList("201905", 43700, 54000 ) +
+      toTableRowList("201904", 46000, 54000, "to-u-row-year" ) +
+      toTableRowList("201903", 49000, 54000 ) +
 
     '</tbody>
 </table>
