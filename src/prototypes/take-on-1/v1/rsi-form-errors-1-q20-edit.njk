@@ -26,6 +26,17 @@ layout: take-on-1/views/_iframe_master
 {% from "prototypes/take-on-1/components/radio-pair/_macro.njk" import radioPair %}
 
 
+{% from "components/panel/_macro.njk" import onsPanel %}
+{{
+    onsPanel({
+        "type": "success",
+        "id": "success-id",
+        "body": "<p>Form saved</p>",
+        "classes": "u-mb-m"
+    })
+}}
+
+
     <h1 class="companyName">
     Tresco Stores Ltd
     </h1>
@@ -105,32 +116,7 @@ layout: take-on-1/views/_iframe_master
         }}
 
 
-<!-- VALIDATIONS ########################################################## -->
-        {% from "components/panel/_macro.njk" import onsPanel %}
-        {% call onsPanel({
-                "type": "error"
-        }) %}
-        <fieldset>
-          <legend class="u-vh">
-              Q20 validations and overrides
-          </legend>
-
-
-        {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
-
-        <p class="panel__error u-mb-no">
-          <strong>This total is not equal to the calculated total</strong>
-        </p>
-
-        {{
-            onsSingleCheckbox({
-                "id": "Q20_override_1",
-                "label": "Override",
-                "spanclass": "u-mt-no u-mb-s",
-                "accessibleLabel": "This total is not equal to the calculated total",
-                "reason": "yes"
-            })
-        }}
+<!-- ########################################################## -->
 
         {{
             onsInput({
@@ -138,13 +124,10 @@ layout: take-on-1/views/_iframe_master
                 "label": {
                     "text": "Q20 Total retail turnover"
                 },
-                "value": "310000",
+                "value": "301000",
                 "classes": "input--w-10"
             })
         }}
-
-        </fieldset>
-        {% endcall %}
 
 
 <!-- ###################################################################### -->
