@@ -14,14 +14,20 @@ layout: take-on-1/views/_master
 
 {% block main %}
 
-    <h1>
-    Lawrence Group Ltd
+    <h1 class="companyName">
+    Tresco Stores Ltd
     </h1>
 
     {% set title = "Form details" %}
-    {% set tCols = 2 %}
+    {% set tCols = 4 %}
     {% set dCols = 12-tCols %}
     {% set mclass = "u-mt-no" %}
+
+    {% set emailAddress = "b.smith@gmail.com" %}
+
+
+<div class="grid">
+  <div class="grid__col col-6@m">
 
     <dl class="metadata metadata__list grid grid--gutterless u-cf u-mb-s" title="{{title}}" aria-label="{{title}}">
 
@@ -29,11 +35,31 @@ layout: take-on-1/views/_master
       <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">49900265143</dd>
 
       <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Survey:</dt>
-      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">Quarterly Survey of Building Materials Sand and Gravel (marine dredged) 0066</dd>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">Retail Sales Index (RSI) 023</dd>
 
       <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Period:</dt>
-      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">201903</dd>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">202003</dd>
+
     </dl>
+  </div>
+  <div class="grid__col col-6@m">
+
+    <dl class="metadata metadata__list grid grid--gutterless u-cf u-mb-s" title="{{title}}" aria-label="{{title}}">
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Email:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}"><a href="mailto:{{ emailAddress }}?subject=Retail%20Sales%20Index%202020-03">{{ emailAddress }}</a></dd>
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Skype call:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}"><a href="tel:+442920180243">029 2018 0243</a>
+      </dd>
+
+      <dt class="metadata__term grid__col col-{{tCols}}@m {{mclass}}">Contact preference:</dt>
+      <dd class="metadata__value grid__col col-{{dCols}}@m {{mclass}}">Fridays only after 1pm</dd>
+
+    </dl>
+  </div>
+</div>
+
 
 
 
