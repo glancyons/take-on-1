@@ -1,0 +1,186 @@
+{% set questions =
+
+[
+ {
+   "Order": 1,
+   "Question": "Q5002",
+   "Label": "Reference period start date",
+   "Value": "2020-03-01",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 2,
+   "Question": "Q5001",
+   "Label": "Reference period end date",
+   "Value": "2020-03-31",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 3,
+   "Question": "Q20",
+   "Label": "Total retail turnover",
+   "Value": "310000",
+   "Error": "This total is not equal to the calculated total",
+   "History": "Yes",
+   "Type": "Text"
+ },
+ {
+   "Order": 4,
+   "Question": "Q8000",
+   "Label": "Calculated total (Q21+Q22+Q23+Q24+Q25+Q26+Q27)",
+   "Value": "301000",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 5,
+   "Question": "Q21",
+   "Label": "Food sales",
+   "Value": "184000",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 6,
+   "Question": "Q22",
+   "Label": "Alcohol, confectionery, tobacco",
+   "Value": "54000",
+   "Error": "This has changed significantly since the last submission",
+   "History": "Yes",
+   "Type": "Text"
+ },
+ {
+   "Order": 7,
+   "Question": "Q23",
+   "Label": "Clothing and footwear",
+   "Value": "13000",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 8,
+   "Question": "Q24",
+   "Label": "Household goods",
+   "Value": "8000",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 9,
+   "Question": "Q25",
+   "Label": "Other sales",
+   "Value": "8000",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 10,
+   "Question": "Q27",
+   "Label": "Automotive fuel",
+   "Value": "8000",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 11,
+   "Question": "Q26",
+   "Label": "Internet sales",
+   "Value": "67000",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 12,
+   "Question": "Q146a",
+   "Label": "Did significant turnover changes occur?",
+   "Value": "Yes",
+   "Error": "Check the response to this question",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 13,
+   "Question": "Q146b",
+   "Label": "Reason: in-store / online promotions",
+   "Value": "Yes",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 14,
+   "Question": "Q146c",
+   "Label": "Reason: special events",
+   "Value": "Yes",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 15,
+   "Question": "Q146d",
+   "Label": "Reason: calendar events",
+   "Value": "No",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 16,
+   "Question": "Q146e",
+   "Label": "Reason: weather",
+   "Value": "No",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 17,
+   "Question": "Q146f",
+   "Label": "Reason: store closures",
+   "Value": "No",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 18,
+   "Question": "Q146g",
+   "Label": "Reason: store openings",
+   "Value": "No",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 19,
+   "Question": "Q146h",
+   "Label": "Reason: other",
+   "Value": "No",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 20,
+   "Question": "Q146",
+   "Label": "Comment about reason for turnover changes",
+   "Value": "We ran some special promotions and easter events. As a result we saw an increase in online sales. However there was a rainy third weekend which depressed later sales.",
+   "Error": "",
+   "History": "No",
+   "Type": "Textarea"
+ }
+]
+
+%}

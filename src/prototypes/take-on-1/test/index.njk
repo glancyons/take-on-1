@@ -1,0 +1,29 @@
+---
+title: JSON test
+group: Take-on
+version: 14.4.0
+layout: take-on-1/views/_master
+---
+
+
+{% block main %}
+
+    <h1>
+    JSON test
+    </h1>
+
+{% from "prototypes/take-on-1/data/fruits-json.dta" import fruits %}
+
+
+<ul>
+  {% for fruit in fruits %}
+    <li><span class="u-fw-b">{{ fruit.Fruit }}</span><br>
+    {{ fruit.Description }}<br>
+    {{ fruit.Price }}</li>
+  {% else %}
+    <li>This would display if the 'Fruit' collection were empty</li>
+  {% endfor %}
+</ul>
+
+
+{% endblock %}
