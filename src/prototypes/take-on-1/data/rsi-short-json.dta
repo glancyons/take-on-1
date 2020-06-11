@@ -1,0 +1,60 @@
+{% set questions =
+
+[
+ {
+   "Order": 1,
+   "Question": "Q5002",
+   "Label": "Reference period start date",
+   "Value": "2020-03-01",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 2,
+   "Question": "Q5001",
+   "Label": "Reference period end date",
+   "Value": "2020-03-31",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 3,
+   "Question": "Q20",
+   "Label": "Total retail turnover",
+   "Value": "301000",
+   "Error": "This total is not equal to the calculated total",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 4,
+   "Question": "Q8000",
+   "Label": "Calculated total (Q21+Q22+Q23+Q24+Q25+Q26+Q27)",
+   "Value": "301000",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 5,
+   "Question": "Q26",
+   "Label": "Internet sales",
+   "Value": "67000",
+   "Error": "This has changed significantly since the last submission",
+   "History": "No",
+   "Type": "Text"
+ },
+ {
+   "Order": 6,
+   "Question": "Q146a",
+   "Label": "Did significant turnover changes occur?",
+   "Value": "No",
+   "Error": "",
+   "History": "No",
+   "Type": "Text"
+ }
+]
+
+%}
