@@ -36,26 +36,34 @@ layout: take-on-1/views/_master
                     <dt class="metadata__term grid__col col-2@m u-mt-no">Reference:</dt>
                     <dd class="metadata__value grid__col col-10@m u-mt-no">49900265143</dd>
                     <dt class="metadata__term grid__col col-2@m u-mt-no">Survey:</dt>
-                    <dd class="metadata__value grid__col col-10@m u-mt-no">Quarterly Survey of Building Materials Sand and Gravel (marine dredged) 0066</dd>
+                    <dd class="metadata__value grid__col col-10@m u-mt-no">Retail Sales Index (RSI) 023</dd>
       </dl>
 
-      <p class="u-bb u-pb-s"></p>
+      {# <p class="u-bb u-pb-s"></p> #}
 
         <a href="http://localhost:3333/prototypes/take-on-1/v3/QuestionList.html" class="list__link ">
             Back to main form
         </a>
     
-  <span> <p class="u-bb u-pb-s"></p></span>
+  {# <span> <p class="u-bb u-pb-s"></p></span> #}
+    <br>
+<br>
+<br>
+
+
+
 
 <section role="region" class="tabs">
   <h2 class="tabs__title">Tabs</h2>
   <ul class="tabs__list">
-    <li id="tabId1Item" class="tab__list-item"><a href="#tabId1" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: UKIS" data-ga-label="Show: UKIS">Form data</a></li>
-    <li id="tabId2Item" class="tab__list-item"><a href="#tabId2" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: Vacancy survey" data-ga-label="Show: Vacancy survey">Previous data</a></li>
+    <li id="tabId1Item" class="tab__list-item"><a href="#tabId1" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: Form data" data-ga-label="Show: Form data">Form data</a></li>
+    <li id="tabId2Item" class="tab__list-item"><a href="#tabId2" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: Previous data" data-ga-label="Show: Previous data">Previous data</a></li>
+   
   </ul>
+<section role="region" class="tabs">
   <section id="tabId1" class="tabs__panel">
 
-      <div class="panel panel--error panel--simple">
+    <div class="panel panel--error panel--simple">
         <div class="panel__body">
           <fieldset>
             <legend class="u-vh">
@@ -174,21 +182,45 @@ layout: take-on-1/views/_master
         ]
     })
 }}
+<br>
+<br>
+<br>
+
+{% from "components/button/_macro.njk" import onsButton %}
+{{
+    onsButton({
+        "text": 'Save and validate'
+    })
+}}
 
 
   </section>
   <section id="tabId2" class="tabs__panel">
-    <h3>Previous data for Q22</h3>
+        <h3>Previous data for Q22</h3>
+
+        {% set foo = 0 %}
+
+        {% for q in questions %}
+
+            {% if q.RespondantFigure > foo %}
+
+                {% set foo = q.RespondantFigure %}
+                {# {{ foo }}  #}
+
+            {% endif %}
+
+        {% endfor %}
+
 
     <table id="basic-table" class="table ">
-  <caption class="table__caption">A basic table with a caption</caption>
+
   <thead class="table__head">
     <tr class="table__row">
-      <th scope="col" class="table__header ">Period</th>
-      <th scope="col" class="table__header ">Respondant Figure</th>
-      <th scope="col" class="table__header ">Adjusted Figure</th>
-      <th scope="col" class="table__header ">Period percentage change</th>
-      <th scope="col" class="table__header ">Year on year percentage change</th>
+      <th scope="col" class="table__header table__header--numeric">Period</th>
+      <th scope="col" class="table__header table__header--numeric">Response</th>
+      <th scope="col" class="table__header table__header--numeric">Adjusted</th>
+      <th scope="col" class="table__header table__header--numeric">Period change</th>
+      <th scope="col" class="table__header table__header--numeric">Year change</th>
       <th scope="col" class="table__header t_period_chart_col">Chart</th>
     </tr>
   </thead>
@@ -203,18 +235,18 @@ layout: take-on-1/views/_master
             
 
 
-            <td class="table__cell ">
+            <td class="table__cell table__header--numeric">
                 {{ q.Period }} 
             </td>
-            <td class="table__cell ">
+            <td class="table__cell table__header--numeric">
                 {{ q.RespondantFigure }} 
             </td>
 
-            <td class="table__cell "> 
+            <td class="table__cell table__header--numeric"> 
                 {{ q.AdjustedFigure }} 
             </td class="table__cell ">
 
-            <td class="table__cell "> 
+            <td class="table__cell table__header--numeric"> 
 
                 {% if q.PPChangeSign == "+" %}
 
@@ -226,13 +258,14 @@ layout: take-on-1/views/_master
 
                 {% endif %}
 
-                    {{ q.PPChangeSign }}{{ q.PPChangeValue }}%
+                    {# {{ q.PPChangeSign }}{{ q.PPChangeValue }}% #}
+                    {{ q.PPChangeValue }}
 
                 </p>
 
-            </td class="table__cell ">
+            </td class="table__cell table__header--numeric">
 
-            <td class="table__cell "> 
+            <td class="table__cell table__header--numeric"> 
 
                 {% if q.YoYPChangeSign == "+" %}
 
@@ -245,18 +278,23 @@ layout: take-on-1/views/_master
                 {% endif %}            
 
 
-                {{ q.YoYPChangeSign }}{{ q.YoYPChangeValue }}%
+                {# {{ q.YoYPChangeSign }}{{ q.YoYPChangeValue }}% #}
+                {{ q.YoYPChangeValue }}
 
 
                 </p>
 
             </td class="table__cell ">
 
-            <td class="table__cell "> 
+            <td class="table__cell table__header--numeric"> 
                 
-                <a href="http://localhost:3333/prototypes/take-on-1/v3/ViewForm.html" role="button" class="btn btn--secondary btn--small"><span class="btn__inner">View</span></a>
 
-            </td class="table__cell ">
+                {% set perc = q.RespondantFigure/foo*100 %}
+                
+
+                <div role="figure" aria-describedby="period-tg-1-{{period}}" class="to-u-bar-grid" style="width: {{perc}}%;"><span id="period-tg-1-{{period}}" class="u-vh">{{perc}}%</span></div>
+
+            </td class="table__cell " >
 
         </tr>
     {% endfor %}
@@ -269,159 +307,27 @@ layout: take-on-1/views/_master
 </table>
 
 
-{% from "components/pagination/_macro.njk" import onsPagination %}
-{{
-    onsPagination({
-        "previous": "Previous",
-        "next": "Next",
-        "pages": [
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": true
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": false
-            },
-            {
-                "url": "#",
-                "current": flase
-            },
-            {
-                "url": "#",
-                "current": false
-            }
-        ]
-    })
-}}
 
+        <a href="#" class="list__link ">
+            Previous
+        </a>
+        <p> </p>
+        <a href="#" class="list__link ">
+            Next
+        </a>
+
+  
   </section>
 
 </section>
+
+
+
+
+
+
+
+
 
 
 
