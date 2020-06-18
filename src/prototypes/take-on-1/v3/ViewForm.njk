@@ -1,0 +1,43 @@
+---
+title: Check needed - Tresco Stores Ltd - survey 0023 - 202004
+group: Take-on
+version: 14.4.0
+layout: take-on-1/views/_master
+---
+
+{% set pageWidthCols="8" %}
+
+{% from "components/button/_macro.njk" import onsButton %}
+{% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
+{% from "components/input/_macro.njk" import onsInput %}
+{% from "components/panel/_macro.njk" import onsPanel %}
+{% from "components/collapsible/_macro.njk" import onsCollapsible %}
+{% from "components/textarea/_macro.njk" import onsTextarea %}
+
+{% from "prototypes/take-on-1/components/data-tables/_macro.njk" import toTableRowList %}
+{% from "prototypes/take-on-1/components/data-tables/_macro.njk" import toTableRowGrid %}
+{% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
+{% from "prototypes/take-on-1/components/radio-pair/_macro.njk" import radioPair %}
+{% from "prototypes/take-on-1/components/history-table/_macro.njk" import historyTable %}
+
+
+
+
+{% block main %}
+
+    <h1 class="companyName">
+    Q22 Alcohol, confectionery, tobacco previous data
+    </h1>
+
+
+    <dl class="metadata metadata__list grid grid--gutterless u-cf u-mb-s" title="Form details" aria-label="Form details">
+                    <dt class="metadata__term grid__col col-2@m u-mt-no">Reference:</dt>
+                    <dd class="metadata__value grid__col col-10@m u-mt-no">49900265143</dd>
+                    <dt class="metadata__term grid__col col-2@m u-mt-no">Survey:</dt>
+                    <dd class="metadata__value grid__col col-10@m u-mt-no">Quarterly Survey of Building Materials Sand and Gravel (marine dredged) 0066</dd>
+      </dl>
+    
+  
+
+
+{% endblock %}
