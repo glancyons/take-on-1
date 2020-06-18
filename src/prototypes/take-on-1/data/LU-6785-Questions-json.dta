@@ -1,0 +1,60 @@
+{% set questions =
+
+[
+ {
+   "Number": "Q5002",
+   "Question": "Reference period start date",
+   "Response": " 2020-03-01",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ },
+ {
+   "Number": "Q5002",
+   "Question": "Reference period start date",
+   "Response": " 2020-03-01",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ },
+ {
+   "Number": "Q20",
+   "Question": "Total retail turnover",
+   "Response": "162157",
+   "Adjusted": "154157",
+   "Status": "Edited",
+   "Action": "",
+   "ValidationMessages": "Zero Error"
+ },
+  {
+   "Number": "Q5002",
+   "Question": "Reference period start date",
+   "Response": " 2020-03-01",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ },
+ {
+   "Number": "Q5002",
+   "Question": "Reference period start date",
+   "Response": " 2020-03-01",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ },
+  {
+   "Number": "Q22",
+   "Question": "Alcohol, confectionery, tobacco",
+   "Response": "43928",
+   "Adjusted": "39928",
+   "Status": "Validations",
+   "Action": "No",
+   "ValidationMessages": "This has changed since the last submission"
+ }
+]
+
+%}

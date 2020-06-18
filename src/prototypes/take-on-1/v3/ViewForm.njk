@@ -5,7 +5,7 @@ version: 14.4.0
 layout: take-on-1/views/_master
 ---
 
-{% set pageWidthCols="8" %}
+{% set pageWidthCols="12" %}
 
 {% from "components/button/_macro.njk" import onsButton %}
 {% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
@@ -19,6 +19,8 @@ layout: take-on-1/views/_master
 {% from "prototypes/take-on-1/components/single-checkbox/_macro.njk" import onsSingleCheckbox %}
 {% from "prototypes/take-on-1/components/radio-pair/_macro.njk" import radioPair %}
 {% from "prototypes/take-on-1/components/history-table/_macro.njk" import historyTable %}
+
+{% from "prototypes/take-on-1/data/LU-6785-Periods-json.dta" import questions %}
 
 
 
@@ -36,8 +38,392 @@ layout: take-on-1/views/_master
                     <dt class="metadata__term grid__col col-2@m u-mt-no">Survey:</dt>
                     <dd class="metadata__value grid__col col-10@m u-mt-no">Quarterly Survey of Building Materials Sand and Gravel (marine dredged) 0066</dd>
       </dl>
+
+      <p class="u-bb u-pb-s"></p>
+
+        <a href="http://localhost:3333/prototypes/take-on-1/v3/QuestionList.html" class="list__link ">
+            Back to main form
+        </a>
     
-  
+  <span> <p class="u-bb u-pb-s"></p></span>
+
+<section role="region" class="tabs">
+  <h2 class="tabs__title">Tabs</h2>
+  <ul class="tabs__list">
+    <li id="tabId1Item" class="tab__list-item"><a href="#tabId1" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: UKIS" data-ga-label="Show: UKIS">Form data</a></li>
+    <li id="tabId2Item" class="tab__list-item"><a href="#tabId2" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: Vacancy survey" data-ga-label="Show: Vacancy survey">Previous data</a></li>
+  </ul>
+  <section id="tabId1" class="tabs__panel">
+
+      <div class="panel panel--error panel--simple">
+        <div class="panel__body">
+          <fieldset>
+            <legend class="u-vh">
+                {{ q.Question }} validations and overrides
+            </legend>
+
+          <p class="panel__error u-mb-no">
+            <strong>This has changed since the last submission</strong>
+          </p>
+          {{
+              onsSingleCheckbox({
+                  "id": 1,
+                  "label": "Override",
+                  "spanclass": "u-mt-no u-mb-s",
+                  "accessibleLabel": q.Error,
+                  "reason": "yes"
+              })
+          }}
+
+    {% set questionParams =
+        {
+            "id": 1,
+            "name": 2,
+            "label": {
+                "text": "Q22 Alcohol, confectionery, tobacco"
+            },
+            "value": 54000,
+            "classes": classes
+        }
+     %}
+
+
+    {{
+      onsTextarea( questionParams ) if q.Type == "Textarea" else onsInput( questionParams )
+    }}
+
+        </div>
+      </div>
+
+
+    {% from "components/radios/_macro.njk" import onsRadios %}
+{{
+    onsRadios({
+        "legend": "Actions",
+        "name": "food",
+        "radios": [
+            {
+                "id": "bacon",
+                "label": {
+                    "text": "Override"
+                },
+                "value": "bacon"
+            },
+            {
+                "id": "bacon",
+                "label": {
+                    "text": "Edit"
+                },
+                "value": "bacon"
+            },
+            {
+                "id": "olives",
+                "label": {
+                    "text": "Add estimated value"
+                },
+                "value": "olives"
+            }
+        ]
+    })
+}}
+
+
+{% from "components/select/_macro.njk" import onsSelect %}
+{{
+    onsSelect({
+        "id": "select",
+        "name": "select",
+        "label": {
+            "text": "Reason"
+        },
+        "options": [
+            {
+                "value": "",
+                "text": "Select an option",
+                "disabled": true,
+                "selected": true
+            },
+            {
+                "value": "bart",
+                "text": "Bart Simpson"
+            },
+            {
+                "value": "homer",
+                "text": "Homer Simpson"
+            },
+            {
+                "value": "marge",
+                "text": "Marge Simpson"
+            },
+            {
+                "value": "lisa",
+                "text": "Lisa Simpson"
+            },
+            {
+                "value": "maggie",
+                "text": "Maggie Simpson"
+            },
+            {
+                "value": "ned",
+                "text": "Ned Flanders"
+            },
+            {
+                "value": "7-dwarves",
+                "text": "The 7 Dwarves: Grumpy, Happy, Sleepy, Bashful, Sneezy, Dopey, Doc"
+            }
+        ]
+    })
+}}
+
+
+  </section>
+  <section id="tabId2" class="tabs__panel">
+    <h3>Previous data for Q22</h3>
+
+    <table id="basic-table" class="table ">
+  <caption class="table__caption">A basic table with a caption</caption>
+  <thead class="table__head">
+    <tr class="table__row">
+      <th scope="col" class="table__header ">Period</th>
+      <th scope="col" class="table__header ">Respondant Figure</th>
+      <th scope="col" class="table__header ">Adjusted Figure</th>
+      <th scope="col" class="table__header ">Period percentage change</th>
+      <th scope="col" class="table__header ">Year on year percentage change</th>
+      <th scope="col" class="table__header t_period_chart_col">Chart</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+
+     {% for q in questions %}
+
+
+
+
+            <tr class="table__row">
+            
+
+
+            <td class="table__cell ">
+                {{ q.Period }} 
+            </td>
+            <td class="table__cell ">
+                {{ q.RespondantFigure }} 
+            </td>
+
+            <td class="table__cell "> 
+                {{ q.AdjustedFigure }} 
+            </td class="table__cell ">
+
+            <td class="table__cell "> 
+
+                {% if q.PPChangeSign == "+" %}
+
+                    <p style="color:green">
+
+                {% else %}
+
+                    <p style="color:red">
+
+                {% endif %}
+
+                    {{ q.PPChangeSign }}{{ q.PPChangeValue }}%
+
+                </p>
+
+            </td class="table__cell ">
+
+            <td class="table__cell "> 
+
+                {% if q.YoYPChangeSign == "+" %}
+
+                    <p style="color:green">
+
+                {% else %}
+
+                    <p style="color:red">
+
+                {% endif %}            
+
+
+                {{ q.YoYPChangeSign }}{{ q.YoYPChangeValue }}%
+
+
+                </p>
+
+            </td class="table__cell ">
+
+            <td class="table__cell "> 
+                
+                <a href="http://localhost:3333/prototypes/take-on-1/v3/ViewForm.html" role="button" class="btn btn--secondary btn--small"><span class="btn__inner">View</span></a>
+
+            </td class="table__cell ">
+
+        </tr>
+    {% endfor %}
+
+
+
+
+  </tbody>
+
+</table>
+
+
+{% from "components/pagination/_macro.njk" import onsPagination %}
+{{
+    onsPagination({
+        "previous": "Previous",
+        "next": "Next",
+        "pages": [
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": true
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": false
+            },
+            {
+                "url": "#",
+                "current": flase
+            },
+            {
+                "url": "#",
+                "current": false
+            }
+        ]
+    })
+}}
+
+  </section>
+
+</section>
+
+
 
 
 {% endblock %}

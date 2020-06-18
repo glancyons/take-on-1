@@ -1,0 +1,26 @@
+{% set questions =
+
+[
+ {
+   "Period": "202006",
+   "RespondantFigure": "55486",
+   "AdjustedFigure": "51217",
+   "PPChangeSign": "+",
+   "PPChangeValue": "44",
+   "YoYPChangeSign": "-",
+   "YoYPChangeValue": "6",
+   "Chart": "No"
+ },
+  {
+   "Period": "202005",
+   "RespondantFigure": "Reference period start date",
+   "AdjustedFigure": " 2020-03-01",
+   "PPChangeSign": "+",
+   "PPChangeValue": "55",
+   "YoYPChangeSign": "-",
+   "YoYPChangeValue": "100",
+   "Chart": "No"
+ }
+]
+
+%}
