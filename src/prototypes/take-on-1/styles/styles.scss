@@ -15,7 +15,7 @@
 .to-u-bar {
   background-color: #1d70b8;
   display: inline-block;
-  padding: 8px 0;
+  padding: 0px 0;
   margin: 0 0 0 0;
 }
 
@@ -23,17 +23,29 @@
   background-color: #1d70b8;
   display: block;
   padding: 0;
-  height: 4px;
-  margin: 0 0 2px 0;
+  height: 30px;
+  margin: 0px 0 0px 0;
 }
 
 .to-u-bar-warning {
   background-color: #d0021b;
 }
 
+.to-value-positive {
+  color: #0f8243;
+}
+
+.to-value-negative {
+  color: #0f8243;
+}
+
 .to-u-cell-barchart {
   vertical-align: middle;
   width: 70%;
+}
+
+.t_period_chart_col {
+  width: 50%;
 }
 
 .to-u-current {
