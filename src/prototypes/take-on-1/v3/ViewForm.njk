@@ -5,7 +5,7 @@ version: 14.4.0
 layout: take-on-1/views/_master
 ---
 
-{% set pageWidthCols="12" %}
+{% set pageWidthCols="8" %}
 
 {% from "components/button/_macro.njk" import onsButton %}
 {% from "components/checkboxes/_macro.njk" import onsCheckboxes %}
@@ -250,18 +250,18 @@ layout: take-on-1/views/_master
 
                 {% if q.PPChangeSign == "+" %}
 
-                    <p style="color:green">
+                    <span class = "to-value-positive">
 
                 {% else %}
 
-                    <p style="color:red">
+                    <span style="color:red">
 
                 {% endif %}
 
                     {# {{ q.PPChangeSign }}{{ q.PPChangeValue }}% #}
                     {{ q.PPChangeValue }}
 
-                </p>
+                </span>
 
             </td class="table__cell table__header--numeric">
 
@@ -269,11 +269,11 @@ layout: take-on-1/views/_master
 
                 {% if q.YoYPChangeSign == "+" %}
 
-                    <p style="color:green">
+                    <span style="color:green">
 
                 {% else %}
 
-                    <p style="color:red">
+                    <span style="color:red">
 
                 {% endif %}            
 
@@ -282,7 +282,7 @@ layout: take-on-1/views/_master
                 {{ q.YoYPChangeValue }}
 
 
-                </p>
+                </span>
 
             </td class="table__cell ">
 
