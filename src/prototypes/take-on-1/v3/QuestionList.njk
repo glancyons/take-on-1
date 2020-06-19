@@ -92,7 +92,21 @@ layout: take-on-1/views/_master
             </td>
 
             <td class="table__cell "> 
-                {{ q.Response }} 
+                {# {{ q.Response }}  #}
+                
+                {% set charLimit = 100 %}
+
+                {% if q.Response | length > charLimit %}
+
+                    {{ q.Response.slice(0, charLimit) }}... [View for more]
+
+                {% else %}
+
+                    {{ q.Response }} 
+
+                {% endif %}
+                
+                
             </td class="table__cell ">
 
             <td class="table__cell "> 
