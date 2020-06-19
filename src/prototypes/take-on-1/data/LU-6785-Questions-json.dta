@@ -54,6 +54,132 @@
    "Status": "Validations",
    "Action": "No",
    "ValidationMessages": "This has changed since the last submission"
+ },
+ {
+   "Number": "Q23",
+   "Question": "Clothing and footwear",
+   "Response": "13000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q24",
+   "Question": "Household goods",
+   "Response": "8000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q25",
+   "Question": "Other sales",
+   "Response": "8000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q27",
+   "Question": "Automotive fuel",
+   "Response": "8000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q26",
+   "Question": "Internet sales",
+   "Response": "67000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q146a",
+   "Question": "Did significant turnover changes occur?",
+   "Response": "Yes",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q146b",
+   "Question": "Reason: in-store / online promotions",
+   "Response": "Yes",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q146c",
+   "Question": "Reason: special events",
+   "Response": "Yes",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q146d",
+   "Question": "Reason: calendar events",
+   "Response": "No",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q146e",
+   "Question": "Reason: weather",
+   "Response": "No",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q146f",
+   "Question": "Reason: store closures",
+   "Response": "No",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q146g",
+   "Question": "Reason: store openings",
+   "Response": "No",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q146h",
+   "Question": "Reason: other",
+   "Response": "No",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q146",
+   "Question": "Comment about reason for turnover changes",
+   "Response": "We ran some special promotions and easter events. As a result we saw an increase in online sales. However there was a rainy third weekend which depressed later sales.",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "",
+   "ValidationMessages": ""
  }
 ]
 
