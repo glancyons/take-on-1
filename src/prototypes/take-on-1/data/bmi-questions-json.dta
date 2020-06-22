@@ -1,0 +1,106 @@
+{% set questions =
+
+[
+ {
+   "Number": "Q146",
+   "Question": "Comment on the figures included in your return",
+   "Response": " 2",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ },
+ {
+   "Number": "Q147",
+   "Question": "New pits or quarries brought into use since date of last return",
+   "Response": "2",
+   "Adjusted": "",
+   "Status": "Validations",
+   "Action": "No",
+   "ValidationMessages": "Value is larger than expected.<br> This has changed significantly since the last submission"
+ },
+ {
+   "Number": "Q601",
+   "Question": "Sand produced for asphalt (asphalting sand)",
+   "Response": "176100",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ },
+ {
+   "Number": "Q602",
+   "Question": "Sand produced for use in mortar (building or soft sand)",
+   "Response": "123000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ },
+ {
+   "Number": "Q603",
+   "Question": "Sand produced for concreting (sharp sand)",
+   "Response": "56000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ },
+ {
+   "Number": "Q604",
+   "Question": "Gravel coated with bituminous binder (on or off site)",
+   "Response": "345000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ },
+ {
+   "Number": "Q605",
+   "Question": "Gravel produced for concrete aggregate (including sand/gravel mixes)",
+   "Response": "345000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ },
+ {
+   "Number": "Q606",
+   "Question": "Other screened and graded gravels",
+   "Response": "15000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ },
+ {
+   "Number": "Q607",
+   "Question": "Sand and gravel used for constructional fill",
+   "Response": "12000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ },
+ {
+   "Number": "Q608",
+   "Question": "TOTALS",
+   "Response": "1345000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ },
+ {
+   "Number": "Q9001",
+   "Question": "Derived Total of all sand and gravel (Q601 + Q602 + Q603 + Q604 + Q605 + Q606 + Q607)",
+   "Response": "1345000",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": "Zero Error"
+ }
+
+]
+
+%}

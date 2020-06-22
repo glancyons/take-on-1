@@ -5,6 +5,7 @@ version: 14.4.0
 layout: take-on-1/views/_master
 ---
 
+{% set showAdjustedValue = false %}
 
 {% set pageWidthCols="12" %}
 
@@ -50,7 +51,7 @@ layout: take-on-1/views/_master
 
 
 
-{% from "prototypes/take-on-1/data/rsi-questions-json.dta" import questions %}
+{% from "prototypes/take-on-1/data/bmi-questions-json.dta" import questions %}
 
 
 
@@ -61,7 +62,9 @@ layout: take-on-1/views/_master
       <th scope="col" class="table__header ">Number</th>
       <th scope="col" class="table__header ">Question</th>
       <th scope="col" class="table__header to-action-th">Response</th>
+      {% if showAdjustedValue == true %}
       <th scope="col" class="table__header ">Adjusted</th>
+      {%endif%}
       <th scope="col" class="table__header ">Status</th>
       <th scope="col" class="table__header ">Action</th>
     </tr>
@@ -108,10 +111,11 @@ layout: take-on-1/views/_master
                 
                 
             </td class="table__cell ">
-
+            {% if showAdjustedValue == true %}
             <td class="table__cell "> 
                 {{ q.Adjusted }} 
             </td class="table__cell ">
+            {% endif %}
 
             <td class="table__cell "> 
                 
