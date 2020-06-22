@@ -17,7 +17,7 @@
    "Adjusted": "",
    "Status": "Validations",
    "Action": "No",
-   "ValidationMessages": "Value is larger than expected.<br> This has changed significantly since the last submission"
+   "ValidationMessages": ["Value is larger than expected.","This has changed significantly since the last submission"]
  },
  {
    "Number": "Q601",
