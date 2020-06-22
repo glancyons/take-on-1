@@ -12,15 +12,19 @@ window.onload = function () {
 
 		axisX:{
 				valueFormatString: "MMM",
+				
+
 				crosshair: {
 					enabled: true,
 					snapToDataPoint: true
 				}
 			},
 		axisY: {
-			title: "Number of Visits",
+			title: "Sales",
 			crosshair: {
-				enabled: false
+				enabled: true,
+				minimum: 50000,
+       			maximum: 150000
 			}
 			},
 			toolTip:{
@@ -40,7 +44,7 @@ window.onload = function () {
 				name: "2014",
 				lineDashType: "dash",
 				dataPoints: [
-					{ x: new Date(2020, 12, 1), y: 105342 },
+					{ x: new Date(2020, 11, 1), y: 105342 },
 
 				]
 			},
@@ -50,18 +54,18 @@ window.onload = function () {
 				name: "2015",
 				lineDashType: "dash",
 				dataPoints: [
-					{ x: new Date(2020, 12, 1), y: 158013 },
-					{ x: new Date(2020, 11, 1), y: 81231 },
-					{ x: new Date(2020, 10, 1), y: 79290 },
-					{ x: new Date(2020, 9, 1), y: 82880 },
-					{ x: new Date(2020, 8, 1), y: 83922 },
-					{ x: new Date(2020, 7, 1), y: 61728 },
-					{ x: new Date(2020, 6, 1), y: 77634 },
-					{ x: new Date(2020, 5, 1), y: 83054 },
-					{ x: new Date(2020, 4, 1), y: 84829 },
-					{ x: new Date(2020, 3, 1), y: 57310 },
-					{ x: new Date(2020, 2, 1), y: 80663 },
-					{ x: new Date(2020, 1, 1), y: 79669 },
+					{ x: new Date(2020, 11, 1), y: 158013 },
+					{ x: new Date(2020, 10, 1), y: 81231 },
+					{ x: new Date(2020, 9, 1), y: 79290 },
+					{ x: new Date(2020, 8, 1), y: 82880 },
+					{ x: new Date(2020, 7, 1), y: 83922 },
+					{ x: new Date(2020, 6, 1), y: 61728 },
+					{ x: new Date(2020, 5, 1), y: 77634 },
+					{ x: new Date(2020, 4, 1), y: 83054 },
+					{ x: new Date(2020, 3, 1), y: 84829 },
+					{ x: new Date(2020, 2, 1), y: 57310 },
+					{ x: new Date(2020, 1, 1), y: 80663 },
+					{ x: new Date(2020, 0, 1), y: 79669 },
 
 				]
 			},
@@ -71,18 +75,18 @@ window.onload = function () {
 				name: "2016",
 				lineDashType: "dash",
 				dataPoints: [
-					{ x: new Date(2020, 12, 1), y: 131678 },
-					{ x: new Date(2020, 11, 1), y: 121847 },
-					{ x: new Date(2020, 10, 1), y: 63432 },
-					{ x: new Date(2020, 9, 1), y: 82880 },
-					{ x: new Date(2020, 8, 1), y: 76292 },
-					{ x: new Date(2020, 7, 1), y: 77160 },
-					{ x: new Date(2020, 6, 1), y: 85397 },
-					{ x: new Date(2020, 5, 1), y: 75503 },
-					{ x: new Date(2020, 4, 1), y: 70691 },
-					{ x: new Date(2020, 3, 1), y: 64474 },
-					{ x: new Date(2020, 2, 1), y: 67219 },
-					{ x: new Date(2020, 1, 1), y: 79669 },
+					{ x: new Date(2020, 11, 1), y: 131678 },
+					{ x: new Date(2020, 10, 1), y: 121847 },
+					{ x: new Date(2020, 9, 1), y: 63432 },
+					{ x: new Date(2020, 8, 1), y: 82880 },
+					{ x: new Date(2020, 7, 1), y: 76292 },
+					{ x: new Date(2020, 6, 1), y: 77160 },
+					{ x: new Date(2020, 5, 1), y: 85397 },
+					{ x: new Date(2020, 4, 1), y: 75503 },
+					{ x: new Date(2020, 3, 1), y: 70691 },
+					{ x: new Date(2020, 2, 1), y: 64474 },
+					{ x: new Date(2020, 1, 1), y: 67219 },
+					{ x: new Date(2020, 0, 1), y: 79669 },
 
 				]
 			},
@@ -92,18 +96,18 @@ window.onload = function () {
 				name: "2017",
 				lineDashType: "dash",
 				dataPoints: [
-					{ x: new Date(2020, 12, 1), y: 105342 },
-					{ x: new Date(2020, 11, 1), y: 121847 },
-					{ x: new Date(2020, 10, 1), y: 63432 },
-					{ x: new Date(2020, 9, 1), y: 82880 },
-					{ x: new Date(2020, 8, 1), y: 91551 },
-					{ x: new Date(2020, 7, 1), y: 84876 },
-					{ x: new Date(2020, 6, 1), y: 69870 },
-					{ x: new Date(2020, 5, 1), y: 83054 },
-					{ x: new Date(2020, 4, 1), y: 84829 },
-					{ x: new Date(2020, 3, 1), y: 64474 },
-					{ x: new Date(2020, 2, 1), y: 67219 },
-					{ x: new Date(2020, 1, 1), y: 86912 },
+					{ x: new Date(2020, 11, 1), y: 105342 },
+					{ x: new Date(2020, 10, 1), y: 121847 },
+					{ x: new Date(2020, 9, 1), y: 63432 },
+					{ x: new Date(2020, 8, 1), y: 82880 },
+					{ x: new Date(2020, 7, 1), y: 91551 },
+					{ x: new Date(2020, 6, 1), y: 84876 },
+					{ x: new Date(2020, 5, 1), y: 69870 },
+					{ x: new Date(2020, 4, 1), y: 83054 },
+					{ x: new Date(2020, 3, 1), y: 84829 },
+					{ x: new Date(2020, 2, 1), y: 64474 },
+					{ x: new Date(2020, 1, 1), y: 67219 },
+					{ x: new Date(2020, 0, 1), y: 86912 },
 
 				]
 			},
@@ -113,18 +117,18 @@ window.onload = function () {
 				name: "2018",
 				lineDashType: "dash",
 				dataPoints: [
-					{ x: new Date(2020, 12, 1), y: 105342 },
-					{ x: new Date(2020, 11, 1), y: 101539 },
-					{ x: new Date(2020, 10, 1), y: 63432 },
-					{ x: new Date(2020, 9, 1), y: 75346 },
-					{ x: new Date(2020, 8, 1), y: 68663 },
-					{ x: new Date(2020, 7, 1), y: 69444 },
-					{ x: new Date(2020, 6, 1), y: 93160 },
-					{ x: new Date(2020, 5, 1), y: 60403 },
-					{ x: new Date(2020, 4, 1), y: 77760 },
-					{ x: new Date(2020, 3, 1), y: 85965 },
-					{ x: new Date(2020, 2, 1), y: 67219 },
-					{ x: new Date(2020, 1, 1), y: 79669 },
+					{ x: new Date(2020, 11, 1), y: 105342 },
+					{ x: new Date(2020, 10, 1), y: 101539 },
+					{ x: new Date(2020, 9, 1), y: 63432 },
+					{ x: new Date(2020, 8, 1), y: 75346 },
+					{ x: new Date(2020, 7, 1), y: 68663 },
+					{ x: new Date(2020, 6, 1), y: 69444 },
+					{ x: new Date(2020, 5, 1), y: 93160 },
+					{ x: new Date(2020, 4, 1), y: 60403 },
+					{ x: new Date(2020, 3, 1), y: 77760 },
+					{ x: new Date(2020, 2, 1), y: 85965 },
+					{ x: new Date(2020, 1, 1), y: 67219 },
+					{ x: new Date(2020, 0, 1), y: 79669 },
 
 				]
 			},
@@ -134,17 +138,17 @@ window.onload = function () {
 				name: "2019",
 				lineDashType: "dash",
 				dataPoints: [
-					{ x: new Date(2020, 12, 1), y: 131678 },
-					{ x: new Date(2020, 11, 1), y: 101539 },
-					{ x: new Date(2020, 10, 1), y: 79290 },
-					{ x: new Date(2020, 9, 1), y: 75346 },
-					{ x: new Date(2020, 8, 1), y: 76292 },
-					{ x: new Date(2020, 7, 1), y: 77160 },
-					{ x: new Date(2020, 6, 1), y: 77634 },
-					{ x: new Date(2020, 5, 1), y: 75503 },
-					{ x: new Date(2020, 4, 1), y: 70691 },
-					{ x: new Date(2020, 3, 1), y: 71637 },
-					{ x: new Date(2020, 2, 1), y: 67219 },
+					{ x: new Date(2020, 11, 1), y: 131678 },
+					{ x: new Date(2020, 10, 1), y: 101539 },
+					{ x: new Date(2020, 9, 1), y: 79290 },
+					{ x: new Date(2020, 8, 1), y: 75346 },
+					{ x: new Date(2020, 7, 1), y: 76292 },
+					{ x: new Date(2020, 6, 1), y: 77160 },
+					{ x: new Date(2020, 5, 1), y: 77634 },
+					{ x: new Date(2020, 4, 1), y: 75503 },
+					{ x: new Date(2020, 3, 1), y: 70691 },
+					{ x: new Date(2020, 2, 1), y: 71637 },
+					{ x: new Date(2020, 1, 1), y: 67219 },
 
 
 				]
@@ -155,18 +159,14 @@ window.onload = function () {
 				name: "2020",
 				lineDashType: "dash",
 				dataPoints: [
-					{ x: new Date(2020, 6, 1), y: 62107 },
-					{ x: new Date(2020, 5, 1), y: 60403 },
-					{ x: new Date(2020, 4, 1), y: 70691 },
-					{ x: new Date(2020, 3, 1), y: 71637 },
-					{ x: new Date(2020, 2, 1), y: 73941 },
+					{ x: new Date(2020, 5, 1), y: 62107 },
+					{ x: new Date(2020, 4, 1), y: 60403 },
+					{ x: new Date(2020, 3, 1), y: 70691 },
+					{ x: new Date(2020, 2, 1), y: 71637 },
+					{ x: new Date(2020, 1, 1), y: 73941 },
 				]
 			},
-			
-			
-			
 			]
-
 	});
 	chart.render();
 
