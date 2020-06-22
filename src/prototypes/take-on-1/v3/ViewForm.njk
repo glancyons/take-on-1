@@ -27,6 +27,11 @@ layout: take-on-1/views/_master
 
 {% block main %}
 
+
+{% include "prototypes/take-on-1/v3/graphs/rsi-graph.inc" %}
+
+
+
     <h1 class="companyName">
     Q22 Alcohol, confectionery, tobacco previous data
     </h1>
@@ -44,7 +49,7 @@ layout: take-on-1/views/_master
         <a href="https://take-on-prototype.netlify.app/prototypes/take-on-1/v3/QuestionList.html" class="list__link ">
             Back to main form
         </a>
-    
+
   {# <span> <p class="u-bb u-pb-s"></p></span> #}
     <br>
 <br>
@@ -58,7 +63,7 @@ layout: take-on-1/views/_master
   <ul class="tabs__list">
     <li id="tabId1Item" class="tab__list-item"><a href="#tabId1" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: Form data" data-ga-label="Show: Form data">Form data</a></li>
     <li id="tabId2Item" class="tab__list-item"><a href="#tabId2" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: Previous data" data-ga-label="Show: Previous data">Previous data</a></li>
-   
+
   </ul>
 <section role="region" class="tabs">
   <section id="tabId1" class="tabs__panel">
@@ -224,21 +229,21 @@ layout: take-on-1/views/_master
 
 
             <tr class="table__row">
-            
+
 
 
             <td class="table__cell table__header--numeric">
-                {{ q.Period }} 
+                {{ q.Period }}
             </td>
             <td class="table__cell table__header--numeric">
-                {{ q.RespondantFigure }} 
+                {{ q.RespondantFigure }}
             </td>
 
-            <td class="table__cell table__header--numeric"> 
-                {{ q.AdjustedFigure }} 
+            <td class="table__cell table__header--numeric">
+                {{ q.AdjustedFigure }}
             </td class="table__cell ">
 
-            <td class="table__cell table__header--numeric"> 
+            <td class="table__cell table__header--numeric">
 
                 {% if q.PPChangeSign == "+" %}
 
@@ -257,7 +262,7 @@ layout: take-on-1/views/_master
 
             </td class="table__cell table__header--numeric">
 
-            <td class="table__cell table__header--numeric"> 
+            <td class="table__cell table__header--numeric">
 
                 {% if q.YoYPChangeSign == "+" %}
 
@@ -267,7 +272,7 @@ layout: take-on-1/views/_master
 
                     <span class = "to-value-negative">
 
-                {% endif %}            
+                {% endif %}
 
 
                 {# {{ q.YoYPChangeSign }}{{ q.YoYPChangeValue }}% #}
@@ -278,11 +283,11 @@ layout: take-on-1/views/_master
 
             </td class="table__cell ">
 
-            <td class="table__cell table__header--numeric"> 
-                
+            <td class="table__cell table__header--numeric">
+
 
                 {% set perc = q.RespondantFigure/foo*100 %}
-                
+
 
                 <div role="figure" aria-describedby="period-tg-1-{{period}}" class="to-u-bar-grid" style="width: {{perc}}%;"><span id="period-tg-1-{{period}}" class="u-vh">{{perc}}%</span></div>
 
@@ -308,7 +313,12 @@ layout: take-on-1/views/_master
             Next
         </a>
 
-  
+
+
+
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+
   </section>
 
 </section>
