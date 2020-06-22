@@ -28,7 +28,6 @@ layout: take-on-1/views/_master
 {% block main %}
 
 
-{% include "prototypes/take-on-1/v3/graphs/rsi-graph.inc" %}
 
 
 
@@ -44,32 +43,36 @@ layout: take-on-1/views/_master
                     <dd class="metadata__value grid__col col-10@m u-mt-no">Retail Sales Index (RSI) 023</dd>
       </dl>
 
-      {# <p class="u-bb u-pb-s"></p> #}
-{# 
-        <a href="https://take-on-prototype.netlify.app/prototypes/take-on-1/v3/questionlist-rsi.html" class="list__link ">
-            Back to main form
-        </a> #}
-        <a href="/prototypes/take-on-1/v3/questionlist-rsi.html" class="list__link ">
-            Back to main form
-        </a>
 
-  {# <span> <p class="u-bb u-pb-s"></p></span> #}
-    <br>
-<br>
-<br>
-
+        {% from "components/button/_macro.njk" import onsButton %}
+        {{
+            onsButton({
+                "type": 'button',
+                "text": 'Back to main form',
+                "classes": 'btn--secondary btn--small u-mb-l',
+                "url": "/prototypes/take-on-1/v3/questionlist-rsi.html"
+            })
+        }}
 
 
 
 <section role="region" class="tabs">
-  <h2 class="tabs__title">Tabs</h2>
+
+  <h2 class="tabs__title">Form and previous data for Q22</h2>
+
   <ul class="tabs__list">
-    <li id="tabId1Item" class="tab__list-item"><a href="#tabId1" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: Form data" data-ga-label="Show: Form data">Form data</a></li>
-    <li id="tabId2Item" class="tab__list-item"><a href="#tabId2" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: Previous data" data-ga-label="Show: Previous data">Previous data</a></li>
+
+    <li id="tabId1Item" class="tab__list-item"><a href="#tabId1" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: form data" data-ga-label="Show: form data">Form data</a></li>
+
+    <li id="tabId2Item" class="tab__list-item"><a href="#tabId2" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: previous data" data-ga-label="Show: previous data">Previous data</a></li>
+
+    <li id="tabId3Item" class="tab__list-item"><a href="#tabId3" class="tab" data=ga="click" data-ga-category="tabs" data-ga-action="Show: graph of previous data" data-ga-label="Show: graph of previous data">Graph of previous data</a></li>
 
   </ul>
-<section role="region" class="tabs">
+
   <section id="tabId1" class="tabs__panel">
+
+  <h3>Form data for Q22</h3>
 
     <div class="panel panel--error panel--simple">
         <div class="panel__body">
@@ -111,25 +114,25 @@ layout: take-on-1/views/_master
         "name": "food",
         "radios": [
             {
-                "id": "bacon",
+                "id": "Override",
                 "label": {
                     "text": "Override"
                 },
-                "value": "bacon"
+                "value": "Override"
             },
             {
-                "id": "bacon",
+                "id": "Edit",
                 "label": {
                     "text": "Edit"
                 },
-                "value": "bacon"
+                "value": "Edit"
             },
             {
-                "id": "olives",
+                "id": "estimated",
                 "label": {
                     "text": "Add estimated value"
                 },
-                "value": "olives"
+                "value": "estimated"
             }
         ]
     })
@@ -141,50 +144,48 @@ layout: take-on-1/views/_master
     onsSelect({
         "id": "select",
         "name": "select",
+        "classes": "u-mb-l",
         "label": {
             "text": "Reason"
         },
         "options": [
             {
                 "value": "",
-                "text": "Select an option",
+                "text": "Select a reason",
                 "disabled": true,
                 "selected": true
             },
             {
-                "value": "bart",
-                "text": "Bart Simpson"
+                "value": "Informed decision",
+                "text": "Informed decision"
             },
             {
-                "value": "homer",
-                "text": "Homer Simpson"
+                "value": "Conversation with business",
+                "text": "Conversation with business"
             },
             {
-                "value": "marge",
-                "text": "Marge Simpson"
+                "value": "RAP advised clearance",
+                "text": "RAP advised clearance"
             },
             {
-                "value": "lisa",
-                "text": "Lisa Simpson"
+                "value": "Internet increase",
+                "text": "Internet increase"
             },
             {
-                "value": "maggie",
-                "text": "Maggie Simpson"
+                "value": "COVID-19",
+                "text": "COVID-19"
             },
             {
-                "value": "ned",
-                "text": "Ned Flanders"
+                "value": "Re-class",
+                "text": "Re-class"
             },
             {
-                "value": "7-dwarves",
-                "text": "The 7 Dwarves: Grumpy, Happy, Sleepy, Bashful, Sneezy, Dopey, Doc"
+                "value": "Zero return",
+                "text": "Zero return"
             }
         ]
     })
 }}
-<br>
-<br>
-<br>
 
 {% from "components/button/_macro.njk" import onsButton %}
 {{
@@ -195,6 +196,10 @@ layout: take-on-1/views/_master
 
 
   </section>
+
+
+  <!-- TAB ######################################################### -->
+
   <section id="tabId2" class="tabs__panel">
         <h3>Previous data for Q22</h3>
 
@@ -316,24 +321,26 @@ layout: take-on-1/views/_master
             Next
         </a>
 
+  </section>
+
+  <!-- TAB ######################################################### -->
+
+  <section id="tabId3" class="tabs__panel">
 
 
+  {% include "prototypes/take-on-1/v3/graphs/rsi-graph.inc" %}
 
-        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+  <h3>Graph of previous data for Q22</h3>
 
+    <div
+    id="chartContainer"
+    style="height: 99%; width: 99%;"
+    class="u-mt-l u-mb-xl">
+    </div>
 
   </section>
 
 </section>
-
-
-
-
-
-
-
-
-
 
 
 
