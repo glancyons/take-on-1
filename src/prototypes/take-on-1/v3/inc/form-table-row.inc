@@ -29,7 +29,15 @@
         {% endif %}
 
         {% if q.Status == "Validations" %}
-            <span class='status status--error'>{{ q.ValidationMessages }}</span>
+
+
+            {% for v in q.ValidationMessages %}
+
+                <span class='status status--error'>{{ v }}</span>
+                <br>
+             
+             {% endfor %}
+
         {% endif %}
     </td class="table__cell ">
 

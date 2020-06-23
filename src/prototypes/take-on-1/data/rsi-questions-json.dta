@@ -53,7 +53,7 @@
    "Adjusted": "39928",
    "Status": "Validations",
    "Action": "No",
-   "ValidationMessages": "This has changed since the last submission"
+   "ValidationMessages": ["This has changed since the last submission"]
  },
  {
    "Number": "Q23",
