@@ -5,6 +5,9 @@ window.onload = function () {
 	var chart = new CanvasJS.Chart (
 		"chartContainer",
 		{
+		options: {
+              responsive: false
+          },
 		animationEnabled: false,
 		theme: "light2",
 		title:{
