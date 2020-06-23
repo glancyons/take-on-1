@@ -43,8 +43,8 @@ window.onload = function () {
 		  },
 		legend: {
 				cursor:"pointer",
-				verticalAlign: "top",
-				horizontalAlign: "left",
+				
+				horizontalAlign: "right",
 				dockInsidePlotArea: false,
 				itemclick: toogleDataSeries,
 				fontSize: 18,
