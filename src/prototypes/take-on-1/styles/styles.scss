@@ -125,3 +125,9 @@ table.to-u-grid tr:nth-child(4) td.to-u-year1 {
 .to-u-bg-warning {
   background-color: #ff0000;
 }
+
+/* TEMPORARY FIX FOR ACTIVE TAB BOTTOM NOT WHITE */
+.tab--row[aria-selected='true']:after {
+  bottom: -2px;
+  height: 2px;
+}

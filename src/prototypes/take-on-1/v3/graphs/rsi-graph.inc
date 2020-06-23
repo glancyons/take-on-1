@@ -53,6 +53,7 @@ window.onload = function () {
 				showInLegend: true,
 				name: "2015",
 				lineDashType: "solid",
+				color: "#888888",
 				dataPoints: [
 					{ x: new Date(2020, 11, 1), y: 105342 },
 					{ x: new Date(2020, 10, 1), y: 91385 },
@@ -73,6 +74,7 @@ window.onload = function () {
 				showInLegend: true,
 				name: "2016",
 				lineDashType: "solid",
+				color: "#595959",
 				dataPoints: [
 
 					{ x: new Date(2020, 11, 1), y: 118510 },
@@ -93,6 +95,7 @@ window.onload = function () {
 				showInLegend: true,
 				name: "2017",
 				lineDashType: "solid",
+				color: "#222222",
 				dataPoints: [
 					{ x: new Date(2020, 11, 1), y: 105342 },
 					{ x: new Date(2020, 10, 1), y: 91385 },
@@ -113,6 +116,7 @@ window.onload = function () {
 				showInLegend: true,
 				name: "2018",
 				lineDashType: "solid",
+				color: "#000000",
 				dataPoints: [
 					{ x: new Date(2020, 11, 1), y: 131678 },
 					{ x: new Date(2020, 10, 1), y: 111693 },
@@ -133,6 +137,7 @@ window.onload = function () {
 				showInLegend: true,
 				name: "2019",
 				lineDashType: "solid",
+				color: "#4263c2",
 				dataPoints: [
 					{ x: new Date(2020, 11, 1), y: 131678 },
 					{ x: new Date(2020, 10, 1), y: 101539 },
@@ -153,6 +158,7 @@ window.onload = function () {
 				showInLegend: true,
 				name: "2020",
 				lineDashType: "solid",
+				color: "#d0021b",
 				dataPoints: [
 					{ x: new Date(2020, 5, 1), y: 93160 },
 					{ x: new Date(2020, 4, 1), y: 75503 },
