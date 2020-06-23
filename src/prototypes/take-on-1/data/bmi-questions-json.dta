@@ -4,101 +4,101 @@
  {
    "Number": "Q146",
    "Question": "Comment on the figures included in your return",
-   "Response": " 2",
+   "Response": "1",
    "Adjusted": "",
    "Status": "",
    "Action": "No",
-   "ValidationMessages": "Zero Error"
+   "ValidationMessages": ""
  },
  {
    "Number": "Q147",
    "Question": "New pits or quarries brought into use since date of last return",
-   "Response": "2",
+   "Response": "1",
+   "Adjusted": "",
+   "Status": "",
+   "Action": "No",
+   "ValidationMessages": ""
+ },
+ {
+   "Number": "Q601",
+   "Question": "Sand produced for asphalt (asphalting sand)",
+   "Response": "176,100",
    "Adjusted": "",
    "Status": "Validations",
    "Action": "No",
    "ValidationMessages": ["Value is larger than expected.","This has changed significantly since the last submission"]
  },
  {
-   "Number": "Q601",
-   "Question": "Sand produced for asphalt (asphalting sand)",
-   "Response": "176100",
-   "Adjusted": "",
-   "Status": "",
-   "Action": "No",
-   "ValidationMessages": "Zero Error"
- },
- {
    "Number": "Q602",
    "Question": "Sand produced for use in mortar (building or soft sand)",
-   "Response": "123000",
+   "Response": "123,000",
    "Adjusted": "",
    "Status": "",
    "Action": "No",
-   "ValidationMessages": "Zero Error"
+   "ValidationMessages": ""
  },
  {
    "Number": "Q603",
    "Question": "Sand produced for concreting (sharp sand)",
-   "Response": "56000",
+   "Response": "56,000",
    "Adjusted": "",
-   "Status": "",
+   "Status": "Validations",
    "Action": "No",
-   "ValidationMessages": "Zero Error"
+   "ValidationMessages": ["This has changed by a significant percentage since the last submission"]
  },
  {
    "Number": "Q604",
    "Question": "Gravel coated with bituminous binder (on or off site)",
-   "Response": "345000",
+   "Response": "345,000",
    "Adjusted": "",
    "Status": "",
    "Action": "No",
-   "ValidationMessages": "Zero Error"
+   "ValidationMessages": ""
  },
  {
    "Number": "Q605",
    "Question": "Gravel produced for concrete aggregate (including sand/gravel mixes)",
-   "Response": "345000",
+   "Response": "345,000",
    "Adjusted": "",
    "Status": "",
    "Action": "No",
-   "ValidationMessages": "Zero Error"
+   "ValidationMessages": ""
  },
  {
    "Number": "Q606",
    "Question": "Other screened and graded gravels",
-   "Response": "15000",
+   "Response": "15,000",
    "Adjusted": "",
    "Status": "",
    "Action": "No",
-   "ValidationMessages": "Zero Error"
+   "ValidationMessages": ""
  },
  {
    "Number": "Q607",
    "Question": "Sand and gravel used for constructional fill",
-   "Response": "12000",
+   "Response": "12,000",
    "Adjusted": "",
    "Status": "",
    "Action": "No",
-   "ValidationMessages": "Zero Error"
+   "ValidationMessages": ""
  },
  {
    "Number": "Q608",
-   "Question": "TOTALS",
-   "Response": "1345000",
+   "Question": "Total",
+   "Response": "1,345,000",
    "Adjusted": "",
    "Status": "",
    "Action": "No",
-   "ValidationMessages": "Zero Error"
+   "ValidationMessages": ""
  },
  {
    "Number": "Q9001",
-   "Question": "Derived Total of all sand and gravel (Q601 + Q602 + Q603 + Q604 + Q605 + Q606 + Q607)",
-   "Response": "1345000",
+   "Question": "Automatically calculated total",
+   "Response": "1,345,000",
    "Adjusted": "",
    "Status": "",
    "Action": "No",
-   "ValidationMessages": "Zero Error"
+   "ValidationMessages": ""
  }
 
 ]

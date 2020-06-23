@@ -8,7 +8,7 @@
    "Adjusted": "",
    "Status": "",
    "Action": "No",
-   "ValidationMessages": "Zero Error"
+   "ValidationMessages": ""
  },
  {
    "Number": "Q5002",
@@ -17,40 +17,22 @@
    "Adjusted": "",
    "Status": "",
    "Action": "No",
-   "ValidationMessages": "Zero Error"
+   "ValidationMessages": ""
  },
  {
    "Number": "Q20",
    "Question": "Total retail turnover",
-   "Response": "162157",
-   "Adjusted": "154157",
+   "Response": "162,157",
+   "Adjusted": "154,157",
    "Status": "Edited",
    "Action": "",
-   "ValidationMessages": "Zero Error"
- },
-  {
-   "Number": "Q5002",
-   "Question": "Reference period start date",
-   "Response": " 2020-03-01",
-   "Adjusted": "",
-   "Status": "",
-   "Action": "No",
-   "ValidationMessages": "Zero Error"
- },
- {
-   "Number": "Q5002",
-   "Question": "Reference period start date",
-   "Response": " 2020-03-01",
-   "Adjusted": "",
-   "Status": "",
-   "Action": "No",
-   "ValidationMessages": "Zero Error"
+   "ValidationMessages": ""
  },
   {
    "Number": "Q22",
    "Question": "Alcohol, confectionery, tobacco",
-   "Response": "43928",
-   "Adjusted": "39928",
+   "Response": "43,928",
+   "Adjusted": "39,928",
    "Status": "Validations",
    "Action": "No",
    "ValidationMessages": ["This has changed since the last submission"]
@@ -58,8 +40,8 @@
  {
    "Number": "Q23",
    "Question": "Clothing and footwear",
-   "Response": "13000",
-   "Adjusted": "",
+   "Response": "13,000",
+   "Adjusted": "11,456",
    "Status": "",
    "Action": "",
    "ValidationMessages": ""
@@ -67,8 +49,8 @@
  {
    "Number": "Q24",
    "Question": "Household goods",
-   "Response": "8000",
-   "Adjusted": "",
+   "Response": "8,000",
+   "Adjusted": "6,900",
    "Status": "",
    "Action": "",
    "ValidationMessages": ""
@@ -76,8 +58,8 @@
  {
    "Number": "Q25",
    "Question": "Other sales",
-   "Response": "8000",
-   "Adjusted": "",
+   "Response": "8,000",
+   "Adjusted": "6,900",
    "Status": "",
    "Action": "",
    "ValidationMessages": ""
@@ -85,8 +67,8 @@
  {
    "Number": "Q27",
    "Question": "Automotive fuel",
-   "Response": "8000",
-   "Adjusted": "",
+   "Response": "8,000",
+   "Adjusted": "6,900",
    "Status": "",
    "Action": "",
    "ValidationMessages": ""
@@ -94,8 +76,8 @@
  {
    "Number": "Q26",
    "Question": "Internet sales",
-   "Response": "67000",
-   "Adjusted": "",
+   "Response": "67,000",
+   "Adjusted": "62,056",
    "Status": "",
    "Action": "",
    "ValidationMessages": ""
@@ -177,9 +159,9 @@
    "Question": "Comment about reason for turnover changes",
    "Response": "We ran some special promotions and easter events. As a result we saw an increase in online sales. However there was a rainy third weekend which depressed later sales.",
    "Adjusted": "",
-   "Status": "",
+   "Status": "Validations",
    "Action": "",
-   "ValidationMessages": ""
+   "ValidationMessages": ["Respondent entered a comment"]
  }
 ]
 

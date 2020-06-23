@@ -126,6 +126,11 @@ table.to-u-grid tr:nth-child(4) td.to-u-year1 {
   background-color: #ff0000;
 }
 
+.to-validation {
+  font-weight: 600;
+  color: #d0021b;
+}
+
 /* TEMPORARY FIX FOR ACTIVE TAB BOTTOM NOT WHITE */
 .tab--row[aria-selected='true']:after {
   bottom: -2px;

@@ -12,7 +12,7 @@
     <td class="table__cell ">
         {{ q.Question }}
     </td>
-    <td class="table__cell ">
+    <td class="table__cell table__cell--numeric">
         {% set charLimit = 100 %}
         {% if q.Response | length > charLimit %}
             {{ q.Response.slice(0, charLimit) }}... [View for more]
@@ -20,9 +20,13 @@
             {{ q.Response }}
         {% endif %}
     </td>
-    <td class="table__cell ">
-        {{ q.Adjusted }}
-    </td>
+
+    {% if showAdjustedCol %}
+      <td class="table__cell table__cell--numeric">
+          {{ q.Adjusted }}
+      </td>
+    {% endif %}
+
     <td class="table__cell ">
         {% if q.Status == "Edited" %}
             <span class='status status--info'>{{ q.Status }}</span>
@@ -33,9 +37,9 @@
 
             {% for v in q.ValidationMessages %}
 
-                <span class='status status--error'>{{ v }}</span>
+                <span class='status status--error to-validation'>{{ v }}</span>
                 <br>
-             
+
              {% endfor %}
 
         {% endif %}
