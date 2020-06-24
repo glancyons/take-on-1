@@ -5,6 +5,7 @@ window.onload = function () {
 	var chart = new CanvasJS.Chart (
 		"chartContainer",
 		{
+		width: 823,
 		options: {
               responsive: false
           },
@@ -43,7 +44,7 @@ window.onload = function () {
 		  },
 		legend: {
 				cursor:"pointer",
-				
+
 				horizontalAlign: "right",
 				dockInsidePlotArea: false,
 				itemclick: toogleDataSeries,
