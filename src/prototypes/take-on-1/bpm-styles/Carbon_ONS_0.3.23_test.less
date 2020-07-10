@@ -1,0 +1,2041 @@
+/* Carbon_ONS_v0.3.23 Test */
+
+/* Theme_Level_Id is a metadata to indicate the theme level of this bpm theme. */
+/* This Id will be updated to match the one in the Carbon Theme in your dependent System Toolkit when using the theme roller */
+// #Theme_Level_Id#605a66d3-d2ee-424f-8cac-ffb918062019#Theme_Level_Id_End#
+
+/* The theme definitions are in LESS format: */
+/* @variableName:             value; */
+/* The value can be a specific value, a formula, another variable, or a combination of these types. */
+
+/* Global Variables */
+
+/* Neutral colors */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-secondary-action-color-base:          #4263c2;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-btn-alternate-hover-border:           #4263c2;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-btn-alternate-hover-color:            @bpm-body-bg;                                               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"text"}|DE|
+@bpm-btn-height-xsmall:                    28px;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"text"}|DE|
+@bpm-btn-height-large:                     48px;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-btn-icon-span-bg:                     transparent;                                                //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-hover-border-bottom:                  @bpm-secondary-action-color-base;                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-input-hover-border-bottom:            @bpm-hover-border-bottom;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-input-group-btn-bg:                   @bpm-input-bg;                                              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-input-group-btn-border:               transparent;                                                //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-select-hover-border-bottom:           @bpm-hover-border-bottom;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-select-item-hover-bg:                 rgba(85,150,230,.1);                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-select-item-hover-border-left:        #4263c2;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-checkbox-bg:                          @bpm-body-bg;                                               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-checkbox-border:                      @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"text"}|DE|
+@bpm-checkbox-border-width:                2px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-checkbox-hover-bg:                    @bpm-body-bg;                                               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-checkbox-hover-border:                @bpm-secondary-action-color-base;                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-checkbox-checked-bg:                  transparent;                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-checkbox-checked-border:              @bpm-secondary-action-color-base;                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-checkbox-checked-color:               @bpm-text-color-primary;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"text"}|DE|
+@bpm-checkbox-height:                      22.5px;                                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"text"}|DE|
+@bpm-checkbox-font-size:                   15px;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"text"}|DE|
+@bpm-checkbox-border-radius:               2px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-radio-bg:                             @bpm-body-bg;                                               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-radio-color:                     @bpm-neutral-darkest;           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-radio-border:                         @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-radio-hover-bg:                       @bpm-secondary-action-color-base;                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-radio-hover-border:                   @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-radio-hover-color:                    @bpm-secondary-action-color-base;                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-radio-checked-bg:                     @bpm-body-bg;                                               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-radio-checked-border:                 @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-radio-checked-color:                  @bpm-neutral-darkest;                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-default-normal-fill-neutral:          @bpm-neutral;                                               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-default-normal-border-neutral:        darken( @bpm-default-normal-fill-neutral, 6%);              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-tabs-default-content-border:          transparent;                                                //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"font-weight"}|DE|
+@bpm-tabs-font-weight:                     bold;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-tabs-inactive-hover-color:            @bpm-secondary-action-color-base;                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-tabs-navbar-bg:                       @bpm-body-bg;                                               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-tabs-active-border-bottom:            @bpm-secondary-action-color-base;                           //|EEM|
+                        													 						   //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"font-weight"}|DE|
+@bpm-table-section-header-weight:          @bpm-section-header-weight;                                 //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-table-header-hover-border-bottom:     @bpm-hover-border-bottom;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-table-item-hover-bg:                  #F0F4F4;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-table-item-selected-border-left:      @bpm-select-item-hover-border-left;                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-text-alternate-color:                 lighten(@bpm-text-color, 100%);                                                       //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-neutral-darkest:                      @bpm-text-color;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010020","type":"color"}|DE|
+@bpm-neutral-darker:                       @bpm-text-color;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010030","type":"color"}|DE|
+@bpm-neutral-dark:                         @bpm-text-color;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010040","type":"color"}|DE|
+@bpm-neutral:                              #595959;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010050","type":"color"}|DE|
+@bpm-neutral-light:                        #6d7777;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010060","type":"color"}|DE|
+@bpm-neutral-lighter:                      @bpm-border-normal;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010070","type":"color"}|DE|
+@bpm-neutral-lightest:                     @bpm-border-normal;                                                    //|EEM|
+
+/* Brand colors */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010080","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-primary-light:                  #3b7a9e;                 //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010081","type":"color"}|DE|
+@bpm-color-primary:                        #033e58;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010082","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-primary-dark:@bpm-color-primary;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010083","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-primary-darker:@bpm-color-primary;                                  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010090","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-info-light:@bpm-color-info;                                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010091","type":"color"}|DE|
+@bpm-color-info:                           #eff0f9;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010092","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-info-dark:                      #033e58;                                //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010093","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-info-darker:@bpm-color-info-dark;                                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010100","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-success-light:@bpm-color-success;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010101","type":"color"}|DE|
+@bpm-color-success:                        #edf4f0;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010102","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-success-dark:                   #0f8243;                //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010103","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-success-darker:@bpm-color-success-dark;                                 //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010110","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-warning-light:                  lighten(@bpm-color-warning, 35%);                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010111","type":"color"}|DE|
+@bpm-color-warning:                        #ffdd00;                                                 //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010112","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-warning-dark:@bpm-color-warning;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010113","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-warning-darker:@bpm-color-warning;                                  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010120","type":"color"}|DE|
+@bpm-color-alert-light:                    #fbecec;                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010121","type":"color"}|DE|
+@bpm-color-alert:                          #d0021b;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010122","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-alert-dark:@bpm-color-alert;                                                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010123","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-alert-darker:@bpm-color-alert;                                      //|EEM|
+
+/* Scaffolding */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010140","type":"color"}|DE|
+@bpm-body-bg:                              #ffffff;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010143","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-bg:                             fade(#161616, 75%);                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010145","type":"color","targetPane":["SP"]}|DE|
+@bpm-fill-darker:                          #595959;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010146","type":"color","targetPane":["SP"]}|DE|
+@bpm-fill-normal:                          #ffffff;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010148","type":"color","targetPane":["SP"]}|DE|
+@bpm-border-normal:                        #cccccc;                                  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010150","type":"color"}|DE|
+@bpm-link-color:                           #4263c2;                                         //|EEM|
+@bpm-link-hover-color:                     darken( @bpm-link-color, 15%);
+@bpm-link-decoration:                      none;
+@bpm-link-hover-decoration:                underline;
+
+/* Typography */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010160","type":"color"}|DE|
+@bpm-text-color:                           #222222;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010170","type":"font-family"}|DE|
+@bpm-font-family-sans-serif:               'Open Sans', 'Helvetica Neue',Helvetica, Arial, sans-serif;//|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010180","type":"text"}|DE|
+@bpm-font-size-base:                       18px;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020003","type":"color","targetPane":["SP"]}|DE|
+@bpm-text-color-negative:                  @bpm-neutral-lightest;                                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020004","type":"color","targetPane":["SP"]}|DE|
+@bpm-text-color-primary:                   darken(@bpm-color-primary, 8%);                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020005","type":"color","targetPane":["SP"]}|DE|
+@bpm-text-color-info:                      darken(@bpm-color-info, 9%);                                //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020006","type":"color","targetPane":["SP"]}|DE|
+@bpm-text-color-success:                   darken(@bpm-color-success, 8%);                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020007","type":"color","targetPane":["SP"]}|DE|
+@bpm-text-color-warning:                   darken(@bpm-color-warning, 34%);                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020008","type":"color","targetPane":["SP"]}|DE|
+@bpm-text-color-alert:                     darken(@bpm-color-alert, 8%);                               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020010","type":"font-family"}|DE|
+@bpm-font-family-serif:                    Georgia, "Times New Roman", Times, serif;                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020020","type":"font-family"}|DE|
+@bpm-font-family-monospace:                "Courier New", Courier, monospace;                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020030","type":"font-family"}|DE|
+@bpm-font-family-base:                     @bpm-font-family-sans-serif;                                //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020040","type":"text","targetPane":["SP"]}|DE|
+@bpm-font-size-xsmall:                     @bpm-font-size-base/1.4;                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020050","type":"text"}|DE|
+@bpm-font-size-small:                      @bpm-font-size-base/1.25;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020060","type":"text"}|DE|
+@bpm-font-size-large:                      @bpm-font-size-base*1.25;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020080","type":"text","targetPane":["SP"]}|DE|
+@bpm-font-size-xlarge:                     round(@bpm-font-size-base * 1.77);                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020090","type":"text","targetPane":["SP"]}|DE|
+@bpm-font-size-xxlarge:                    round(@bpm-font-size-base * 2.3);                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020100","type":"text","targetPane":["SP"]}|DE|
+@bpm-font-size-xxxlarge:                   round(@bpm-font-size-base * 3.85);                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020101","type":"text"}|DE|
+@bpm-font-size-h1:                         @bpm-font-size-h2*1.25;                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020102","type":"text"}|DE|
+@bpm-font-size-h2:                         @bpm-font-size-h3*1.25;                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020103","type":"text"}|DE|
+@bpm-font-size-h3:                         @bpm-font-size-h4*1.25;                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020104","type":"text"}|DE|
+@bpm-font-size-h4:                         @bpm-font-size-large;                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020105","type":"text"}|DE|
+@bpm-font-size-h5:                         @bpm-font-size-base;                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020106","type":"text"}|DE|
+@bpm-font-size-h6:                         @bpm-font-size-small;                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020110","type":"font-weight","targetPane":["SP"]}|DE|
+@bpm-font-weight-slim:                     @bpm-font-weight-normal * 0.75;                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020120","type":"font-weight","targetPane":["SP"]}|DE|
+@bpm-font-weight-normal:                   400;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020130","type":"font-weight","targetPane":["SP"]}|DE|
+@bpm-font-weight-semibold:                 @bpm-font-weight-normal * 1.5;                              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020140","type":"font-weight","targetPane":["SP"]}|DE|
+@bpm-font-weight-bold:                     @bpm-font-weight-normal * 1.75;                             //|EEM|
+
+//-- Unit-less `line-height` for use in components such as buttons.
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010190","type":"text"}|DE|
+@bpm-line-height-base:                     1.6;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010200","type":"text"}|DE|
+@bpm-line-height-small:                    1.6;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010202","type":"text"}|DE|
+@bpm-line-height-large:                    1.4;                                                        //|EEM|
+
+//-- Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, and so on.
+@bpm-line-height-computed:                 floor((@bpm-font-size-base * @bpm-line-height-base)); // ~20px
+
+@bpm-headings-font-family:                 inherit;
+@bpm-headings-font-weight:                 normal;
+@bpm-headings-line-height:                 2;
+@bpm-headings-color:                       inherit;
+
+/* Grid */
+@bpm-half-gutter-width:                    5px;
+
+/* Components */
+// Default margin for any coach view
+
+@bpm-margin-top:                           6px;
+@bpm-margin-bottom:                        6px;
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010210","type":"text"}|DE|
+@bpm-padding-base-vertical:                6px;                                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010220","type":"text"}|DE|
+@bpm-padding-base-horizontal:              12px;                                         //|EEM|
+@bpm-padding-large-vertical:               10px;
+@bpm-padding-large-horizontal:             16px;
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010230","type":"text"}|DE|
+@bpm-padding-small-vertical:               5px;                                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010240","type":"text"}|DE|
+@bpm-padding-small-horizontal:             10px;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010250","type":"text"}|DE|
+@bpm-border-radius-base:                   3px;                                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010255","type":"text"}|DE|
+@bpm-border-radius-large:                  @bpm-border-radius-base;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010260","type":"text"}|DE|
+@bpm-border-radius-small:                  @bpm-border-radius-base;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010270","type":"color"}|DE|
+@bpm-active-color:                         #fff;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010280","type":"color"}|DE|
+@bpm-active-bg:                            #4263c2;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010290","type":"color"}|DE|
+@bpm-list-group-bg:                        @bpm-body-bg;                                 //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010300","type":"color"}|DE|
+@bpm-list-group-border:                    @bpm-neutral-lightest;                        //|EEM|
+
+/* Form inputs */
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030010","type":"font-family"}|DE|
+@bpm-label-font-family:                    @bpm-font-family-base;                        //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030020","type":"font-weight"}|DE|
+@bpm-label-font-weight:                    600;                                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030030","type":"color"}|DE|
+@bpm-label-text-color:                     inherit;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030040","type":"color"}|DE|
+@bpm-input-bg:                             #fff;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030050","type":"color"}|DE|
+@bpm-input-bg-disabled:                    @bpm-neutral-lightest;                            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030060","type":"color"}|DE|
+@bpm-input-color:                          @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030063","type":"color","targetPane":["SP"]}|DE|
+@bpm-input-color-disabled:                 fade(@bpm-text-color, 50%);                   //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030070","type":"color"}|DE|
+@bpm-input-border:                         @bpm-neutral-dark;                                  //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030070","type":"color"}|DE|
+@bpm-input-border-width:                   1px;                                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030071","type":"text"}|DE|
+@bpm-input-border-width-focus:             3px;                                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030072","type":"color","targetPane":["SP"]}|DE|
+@bpm-input-border-disabled:                fade(@bpm-neutral-darkest, 15%);              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030080","type":"text"}|DE|
+@bpm-input-border-radius-base:             @bpm-border-radius-base;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030082","type":"text"}|DE|
+@bpm-input-border-radius-large:            @bpm-border-radius-large;                     //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030083","type":"text"}|DE|
+@bpm-input-border-radius-small:            @bpm-border-radius-small;                     //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030085","type":"color"}|DE|
+@bpm-input-border-focus:                   @bpm-color-warning;                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030087","type":"color"}|DE|
+@bpm-input-shadow:                       transparent;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030088","type":"color"}|DE|
+@bpm-input-shadow-focus:                   transparent;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030089","type":"color"}|DE|
+@bpm-input-alert-shadow:        transparent;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030091","type":"color"}|DE|
+@bpm-input-info-shadow:        transparent;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030092","type":"color"}|DE|
+@bpm-input-success-shadow:        transparent;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030093","type":"color"}|DE|
+@bpm-input-warning-shadow:        transparent;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030094","type":"color"}|DE|
+@bpm-input-primary-shadow:        transparent;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030095","type":"color"}|DE|
+@bpm-input-color-placeholder:              #999999;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030096","type":"color"}|DE|
+@bpm-input-primary-color:                  #555;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030090","type":"text","targetPane":["SP"]}|DE|
+@bpm-input-line-height-small:              @bpm-line-height-small * 0.827;               //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030100","type":"text","targetPane":["SP"]}|DE|
+@bpm-input-line-height-base:               @bpm-line-height-large * 1.133;                        //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030110","type":"text","targetPane":["SP"]}|DE|
+@bpm-input-line-height-large:              @bpm-line-height-large * 1.3;                 //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030120","type":"text","targetPane":["SP"]}|DE|
+@bpm-input-height-base:                    40px;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030130","type":"text","targetPane":["SP"]}|DE|
+@bpm-input-height-small:                   32px;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030140","type":"text","targetPane":["SP"]}|DE|
+@bpm-input-height-large:                   48px;                                         //|EEM|
+
+@bpm-state-success-bg:                     @bpm-color-success;
+@bpm-state-success-text:                   darken(@bpm-state-success-bg, 55%);
+@bpm-state-success-border:                 darken(spin(@bpm-state-success-bg, -10), 5%);
+
+@bpm-state-info-bg:                        @bpm-color-info;
+@bpm-state-info-text:                      darken(@bpm-state-info-bg, 55%);
+@bpm-state-info-border:                    darken(spin(@bpm-state-info-bg, -10), 5%);
+
+@bpm-state-warning-bg:                     @bpm-color-warning;
+@bpm-state-warning-text:                   darken(@bpm-state-warning-bg, 50%);
+@bpm-state-warning-border:                 darken(spin(@bpm-state-warning-bg, -10), 5%);
+
+@bpm-state-alert-bg:                       @bpm-color-alert-light;
+@bpm-state-alert-text:                     darken(@bpm-state-alert-bg, 55%);
+@bpm-state-alert-border:                   darken(spin(@bpm-state-alert-bg, -10), 5%);
+
+/* Tooltip */
+                                    							                         //|EM|{"group":"PREVIEW_GROUP_TOOLTIPS","order":"080010","type":"color","targetPane":["SP"]}|DE|
+@bpm-tooltip-bg-base:                      @bpm-neutral-darkest;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TOOLTIPS","order":"080012","type":"color","targetPane":["SP"]}|DE|
+@bpm-tooltip-color-base:                   @bpm-fill-normal;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TOOLTIPS","order":"080014","type":"text","targetPane":["SP"]}|DE|
+@bpm-tooltip-border-radius:                @bpm-border-radius-base + 4px;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TOOLTIPS","order":"080016","type":"font-size","targetPane":["SP"]}|DE|
+@bpm-tooltip-font-size:                    @bpm-font-size-small;                          //|EEM|
+
+/* Button */
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040010","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-default-color:                    @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040020","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-default-bg:                       @bpm-neutral;                                 //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040022","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-default-bg-dark:                  @bpm-neutral-dark;                            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040024","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-default-bg-darker:                @bpm-neutral-darker;                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040030","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-default-border:                   darken(@bpm-neutral-dark,10%);                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040040","type":"color"}|DE|
+@bpm-btn-default-border-alternate:         @bpm-active-color;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040040","type":"color"}|DE|
+@bpm-btn-default-outline:                  transparent;                  //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040040","type":"color"}|DE|
+@bpm-btn-default-focus-border:             @bpm-color-warning;                                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040040","type":"color"}|DE|
+@bpm-btn-primary-color:                    #fff;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040045","type":"color"}|DE|
+@bpm-btn-primary-bg:                       #0f8243;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040055","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-primary-bg-dark:                  darken( @bpm-btn-primary-bg, 5%);                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040057","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-primary-bg-darker:                darken( @bpm-btn-primary-bg, 10%);                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040060","type":"color"}|DE|
+@bpm-btn-primary-border:                 darken( @bpm-btn-primary-bg, 5%);                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040070","type":"color"}|DE|
+@bpm-btn-primary-border-alternate:         desaturate(darken(@bpm-btn-primary-border, 8%), 29%);                     //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040070","type":"color"}|DE|
+@bpm-btn-primary-outline:                  transparent;                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040070","type":"color"}|DE|
+@bpm-btn-primary-focus-border:           @bpm-btn-primary-border;                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040070","type":"color"}|DE|
+@bpm-btn-alternate-color:                  @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040072","type":"color"}|DE|
+@bpm-btn-alternate-bg:                     #d0d0d0;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040074","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-alternate-bg-dark:                darken(@bpm-btn-alternate-bg, 5%);            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040076","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-alternate-bg-darker:              darken(@bpm-btn-alternate-bg, 15%);           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040078","type":"color"}|DE|
+@bpm-btn-alternate-border:                 @bpm-neutral-lighter;                         //|EEM|
+                                                                              	         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040079","type":"color"}|DE|
+@bpm-btn-alternate-border-alternate:       @bpm-active-color;                            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040079","type":"color"}|DE|
+@bpm-btn-alternate-outline:                transparent;                   //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040079","type":"color"}|DE|
+@bpm-btn-alternate-focus-border:           @bpm-btn-alternate-border;                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040070","type":"color"}|DE|
+@bpm-btn-success-color:                    @bpm-text-color;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040085","type":"color"}|DE|
+@bpm-btn-success-bg:                       @bpm-color-success;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040087","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-success-bg-dark:                  @bpm-color-success-dark;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040089","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-success-bg-darker:                @bpm-color-success-darker;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040093","type":"color"}|DE|
+@bpm-btn-success-border:                   darken( @bpm-btn-success-bg, 5%);                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040100","type":"color"}|DE|
+@bpm-btn-success-border-alternate:         darken(@bpm-btn-success-border,6%);                            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040100","type":"color"}|DE|
+@bpm-btn-success-outline:                 transparent;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040100","type":"color"}|DE|
+@bpm-btn-success-focus-border:             @bpm-btn-success-border;                            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040070","type":"color"}|DE|
+@bpm-btn-info-color:                       @bpm-text-color;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040110","type":"color"}|DE|
+@bpm-btn-info-hover-color:                 @bpm-text-color;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040110","type":"color"}|DE|
+@bpm-btn-info-bg:                          @bpm-color-info;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040113","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-info-bg-dark:                     @bpm-color-info-dark;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040116","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-info-bg-darker:                   @bpm-color-info-darker;                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040120","type":"color"}|DE|
+@bpm-btn-info-border:                      darken( @bpm-btn-info-bg, 5%);                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040130","type":"color"}|DE|
+@bpm-btn-info-border-alternate:            darken(@bpm-btn-info-border, 6%);                            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040130","type":"color"}|DE|
+@bpm-btn-info-outline:                   transparent;                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040130","type":"color"}|DE|
+@bpm-btn-info-focus-border:             @bpm-btn-info-border;                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040070","type":"color"}|DE|
+@bpm-btn-warning-color:                    @bpm-text-color;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040140","type":"color"}|DE|
+@bpm-btn-warning-bg:                       @bpm-color-warning;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040145","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-warning-bg-dark:                  @bpm-color-warning-dark;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040147","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-warning-bg-darker:                @bpm-color-warning-darker;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040150","type":"color"}|DE|
+@bpm-btn-warning-border:                   darken( @bpm-btn-warning-bg, 5%);             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040160","type":"color"}|DE|
+@bpm-btn-warning-border-alternate:         darken(@bpm-btn-warning-border, 13%);                  //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040160","type":"color"}|DE|
+@bpm-btn-warning-outline:                transparent;                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040160","type":"color"}|DE|
+@bpm-btn-warning-focus-border:             @bpm-btn-warning-border;                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040070","type":"color"}|DE|
+@bpm-btn-alert-color:                      @bpm-text-color;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040170","type":"color"}|DE|
+@bpm-btn-alert-bg:                         @bpm-color-alert-light;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040175","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-alert-bg-dark:                    @bpm-color-alert-dark;                        //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040177","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-alert-bg-darker:                  @bpm-color-alert-darker;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040180","type":"color"}|DE|
+@bpm-btn-alert-border:                     darken( @bpm-btn-alert-bg, 5%);               //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040180","type":"color"}|DE|
+@bpm-btn-alert-border-alternate:           darken(@bpm-btn-alert-border, 3%);                   //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040190","type":"color"}|DE|
+@bpm-btn-alert-outline:                    transparent;                  //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040190","type":"color"}|DE|
+@bpm-btn-alert-focus-border:             @bpm-btn-alert-border;                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040070","type":"font-weight"}|DE|
+@bpm-btn-font-weight:                      normal;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040192","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-outline-width:                    0px;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040194","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-border-width:                     3px solid;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040194","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-border-radius-xsmall:             @bpm-border-radius-small;                     //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040194","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-border-radius-small:              @bpm-border-radius-small;                     //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040196","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-border-radius:                    @bpm-border-radius-base;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040200","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-border-radius-large:              @bpm-border-radius-large;                     //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040205","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-bg-use-gradients:                 false;                                        //|EEM|
+                                        												 //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040215","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-scale:                            1.4;                                          //|EEM|
+																						 //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040215","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-xsmall-padding:                   round(4px * @bpm-btn-scale);                  //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040220","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-small-padding:                    8px;                  //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040230","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-normal-padding:                   13.5px;                  //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040235","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-large-padding:                    round(9px * @bpm-btn-scale);                  //|EEM|
+
+/* Switch */
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050010","type":"color","targetPane":["SP"]}|DE|
+@bpm-switch-default-bg:                    @bpm-color-primary;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050020","type":"color"}|DE|
+@bpm-switch-primary-bg:                    darken( @bpm-color-primary, 5%);              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050025","type":"color"}|DE|
+@bpm-switch-primary-color:                 #fff;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050030","type":"color"}|DE|
+@bpm-switch-alternate-bg:                  @bpm-neutral-light;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050040","type":"color"}|DE|
+@bpm-switch-alternate-color:               @bpm-text-color;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050050","type":"color"}|DE|
+@bpm-switch-success-bg:                    lighten( @bpm-color-success, 5%);             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050060","type":"color"}|DE|
+@bpm-switch-success-color:                 @bpm-text-color;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050070","type":"color"}|DE|
+@bpm-switch-info-bg:                       lighten( @bpm-color-info, 5%);                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050080","type":"color"}|DE|
+@bpm-switch-info-color:                    @bpm-text-color;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050090","type":"color"}|DE|
+@bpm-switch-warning-bg:                    lighten( @bpm-color-warning, 5%);             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050100","type":"color"}|DE|
+@bpm-switch-warning-color:                 @bpm-text-color;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050110","type":"color"}|DE|
+@bpm-switch-alert-bg:                      darken( @bpm-color-alert-light, 5%);               //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050120","type":"color"}|DE|
+@bpm-switch-alert-color:                   @bpm-text-color;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050125","type":"color","targetPane":["SP"]}|DE|
+@bpm-switch-color:                         @bpm-text-color-negative;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050130","type":"color"}|DE|
+@bpm-switch-border:                        @bpm-neutral-dark;                            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050140","type":"text"}|DE|
+@bpm-switch-border-radius:                 @bpm-border-radius-base;               //|EEM|
+
+/* Section */
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060005","type":"text"}|DE|
+@bpm-section-font-size-base:               @bpm-font-size-h3;                            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060006","type":"text"}|DE|
+@bpm-section-font-size-small:              @bpm-font-size-h4;                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060007","type":"text"}|DE|
+@bpm-section-font-size-large:              @bpm-font-size-h2;                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060008","type":"text"}|DE|
+@bpm-section-header-active-border:         0px;                   //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060010","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-header-default-color:         lighten(@bpm-text-color, 20%);                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060011","type":"color"}|DE|
+@bpm-section-header-default-border:        0px;                                                 //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060012","type":"color"}|DE|
+@bpm-section-header-default-bg:            @bpm-section-default-bg;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060012","type":"color"}|DE|
+@bpm-section-header-default-accent:        darken(@bpm-section-default-bg,2%);                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060013","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-default-bg:                   @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060014","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-default-content-bg:           @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060015","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-default-border:               darken(@bpm-section-default-bg, 6%);                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060018","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-default-accent-bg:            darken(@bpm-section-default-bg, 6%);          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060020","type":"color"}|DE|
+@bpm-section-header-primary-color:         #fff;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060030","type":"color"}|DE|
+@bpm-section-header-primary-light-bg:      @bpm-color-primary-light;                     //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060032","type":"color"}|DE|
+@bpm-section-header-primary-bg:            darken( @bpm-color-primary, 5%);              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060033","type":"color"}|DE|
+@bpm-section-header-primary-accent:        @bpm-section-primary-bg;                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060034","type":"color"}|DE|
+@bpm-section-header-primary-dark-bg:       @bpm-color-primary-dark;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060036","type":"color"}|DE|
+@bpm-section-header-primary-darker-bg:     @bpm-color-primary-darker;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060040","type":"color"}|DE|
+@bpm-section-header-primary-border:        darken( @bpm-section-header-primary-bg, 5%);                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060042","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-primary-bg:                   @bpm-color-primary;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060046","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-primary-content-bg:           @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060048","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-primary-border:               @bpm-section-primary-bg;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060049","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-primary-accent-bg:            @bpm-color-primary-dark;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060050","type":"color"}|DE|
+@bpm-section-header-alternate-color:       @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060060","type":"color"}|DE|
+@bpm-section-header-alternate-bg:          #fff;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060070","type":"color"}|DE|
+@bpm-section-header-alternate-border:      @bpm-neutral-lighter;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060075","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-alternate-bg:                 #fff;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060077","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-alternate-border:             @bpm-neutral-lighter;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060080","type":"color"}|DE|
+@bpm-section-header-success-color:         @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060090","type":"color"}|DE|
+@bpm-section-header-success-light-bg:      @bpm-color-success-light;                     //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060092","type":"color"}|DE|
+@bpm-section-header-success-bg:            lighten( @bpm-color-success, 5%);             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060093","type":"color"}|DE|
+@bpm-section-header-success-accent:        @bpm-section-success-bg;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060094","type":"color"}|DE|
+@bpm-section-header-success-dark-bg:       @bpm-color-success-dark;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060096","type":"color"}|DE|
+@bpm-section-header-success-darker-bg:     @bpm-color-success-darker;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060100","type":"color"}|DE|
+@bpm-section-header-success-border:        darken( @bpm-section-header-success-bg, 5%);               //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060110","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-success-bg:                   @bpm-color-success;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060112","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-success-content-bg:           @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060114","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-success-border:               @bpm-section-success-bg;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060116","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-success-accent-bg:            @bpm-color-success-dark;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060118","type":"color"}|DE|
+@bpm-section-header-info-color:            @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060120","type":"color"}|DE|
+@bpm-section-header-info-light-bg:         @bpm-color-info-light;                        //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060122","type":"color"}|DE|
+@bpm-section-header-info-bg:               lighten( @bpm-color-info, 5%);                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060123","type":"color"}|DE|
+@bpm-section-header-info-accent:           @bpm-section-info-bg;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060124","type":"color"}|DE|
+@bpm-section-header-info-dark-bg:          @bpm-color-info-dark;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060126","type":"color"}|DE|
+@bpm-section-header-info-darker-bg:        @bpm-color-info-darker;                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060130","type":"color"}|DE|
+@bpm-section-header-info-border:           darken( @bpm-section-header-info-bg, 5%);                  //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060132","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-info-bg:                      @bpm-color-info;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060134","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-info-content-bg:              @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060136","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-info-border:                  @bpm-section-info-bg;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060138","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-info-accent-bg:               @bpm-color-info-dark;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060140","type":"color"}|DE|
+@bpm-section-header-warning-color:         @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060150","type":"color"}|DE|
+@bpm-section-header-warning-light-bg:      @bpm-color-warning-light;                     //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060152","type":"color"}|DE|
+@bpm-section-header-warning-bg:            lighten( @bpm-color-warning, 5%);             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060155","type":"color"}|DE|
+@bpm-section-header-warning-accent:        @bpm-section-warning-bg;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060154","type":"color"}|DE|
+@bpm-section-header-warning-dark-bg:       @bpm-color-warning-dark;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060156","type":"color"}|DE|
+@bpm-section-header-warning-darker-bg:     @bpm-color-warning-darker;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060160","type":"color"}|DE|
+@bpm-section-header-warning-border:        darken( @bpm-section-header-warning-bg, 5%);                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060162","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-warning-bg:                   @bpm-color-warning;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060164","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-warning-content-bg:           @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060166","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-warning-border:               @bpm-section-warning-bg;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060168","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-warning-accent-bg:            @bpm-color-warning-dark;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060170","type":"color"}|DE|
+@bpm-section-header-alert-color:           @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060180","type":"color"}|DE|
+@bpm-section-header-alert-light-bg:        @bpm-color-alert-light;                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060182","type":"color"}|DE|
+@bpm-section-header-alert-bg:              darken( @bpm-color-alert-light, 5%);          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060184","type":"color"}|DE|
+@bpm-section-header-alert-dark-bg:         @bpm-color-alert-dark;                        //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060185","type":"color"}|DE|
+@bpm-section-header-alert-accent:          @bpm-section-alert-bg;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060186","type":"color"}|DE|
+@bpm-section-header-alert-darker-bg:       @bpm-color-alert-darker;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060190","type":"color"}|DE|
+@bpm-section-header-alert-border:          darken( @bpm-section-header-alert-bg, 5%);                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060192","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-alert-bg:                     @bpm-color-alert-light;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060194","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-alert-content-bg:             @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060196","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-alert-border:                 @bpm-color-alert;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060198","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-alert-accent-bg:              @bpm-color-alert;          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060200","type":"text"}|DE|
+@bpm-section-header-border-radius:         @bpm-border-radius-base;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060210","type":"color"}|DE|
+@bpm-section-border:                       @bpm-neutral-lighter;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060220","type":"font-weight"}|DE|
+@bpm-section-header-weight:                bold;                                         //|EEM|
+																						 //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060221","type":"color"}|DE|
+@bpm-section-separator-border:             rgba(0,0,0,0.05);                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060230","type":"text","targetPane":["SP"]}|DE|
+@bpm-section-border-radius:                @bpm-border-radius-base;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060240","type":"text","targetPane":["SP"]}|DE|
+@bpm-section-border-width:                 1px;                                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060250","type":"text","targetPane":["SP"]}|DE|
+@bpm-section-header-padding:               @bpm-padding-base-vertical + 5px;             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060255","type":"text","targetPane":["SP"]}|DE|
+@bpm-section-panel-border-top:             @bpm-section-default-border;                //|EEM|
+
+/* Table  */
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-cell-padding:                   8px;                                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070020","type":"color"}|DE|
+@bpm-table-bg:                             transparent;                                  //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070030","type":"color"}|DE|
+@bpm-table-bg-accent:                      #f0f0f0;                            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070040","type":"color"}|DE|
+@bpm-table-bg-hover:                       @bpm-neutral-lightest;                        //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070050","type":"color"}|DE|
+@bpm-table-bg-active:                      @bpm-neutral-lighter;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070060","type":"color"}|DE|
+@bpm-table-bg-select:                      #7cc7ff;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070070","type":"color"}|DE|
+@bpm-table-border-color:                   transparent;                                  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-header-border-width:            0px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-header-border-style:            solid;                                                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-header-border-color:            transparent;                                                //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-footer-border-width:            0px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-footer-border-style:            solid;                                                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-footer-border-color:            transparent;                                                //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-header-default-color:           @bpm-section-header-default-color;                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-header-default-bg:              @bpm-section-header-default-bg;                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-header-min-height:              40px;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-page-size-margin-top:           initial;                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-row-height:                     initial;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-head-default-color:             initial;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-head-default-bg:                #ffffff;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-head-primary-color:             @bpm-section-header-primary-color;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-head-light-color:               #555555;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-head-info-color:                @bpm-section-header-info-color;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-head-success-color:             @bpm-section-header-success-color;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-head-warning-color:             @bpm-section-header-warning-color;                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-head-alert-color:               @bpm-section-header-alert-color;                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-border-top-width:               0px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-border-right-width:             0px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-border-bottom-width:            0px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-border-left-width:              0px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-row-border-top-width:           0px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-row-border-right-width:         0px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-row-border-bottom-width:        @bpm-table-row-border-top-width;                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-row-border-left-width:          0px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-content-border-top-width:       1px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-content-border-right-width:     0px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-content-border-bottom-width:    @bpm-table-content-border-top-width;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-content-border-left-width:      0px;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-row-hover-bg:                   transparent;                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-content-padding-left:           8px;                                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-content-padding-right:          @bpm-table-content-padding-left;                                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-content-padding-bottom:         @bpm-table-content-padding-left;                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-content-padding-top:            @bpm-table-content-padding-left;                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-content-border-color:           #888;                                                                                  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-page-sizer-bg:                  #ffffff;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-default-selection-bg:           transparent;                                 //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-primary-selection-bg:           @bpm-color-primary;                                 //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-light-selection-bg:             transparent;                                 //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-info-selection-bg:              @bpm-color-info;                                 //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-success-selection-bg:           @bpm-color-success;                                 //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-warning-selection-bg:           @bpm-color-warning;                                 //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-alert-selection-bg:             @bpm-section-alert-accent-bg;                                 //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-light-add-bg:                   darken(@bpm-fill-normal, 8%);                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"color"}|DE|
+@bpm-table-light-pagination-bg:            darken(@bpm-fill-normal, 8%);                                         //|EEM|
+
+@bpm-table-sort-margin-top:                30%;
+@bpm-table-striped-row-hover-bg: 		   #f9f9f9;
+/* Pagination - used by Table coach view  */
+@bpm-pagination-color:                     @bpm-text-color;
+@bpm-pagination-bg:                        #fff;
+@bpm-pagination-border:                    @bpm-neutral-lighter;
+@bpm-pagination-hover-bg:                  @bpm-neutral-lightest;
+@bpm-pagination-hover-color:               @bpm-link-hover-color;
+@bpm-pagination-active-bg:                 @bpm-color-primary;
+@bpm-pagination-active-color:              #fff;
+@bpm-pagination-active-border:             @bpm-color-primary;
+
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070080","type":"color","targetPane":["SP"]}|DE|
+@bpm-table-delete-icon-color:              darken(@bpm-color-alert-darker, 45%);                               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070090","type":"text","targetPane":["SP"]}|DE|
+@bpm-table-min-cell-height:                20px;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070100","type":"text","targetPane":["SP"]}|DE|
+@bpm-table-paging-btn-radius:              @bpm-border-radius-base + 1px;                              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070110","type":"text","targetPane":["SP"]}|DE|
+@bpm-table-paging-outer-btn-radius:        @bpm-table-paging-btn-radius;                               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"0700120","type":"text","targetPane":["SP"]}|DE|
+@bpm-table-paging-inner-btn-radius:        @bpm-table-paging-btn-radius;                               //|EEM|
+
+
+/* Tabs */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080010","type":"text"}|DE|
+@bpm-nav-link-padding:                     10px 15px;                                                  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080012","type":"text"}|DE|
+@bpm-nav-link-margin-bottom:               inherit;                                                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080015","type":"text"}|DE|
+@bpm-nav-link-border:                      1px;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080018","type":"text"}|DE|
+@bpm-nav-tabs-border-bottom:               1px;                                                    //|EEM|
+              																						   //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080020","type":"color"}|DE|
+@bpm-nav-tabs-border-color:                #222;                                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080030","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-default-color:                   #222;                                                            //|EEM|
+
+@bpm-tabs-active-font:                     600;                                        				   //|EEM|
+
+@bpm-tabs-active-leter-spacing:            0.16px;                                        			   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080040","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-default-bg:                      #fff;                                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080050","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-default-border:                  #222;                                                                  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080052","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-default-accent:                  desaturate(lighten(@bpm-active-bg, 40%), 30%);                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080055","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-default-content-bg:              @bpm-fill-normal;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080060","type":"color"}|DE|
+@bpm-tabs-primary-color:                   #fff;                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080065","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-primary-simple-color:            @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080070","type":"color"}|DE|
+@bpm-tabs-primary-bg:                      @bpm-color-primary;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080075","type":"color"}|DE|
+@bpm-tabs-primary-border:                  darken( @bpm-tabs-primary-bg, 5%);                              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080080","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-primary-accent:                  desaturate(lighten(@bpm-tabs-primary-bg, 30%), 30%);                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080085","type":"color"}|DE|
+@bpm-tabs-alternate-color:                 @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080090","type":"color"}|DE|
+@bpm-tabs-alternate-bg:                    #fff;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080095","type":"color"}|DE|
+@bpm-tabs-alternate-border:                @bpm-neutral-lighter;                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080100","type":"color"}|DE|
+@bpm-tabs-success-color:                   @bpm-text-color;                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080110","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-success-simple-color:            @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080120","type":"color"}|DE|
+@bpm-tabs-success-bg:                      lighten( @bpm-color-success, 5%);                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080130","type":"color"}|DE|
+@bpm-tabs-success-border:                  darken( @bpm-tabs-success-bg, 5%);                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080140","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-success-accent:                  desaturate(lighten(@bpm-tabs-success-bg, 30%), 5%);                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080145","type":"color"}|DE|
+@bpm-tabs-info-color:                      @bpm-text-color;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080150","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-info-simple-color:               @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080155","type":"color"}|DE|
+@bpm-tabs-info-bg:                         lighten( @bpm-color-info, 5%);                              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080160","type":"color"}|DE|
+@bpm-tabs-info-border:                     darken( @bpm-tabs-info-bg, 5%);                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080165","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-info-accent:                     desaturate(lighten(@bpm-tabs-info-bg, 25%), 5%);                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080170","type":"color"}|DE|
+@bpm-tabs-warning-color:                   @bpm-text-color;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080175","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-warning-simple-color:            @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080180","type":"color"}|DE|
+@bpm-tabs-warning-bg:                      lighten( @bpm-color-warning, 5%);                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080185","type":"color"}|DE|
+@bpm-tabs-warning-border:                  darken( @bpm-tabs-warning-bg, 5%);                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080190","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-warning-accent:                  desaturate(lighten(@bpm-tabs-warning-bg, 25%), 5%);                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080195","type":"color"}|DE|
+@bpm-tabs-alert-color:                     @bpm-text-color;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080200","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-alert-simple-color:              @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080205","type":"color"}|DE|
+@bpm-tabs-alert-bg:                        darken( @bpm-color-alert-light, 5%);                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080210","type":"color"}|DE|
+@bpm-tabs-alert-border:                    darken( @bpm-tabs-alert-bg, 5%);                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080215","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-alert-accent:                    desaturate(lighten(@bpm-tabs-alert-bg, 30%), 5%);                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080220","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-inactive-color:                  lighten(@bpm-text-color, 20%);                              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080225","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-inactive-bg:                     #d0d0d0;                                                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080230","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-inactive-border:                 darken(@bpm-neutral, 6%);                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080235","type":"text"}|DE|
+@bpm-tabs-border-radius:                   @bpm-border-radius-base;                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080240","type":"text","targetPane":["SP"]}|DE|
+@bpm-tabs-height:                          38px;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080245","type":"text","targetPane":["SP"]}|DE|
+@bpm-tabs-border:                          0px;                                                       //|EEM|
+
+/* Notes */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080510","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-default-bg:                      @bpm-color-info-light;                                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080520","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-default-accent-bg:               @bpm-color-info-dark;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080530","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-default-color:                   @bpm-color-info-dark;                               //|EEM|
+
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080540","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-primary-bg:                      @bpm-color-info-light;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080550","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-primary-accent-bg:               @bpm-color-info-dark;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080560","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-primary-color:                   @bpm-color-info-dark;                                            //|EEM|
+
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080570","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-info-bg:                         @bpm-color-info-light;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080580","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-info-accent-bg:                  @bpm-color-info-dark;                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080590","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-info-color:                      @bpm-color-info-dark;                                 //|EEM|
+
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080600","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-success-bg:                      @bpm-color-success-light;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080610","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-success-accent-bg:               @bpm-color-success-dark;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080620","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-success-color:                   @bpm-color-success-dark;                               //|EEM|
+
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080630","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-warning-bg:                      @bpm-color-warning-light;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080640","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-warning-accent-bg:               @bpm-color-warning-dark;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080650","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-warning-color:                   @bpm-text-color;                               //|EEM|
+
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080660","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-alert-bg:                        @bpm-color-alert-light;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080670","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-alert-accent-bg:                 @bpm-color-alert-dark;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080680","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-alert-color:                     @bpm-color-alert-dark;                               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080690","type":"text","targetPane":["SP"]}|DE|
+@bpm-note-border-width:                    8px;                                                       //|EEM|
+
+/* Slider bars */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"text","targetPane":["SP"]}|DE|
+@bpm-slider-horizontal-height:             19px;                                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"text","targetPane":["SP"]}|DE|
+@bpm-slider-vertical-width:                19px;                                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"text","targetPane":["SP"]}|DE|
+@bpm-slider-border-radius:                 9999px;                                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"text","targetPane":["SP"]}|DE|
+@bpm-slider-handle-height:                 150%;                                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"text","targetPane":["SP"]}|DE|
+@bpm-slider-handle-width:                  19px;                                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"color","targetPane":["SP"]}|DE|
+@bpm-slider-handle-bg:                     @bpm-default-light-fill-neutral;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"color","targetPane":["SP"]}|DE|
+@bpm-slider-handle-border:                 darken(@bpm-default-dark-border-neutral, 7.5%);                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"color","targetPane":["SP"]}|DE|
+@bpm-slider-handle-alert-bg:               @bpm-slider-handle-bg;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"color","targetPane":["SP"]}|DE|
+@bpm-slider-handle-alert-border:           @bpm-slider-handle-border;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"color","targetPane":["SP"]}|DE|
+@bpm-slider-handle-warning-bg:             @bpm-slider-handle-bg;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"color","targetPane":["SP"]}|DE|
+@bpm-slider-handle-warning-border:         @bpm-slider-handle-border;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"color","targetPane":["SP"]}|DE|
+@bpm-slider-handle-success-bg:             @bpm-slider-handle-bg;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"color","targetPane":["SP"]}|DE|
+@bpm-slider-handle-success-border:         @bpm-slider-handle-border;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"color","targetPane":["SP"]}|DE|
+@bpm-slider-handle-info-bg:                @bpm-slider-handle-bg;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"color","targetPane":["SP"]}|DE|
+@bpm-slider-handle-info-border:            @bpm-slider-handle-border;                                            //|EEM|
+
+/* Progress bars */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-empty-bg:                    @bpm-neutral-lightest;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090020","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-default-bg:                  @bpm-neutral-darker;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090030","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-default-border:              darken(@bpm-neutral-darker,10%);                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090040","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-primary-bg:                  @bpm-color-primary;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090050","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-primary-border:              darken(@bpm-progress-primary-bg, 5%);                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090060","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-info-bg:                     @bpm-color-info-darker;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090070","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-info-border:                 darken(@bpm-progress-info-bg, 5%);                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090080","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-success-bg:                  @bpm-color-success-darker;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090090","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-success-border:              darken(@bpm-progress-success-bg, 5%);                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090100","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-warning-bg:                  @bpm-color-warning-darker;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090110","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-warning-border:              darken(@bpm-progress-warning-bg, 5%);                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090120","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-alert-bg:                    @bpm-color-alert;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090130","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-alert-border:                darken(@bpm-progress-alert-bg, 5%);                         //|EEM|
+
+/* Date Picker */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111000","type":"color"}|DE|
+@bpm-dtp-text-color:                       @bpm-default-normal-text-neutral;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111001","type":"color"}|DE|
+@bpm-dtp-icons-color:                      @bpm-default-normal-fill-color;                                              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111005","type":"color"}|DE|
+@bpm-dtp-background:                       @bpm-default-light-fill-neutral;                                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111010","type":"color"}|DE|
+@bpm-dtp-border-color:                     @bpm-default-dark-border-neutral;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111015","type":"color"}|DE|
+@bpm-dtp-span-hover-bg:                    lighten(@bpm-default-dark-fill-neutral, 50%);                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111020","type":"color"}|DE|
+@bpm-dtp-span-hover-border:                @bpm-btn-primary-border;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111021","type":"color"}|DE|
+@bpm-dtp-header-bg:                     @bpm-default-normal-fill-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111021","type":"color"}|DE|
+@bpm-dtp-header-color:                    @bpm-default-light-text-neutral;                                                //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111022","type":"color"}|DE|
+@bpm-dtp-header-bottom-border:             @bpm-default-darker-border-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111025","type":"color"}|DE|
+@bpm-dtp-date-active-bg:                   @bpm-default-normal-fill-color;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111030","type":"color"}|DE|
+@bpm-dtp-date-active-color:                @bpm-default-light-text-neutral;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111032","type":"color"}|DE|
+@bpm-dtp-date-active-hover-color:          @bpm-default-light-text-neutral;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111035","type":"color"}|DE|
+@bpm-dtp-date-hover-bg:                    @bpm-default-normal-fill-neutral;                                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111040","type":"color"}|DE|
+@bpm-dtp-date-hover-color:                 @bpm-btn-primary-color;                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111045","type":"color"}|DE|
+@bpm-dtp-date-today-bg:                    @bpm-default-normal-fill-neutral;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111050","type":"color"}|DE|
+@bpm-dtp-date-today-color:                 @bpm-default-normal-text-neutral;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111052","type":"color"}|DE|
+@bpm-dtp-date-today-highlight:             transparent;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111055","type":"color"}|DE|
+@bpm-dtp-grid-border-color:                @bpm-default-normal-border-neutral;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111060","type":"color"}|DE|
+@bpm-dtp-date-header-bg:                   @bpm-default-darker-fill-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111065","type":"color"}|DE|
+@bpm-dtp-date-header-color:                @bpm-default-light-text-neutral;                                              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111070","type":"color"}|DE|
+@bpm-dtp-month-header-bg:                  @bpm-default-normal-fill-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111075","type":"color"}|DE|
+@bpm-dtp-month-header-border:              @bpm-default-darker-border-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111080","type":"color"}|DE|
+@bpm-dtp-month-hover-bg:                   fade(@bpm-default-light-fill-neutral,20%);                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111085","type":"text"}|DE|
+@bpm-dtp-disabled-span-decoration:         line-through;                                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111090","type":"color"}|DE|
+@bpm-dtp-time-meridian-bg:              @bpm-default-normal-fill-color;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111092","type":"color"}|DE|
+@bpm-dtp-success-header-color:             @bpm-color-success-darker;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111094","type":"color"}|DE|
+@bpm-dtp-info-header-color:             @bpm-color-info-darker;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111095","type":"color"}|DE|
+@bpm-dtp-danger-header-color:             @bpm-color-alert-darker;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111096","type":"color"}|DE|
+@bpm-dtp-warning-header-color:             @bpm-color-warning-darker;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111098","type":"color"}|DE|
+@bpm-dtp-success-month-header-bg:          @bpm-color-success;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111099","type":"color"}|DE|
+@bpm-dtp-info-month-header-bg:             @bpm-color-info;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111100","type":"color"}|DE|
+@bpm-dtp-warning-month-header-bg:          @bpm-color-warning;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111102","type":"color"}|DE|
+@bpm-dtp-danger-month-header-bg:           @bpm-color-alert;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111104","type":"color"}|DE|
+@bpm-dtp-success-date-today-color:         @bpm-default-normal-text-neutral;                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111106","type":"color"}|DE|
+@bpm-dtp-info-date-today-color:            @bpm-default-normal-text-neutral;                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111108","type":"color"}|DE|
+@bpm-dtp-danger-date-today-color:          @bpm-default-normal-text-neutral;                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111110","type":"color"}|DE|
+@bpm-dtp-warning-date-today-color:         @bpm-default-normal-text-neutral;                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111111","type":"color"}|DE|
+@bpm-dtp-week-bg:                @bpm-default-normal-fill-neutral;                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111112","type":"color"}|DE|
+@bpm-dtp-success-month-header-border:      @bpm-border-normal;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111114","type":"color"}|DE|
+@bpm-dtp-info-month-header-border:         @bpm-border-normal;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111116","type":"color"}|DE|
+@bpm-dtp-warning-month-header-border:      @bpm-border-normal;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111118","type":"color"}|DE|
+@bpm-dtp-danger-month-header-border:       @bpm-border-normal;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111120","type":"color"}|DE|
+@bpm-dtp-success-date-today-highlight:     transparent;                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111122","type":"color"}|DE|
+@bpm-dtp-info-date-today-highlight:        transparent;                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111124","type":"color"}|DE|
+@bpm-dtp-danger-date-today-highlight:      transparent;                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111126","type":"color"}|DE|
+@bpm-dtp-warning-date-today-highlight:     transparent;                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_DATEPICKER","order":"111126","type":"color"}|DE|
+@bpm-dtp-date-disabled:                darken(@bpm-default-light-text-neutral, 40%);                          //|EEM|
+@bpm-dtp-date-today-decoration:            0rem;
+
+/* Menus */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_MENUS","order":"100010","type":"color","targetPane":["SP"]}|DE|
+@bpm-menu-item-active-color:               @bpm-active-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_MENUS","order":"100020","type":"color","targetPane":["SP"]}|DE|
+@bpm-menu-item-active-bg:                  @bpm-active-bg;                                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_MENUS","order":"100030","type":"text","targetPane":["SP"]}|DE|
+@bpm-menu-border-radius:                   @bpm-border-radius-base + 2;                                //|EEM|
+
+/* Breadcrumbs */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BREADCRUMBS","order":"11110","type":"color","targetPane":["SP"]}|DE|
+@bpm-breadcrumb-color:                  darken( @bpm-default-dark-fill-neutral, 42%);                                            //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BREADCRUMBS","order":"11111","type":"text","targetPane":["SP"]}|DE|
+@bpm-breadcrumb-font-size:                 12px;                                        //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BREADCRUMBS","order":"11112","type":"text","targetPane":["SP"]}|DE|
+@bpm-breadcrumb-seperator:       054;                                               //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BREADCRUMBS","order":"11113","type":"text","targetPane":["SP"]}|DE|
+@bpm-breadcrumb-seperator-font:      FontAwesome;                                                 //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BREADCRUMBS","order":"11114","type":"text","targetPane":["SP"]}|DE|
+@bpm-breadcrumb-seperator-font-size:    7px;                                              //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BREADCRUMBS","order":"11115","type":"text","targetPane":["SP"]}|DE|
+@bpm-breadcrumb-seperator-opacity:     0.7;                                               //|EEM|
+
+/* Badges */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"080700","type":"text","targetPane":["SP"]}|DE|
+@bpm-badge-border-radius:                  8px;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"50000","type":"font-weight","targetPane":["SP"]}|DE|
+@bpm-badge-font-weight:              600;                                    //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"50001","type":"color","targetPane":["SP"]}|DE|
+@bpm-badge-primary-background:             @bpm-btn-primary-bg;                                                    //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"50002","type":"color","targetPane":["SP"]}|DE|
+@bpm-badge-primary-color:          @bpm-btn-primary-color;                                              //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"50003","type":"color","targetPane":["SP"]}|DE|
+@bpm-badge-info-background:          @bpm-btn-info-bg;                                                 //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"50004","type":"color","targetPane":["SP"]}|DE|
+@bpm-badge-info-color:           @bpm-btn-info-color;                                              //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"50005","type":"color","targetPane":["SP"]}|DE|
+@bpm-badge-success-background:      @bpm-btn-success-bg;                                                 //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"50006","type":"color","targetPane":["SP"]}|DE|
+@bpm-badge-success-color:          @bpm-btn-success-color;                                              //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"50007","type":"color","targetPane":["SP"]}|DE|
+@bpm-badge-warning-background:      @bpm-btn-warning-bg;                                    //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"50008","type":"color","targetPane":["SP"]}|DE|
+@bpm-badge-warning-color:          @bpm-btn-warning-color;                     //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"50009","type":"color","targetPane":["SP"]}|DE|
+@bpm-badge-danger-background:      @bpm-btn-alert-bg;                                                 //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"50010","type":"color","targetPane":["SP"]}|DE|
+@bpm-badge-danger-color:          @bpm-btn-alert-color;                                              //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"50011","type":"color","targetPane":["SP"]}|DE|
+@bpm-badge-default-background:      @bpm-default-darker-fill-neutral;                                                 //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_BADGES","order":"50012","type":"color","targetPane":["SP"]}|DE|
+@bpm-badge-default-color:          @bpm-default-light-text-neutral;                                              //|EEM|
+
+/* Notifications */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTIFICATIONS","order":"70000","type":"font-weight","targetPane":["SP"]}|DE|
+@bpm-notif-font-weight:              600;                                    //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_NOTIFICATIONS","order":"70001","type":"color","targetPane":["SP"]}|DE|
+@bpm-notif-primary-background:             @bpm-btn-primary-bg;                                                    //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_NOTIFICATIONS","order":"70002","type":"color","targetPane":["SP"]}|DE|
+@bpm-notif-primary-color:          @bpm-btn-primary-color;                                              //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_NOTIFICATIONS","order":"70003","type":"color","targetPane":["SP"]}|DE|
+@bpm-notif-info-background:          @bpm-btn-info-bg;                                                 //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_NOTIFICATIONS","order":"70004","type":"color","targetPane":["SP"]}|DE|
+@bpm-notif-info-color:           @bpm-btn-info-color;                                              //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_NOTIFICATIONS","order":"70005","type":"color","targetPane":["SP"]}|DE|
+@bpm-notif-success-background:      @bpm-btn-success-bg;                                                 //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_NOTIFICATIONS","order":"70006","type":"color","targetPane":["SP"]}|DE|
+@bpm-notif-success-color:          @bpm-btn-success-color;                                              //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_NOTIFICATIONS","order":"70007","type":"color","targetPane":["SP"]}|DE|
+@bpm-notif-warning-background:      @bpm-btn-warning-bg;                                   //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_NOTIFICATIONS","order":"70008","type":"color","targetPane":["SP"]}|DE|
+@bpm-notif-warning-color:          @bpm-btn-warning-color;                  //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_NOTIFICATIONS","order":"70009","type":"color","targetPane":["SP"]}|DE|
+@bpm-notif-danger-background:      @bpm-btn-alert-bg;                                                 //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_NOTIFICATIONS","order":"70010","type":"color","targetPane":["SP"]}|DE|
+@bpm-notif-danger-color:          @bpm-btn-alert-color;                                              //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_NOTIFICATIONS","order":"70011","type":"color","targetPane":["SP"]}|DE|
+@bpm-notif-default-background:      @bpm-default-darker-fill-neutral;                                                 //|EEM|
+																									   //|EM|{"group":"PREVIEW_GROUP_NOTIFICATIONS","order":"70012","type":"color","targetPane":["SP"]}|DE|
+@bpm-notif-default-color:          @bpm-default-light-text-neutral;                                              //|EEM|
+
+/* Alerts - Notifications */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100110","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-primary-bg:        @bpm-color-primary;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100115","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-primary-color:     @bpm-active-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100120","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-info-bg:           @bpm-color-info-dark;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100125","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-info-color:        @bpm-active-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100130","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-success-bg:        @bpm-color-success;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100135","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-success-color:     @bpm-active-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100140","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-warning-bg:        @bpm-color-warning;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100145","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-warning-color:     @bpm-active-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100150","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-danger-bg:         @bpm-color-alert;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100155","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-danger-color:      @bpm-active-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100160","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-primary-bg:                     @bpm-color-primary;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100165","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-primary-light-bg:               @bpm-color-primary-light;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100170","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-info-bg:                        @bpm-color-info-dark;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100175","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-info-light-bg:                  @bpm-color-info-dark;                                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100180","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-success-bg:                     @bpm-color-success;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100185","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-success-light-bg:               @bpm-color-success-light;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100190","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-warning-bg:                     @bpm-color-warning;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100195","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-warning-light-bg:               @bpm-color-warning-light;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100200","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-alert-bg:                       @bpm-color-alert;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100205","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-alert-light-bg:                 @bpm-color-alert-light;                                     //|EEM|
+                                             														   //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100206","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-primary-border-color:        @bpm-primary-dark-border-color;                //|EEM|
+                                             														   //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100207","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-danger-border-color:         @bpm-alert-light-border-color;                //|EEM|
+                                             														   //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100208","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-warning-border-color:      @bpm-warning-light-border-color;                //|EEM|
+                                             														   //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100209","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-info-border-color:         @bpm-info-light-border-color;                    //|EEM|
+                                             														   //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100210","type":"color","targetPane":["SP"]}|DE|
+@bpm-alert-success-border-color:      @bpm-success-light-border-color;                //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100211","type":"text","targetPane":["SP"]}|DE|
+@bpm-alert-toast-border:                inherit;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100212","type":"text","targetPane":["SP"]}|DE|
+@bpm-alert-text-align:                inherit;                                                 //|EEM|
+
+/* Title Bar */
+@bpm-portal-titlebar-bg:                   @bpm-color-primary;
+@bpm-portal-titlebar-font-family:          @bpm-headings-font-family;
+@bpm-portal-titlebar-font-weight:          @bpm-headings-font-weight;
+@bpm-portal-titlebar-font-size:            24px;
+@bpm-portal-titlebar-color:                #ffffff;
+@bpm-portal-titlebar-padding-vertical:     6px;
+@bpm-portal-titlebar-padding-horizontal:   5px;
+
+/* Sidebars */
+@bpm-portal-sidebar-bg:                    @bpm-neutral-darkest;
+@bpm-portal-sidebar-color:                 #ffffff;
+@bpm-portal-sidebar-padding:               0px;
+@bpm-portal-sidebar-font-family:           @bpm-font-family-base;
+@bpm-portal-sidebar-font-weight:           normal;
+@bpm-portal-sidebar-font-size:             1.4em;
+@bpm-portal-sidebar-link-color:            #ffffff;
+@bpm-portal-sidebar-link-hover-color:      darken( @bpm-portal-sidebar-link-color, 15%);
+@bpm-portal-sidebar-link-hover-decoration: @bpm-link-hover-decoration;
+@bpm-portal-sidebar-heading-color:         @bpm-portal-sidebar-color;
+@bpm-portal-sidebar-heading-weight:        normal;
+@bpm-portal-sidebar-heading-size:          1em;
+@bpm-portal-sidebar-separator:             @bpm-neutral-lighter;
+@bpm-portal-sidebar-level1-bg:             @bpm-neutral-dark;
+@bpm-portal-sidebar-level1-font-weight:    normal;
+@bpm-portal-sidebar-level1-font-size:      1.2em;
+@bpm-portal-sidebar-level1-padding:        8px;
+@bpm-portal-sidebar-level2-bg:             @bpm-neutral;
+@bpm-portal-sidebar-level2-font-weight:    normal;
+@bpm-portal-sidebar-level2-font-size:      1em;
+@bpm-portal-sidebar-level2-padding:        15px 25px 15px 15px;
+@bpm-portal-sidebar-level3-bg:             #ffffff;
+@bpm-portal-sidebar-level3-font-weight:    normal;
+@bpm-portal-sidebar-level3-font-size:      @bpm-font-size-base;
+@bpm-portal-sidebar-level3-padding:        0px;
+@bpm-portal-sidebar-content-bg:            @bpm-neutral-lightest;
+@bpm-portal-sidebar-content-padding:       10px;
+@bpm-portal-badge-bg:                      @bpm-neutral-light;
+@bpm-portal-badge-color:                   #ffffff;
+@bpm-portal-badge-link-hover-color:        #ffffff;
+@bpm-portal-badge-font-weight:             bold;
+@bpm-portal-badge-border-radius:           10px;
+
+/* Dialogs */
+@bpm-modal-inner-padding:                  15px;
+@bpm-modal-title-padding:                  15px;
+@bpm-modal-content-bg:                     #ffffff;
+@bpm-modal-content-border-color:           @bpm-neutral-lightest;
+@bpm-modal-backdrop-bg:                    @bpm-neutral-darker;
+@bpm-modal-backdrop-opacity:               0.95;
+@bpm-modal-header-border-color:            @bpm-neutral-lightest;
+@bpm-modal-footer-border-color:            @bpm-neutral-lightest;
+
+/* Task List */
+@bpm-color-priority-5:                     @bpm-color-alert-light;
+@bpm-color-priority-4:                     #ffd4a0;
+@bpm-color-priority-3:                     #fde876;
+@bpm-color-priority-2:                     #c8f08f;
+@bpm-color-priority-1:                     #c0e6ff;
+@bpm-color-ontrack:                        #d9ede5;
+@bpm-color-atrisk:                         #fef4dc;
+@bpm-color-overdue:                        #f9dcdf;
+@bpm-tasklist-padding:                     8px;
+@bpm-tasklist-bg:                          transparent;
+@bpm-tasklist-details-bg:                  #f5f9f9;
+@bpm-tasklist-border-color:                @bpm-neutral-lighter;
+
+/*Workplace*/
+
+/*Shell - Title*/
+@bpm-workplace-shell-title-height:				    48px;						//Total height for the horizontal layout of Shell CoachView
+@bpm-workplace-shell-title-bg:                     @bpm-neutral-darker;		//Background colour for the horizontal layout of Shell CoachView
+@bpm-workplace-shell-title-active-bg:              @bpm-neutral-darkest;		//Active background colour for the horizontal layout of Shell CoachView
+@bpm-workplace-shell-title-font-family:            @bpm-headings-font-family;  //Font family for the horizontal layout of Shell CoachView
+@bpm-workplace-shell-title-font-weight:            @bpm-headings-font-weight;  //Font weight for the horizontal layout of Shell CoachView
+@bpm-workplace-shell-title-font-size:              @bpm-font-size-base;		//Font size for the horizontal layout of Shell CoachView
+@bpm-workplace-shell-title-color:                  @bpm-neutral-lightest;		//Colour for the horizontal layout of Shell CoachView
+@bpm-workplace-shell-title-hover-bg:               @bpm-neutral-darkest;		//Hover background colour for buttons and inputs
+@bpm-workplace-shell-title-focus-outline:          @bpm-neutral-lightest;		//Outline Focus for buttons and inputs
+
+/*Shell - Side Menu*/
+@bpm-workplace-shell-sideMenu-width:				 315px;						//Total width of the side menu of Shell CoachView
+@bpm-workplace-shell-sideMenu-bg:                   @bpm-neutral-darkest;		//Background colour for the side menu of Shell CoachView
+@bpm-workplace-shell-sideMenu-active-bg:            @bpm-neutral;      //Active background colour for the side menu of Shell CoachView
+@bpm-workplace-shell-sideMenu-font-family:          @bpm-headings-font-family; //Font family for the side menu of Shell CoachView
+@bpm-workplace-shell-sideMenu-font-weight:          @bpm-headings-font-weight; //Font weight for the side menu of Shell CoachView
+@bpm-workplace-shell-sideMenu-font-size:            @bpm-font-size-base;       //Font size for the side menu of Shell CoachView
+@bpm-workplace-shell-sideMenu-color:                @bpm-neutral-lightest;     //Colour for the side menu of Shell CoachView
+@bpm-workplace-shell-sideMenu-secondary-color:      @bpm-neutral-light;		   //Secondary colour for the side menu of Shell CoachView
+@bpm-workplace-shell-sideMenu-hover-bg:             @bpm-neutral;		//Hover background colour for the side menu of Shell CoachView
+@bpm-workplace-shell-sideMenu-focus-outline:        @bpm-color-primary;		//Outline Focus for buttons and inputs of side menu
+
+/*Action Menu*/
+@bpm-workplace-actionMenu-bg:                       @bpm-neutral-lightest;		//Background colour for ActionMenu CoachView
+@bpm-workplace-actionMenu-active-bg:                @bpm-neutral-lighter;		//Active background colour for ActionMenu CoachView
+@bpm-workplace-actionMenu-color:                    @bpm-neutral-darkest;		//Colour for ActionMenu CoachView
+@bpm-workplace-actionMenu-fill:                     @bpm-neutral-darker;		//Fill colour for the icons of ActionMenu Coach View
+@bpm-workplace-actionMenu-hover:                    @bpm-neutral-lighter;		//Hover background colour for ActionMenu Coach View
+@bpm-workplace-actionMenu-focus-outline:            @bpm-color-primary;		//Outline Focus for buttons and inputs of ActionMenu Coach View
+
+
+
+
+
+/* ====================================================== */
+/* Updated by Martin Glancy 25 June 2020 */
+/* ====================================================== */
+
+/* Bug fix for border-bottom on inputs */
+.form-control {
+    border-bottom-color: @bpm-neutral-dark !important;
+}
+
+
+/* Import ONS standard font Open Sans */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/* NEW CLASSES =========================== */
+
+/* Class for page container */
+/* https://ons-design-system.netlify.app/styles/grid/#creating-layouts */
+
+.bpm-container {
+    max-width: 1032px !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    }
+
+.bpm-container-wide {
+    max-width: 1280px !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    }
+
+.bpm-container-no-margin,
+.bpm-container-no-margin .layoutSec.vChild,
+.bpm-container-no-margin .layoutSec.hChild {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    }
+
+
+
+/* HEADINGS ======================== */
+.bpm-heading-1 {
+    font-weight: 600;
+    font-size: 30px !important;
+    margin: 0 0 18px 0 !important;
+    line-height: 1.4 !important;
+    }
+
+.bpm-heading-2 {
+    font-weight: 600;
+    font-size: 26px !important;
+    margin: 36px 0 18px 0 !important;
+    line-height: 1.2 !important;
+    }
+
+.bpm-heading-3 {
+    font-weight: 600;
+    font-size: 22px !important;
+    margin: 36px 0 18px 0 !important;
+    line-height: 1.2 !important;
+    }
+
+
+/* INPUT WIDTHS ======================== */
+/* TODO - set these to correct widths */
+
+/* Default width is auto except for textarea */
+.input,
+/* .Single_Select>.form-group>.input>select, REMOVED ################### */
+.modal .input,
+/* .modal .Single_Select>.form-group>.input>select REMOVED ################### */ {
+    width: auto !important;
+    }
+
+.Text_Area,
+.Text_Area textarea {
+    width: 100% !important;
+    }
+
+/* Set widths with utility classes */
+.bpm-input--w-5 .input,
+/* .bpm-input--w-5.Single_Select>.form-group>.input>select, */
+.bpm-input--w-5.Text_Area,
+.modal .bpm-input--w-5 .input,
+/* .modal .bpm-input--w-5.Single_Select>.form-group>.input>select */ {
+    width: 10rem !important;
+    }
+
+.bpm-input--w-10 .input,
+/* .bpm-input--w-10.Single_Select>.form-group>.input>select, */
+.bpm-input--w-10.Text_Area,
+.modal .bpm-input--w-10 .input,
+/* .modal .bpm-input--w-10.Single_Select>.form-group>.input>select */ {
+    width: 20rem !important;
+    }
+
+.bpm-input--w-20 .input,
+/* .bpm-input--w-20.Single_Select>.form-group>.input>select, */
+.bpm-input--w-20.Text_Area,
+.modal .bpm-input--w-20 .input,
+/* .modal .bpm-input--w-20.Single_Select>.form-group>.input>select */ {
+    width: 25rem !important;
+    }
+
+.bpm-input--w-30 .input,
+/* .bpm-input--w-30.Single_Select>.form-group>.input>select, */
+.bpm-input--w-30 textarea,
+.modal .bpm-input--w-30 .input,
+/* .modal .bpm-input--w-30.Single_Select>.form-group>.input>select */ {
+    width: 30rem !important;
+    }
+
+.bpm-input--w-40 .input,
+/* .bpm-input--w-40.Single_Select>.form-group>.input>select, */
+.bpm-input--w-40.Text_Area,
+.modal .bpm-input--w-40 .input,
+/* .modal .bpm-input--w-40.Single_Select>.form-group>.input>select */ {
+    width: 40rem !important;
+    }
+
+.bpm-input--w-50 .input,
+/* .bpm-input--w-50.Single_Select>.form-group>.input>select, */
+.bpm-input--w-50.Text_Area,
+.modal .bpm-input--w-50 .input,
+/* .modal .bpm-input--w-50.Single_Select>.form-group>.input>select */ {
+    width: 50rem !important;
+    }
+
+
+
+/* CSS OVERRIDES ========================= */
+
+/* Override small text size in text element */
+.text-xs {
+    font-size:inherit !important;
+    }
+
+/* Focus highlight should be ONS yellow border ============================= */
+.spark-ui .form-control.focus,
+.spark-ui .form-control:focus {
+    border:none !important;
+    outline: 1px solid #222 !important;
+    outline-offset: -2px !important;
+    -webkit-box-shadow: 0 0 0 3px #fd0 !important;
+    box-shadow: 0 0 0 3px #fd0 !important;
+}
+
+.radio3 input:focus,
+.checkbox3 input[type="checkbox"]:focus,
+.checkbox3 span.checkboxFocus {
+    border:none !important;
+    outline:none !important;
+    outline: 1px solid #222 !important;
+    outline-offset: -2px !important;
+    -webkit-box-shadow: 0 0 0 3px #fd0 !important;
+    box-shadow: 0 0 0 3px #fd0 !important;
+}
+
+.btn-primary:focus {
+    outline: 1px solid #222 !important;
+    outline-offset: -2px !important;
+    -webkit-box-shadow: 0 0 0 3px #fd0 !important;
+    box-shadow: 0 0 0 3px #fd0 !important;
+    }
+
+/* Checkbox ============================= */
+.checkbox3 span {
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+    }
+
+/* Remove border for table row select checkbox */
+.SelCtl .checkbox3 span, .RowSel .checkbox3 span {
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    }
+
+/* Select drop down ============================= */
+.form-control[type="text"],
+.Single_Select select {
+    border: 1px solid #222 !important;
+    border-radius: 3px;
+    }
+
+/*
+.Single_Select>.form-group>.input>select {
+    width:50rem;
+    }
+
+
+.Single_Select>.form-group>.input::after {
+    font-size: 18px;
+    left: 48rem;
+    }
+     REMOVED ################### */
+
+/* Allow select drop downs to be auto width (not fixed to 50rem) */
+/*
+.Single_Select>.form-group>.input>select {
+    width: auto !important;
+    }
+.Single_Select>.form-group>.input::after {
+    left: inherit !important;
+    }
+
+         REMOVED ################### */
+
+.Single_Select select [disabled='disabled']
+.Single_Select select option [disabled='disabled'] {
+    color: #00003f;
+    opacity: 1.0;
+    }
+
+/* Radio button ============================= */
+.Radio_Button_Group .radio3:last-child,
+.Radio_Button_Group .checkbox3:last-child {
+    padding-bottom: 1rem !important;
+    }
+
+.Radio_Button_Group .radio3,
+.Radio_Button_Group .checkbox3 {
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+    }
+
+/* Text areas ============================= */
+textarea.form-control {
+    display: block;
+    position: relative;
+    padding: .38911rem .5rem !important;
+    border: 1px solid #222 !important;
+    border-radius: 3px !important;
+    color: inherit !important;
+    font-family: inherit !important;
+    font-size: @bpm-font-size-base !important;
+    line-height: normal !important;
+    resize: vertical !important;
+    }
+
+.Text_Area textarea {
+    resize: vertical !important;
+    }
+
+
+/* Buttons ============================= */
+.btn {
+    border-bottom: .16666667em solid rgba(0,0,0,.6) !important;
+    border-radius: 3px !important;
+    margin-top: 1rem !important;
+    font-size: 1.0em !important;
+    font-weight: 600 !important;
+    padding: 0.5em 0.75em !important;
+    }
+
+.btn-sm {
+    font-weight: 400 !important;
+    padding: 5px !important;
+    font-size: 14px !important;
+    }
+
+
+/* Collapsible panel ============================= */
+.spark-ui .panel,
+.Collapsible_Panel .spark-ui .panel {
+    border: none !important;
+}
+
+.Collapsible_Panel .panel-heading {
+    border: none;
+    color: #4263c2;
+    text-decoration:underline;
+    font-weight: 700;
+    }
+
+.panel-group .panel-heading+.panel-collapse .panel-body {
+    border: none !important;
+    border-color: #ccc !important;
+    border-top-width: 0 !important;
+    border-left: 5px solid #ccc !important;
+    }
+
+.Collapsible_Panel .panel-body {
+    border: none;
+    border-left: 5px solid #ccc;
+    padding-left: 1.3em;
+    }
+
+/* Prevent double left border with panel in panel */
+.panel-group .panel-heading+.panel-collapse .panel-body .panel-body,
+.Collapsible_Panel .panel-body .panel-body {
+    border-left: none !important;
+    }
+
+.Collapsible_Panel .panel-body .control-label {
+    font-weight: 400;
+    }
+
+.accordion-toggle:after {
+    padding: 9px 0px 9px 35px;
+    }
+
+.accordion-toggle:after {
+    content:"" !important;
+    }
+
+.accordion-toggle:before {
+    color: #004669;
+    font-family: FontAwesome;
+    font-size: 24px;
+    line-height: 36px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    }
+
+.accordion-toggle:before {
+    content: "\f107";
+    }
+
+.accordion-toggle.collapsed:before {
+    content: "\f105";
+    }
+
+.accordion-toggle.collapsed:hover, .accordion-toggle:hover {
+    background: none !important;
+    color: inherit !important;
+    text-decoration: inherit !important;
+    }
+
+.accordion-toggle:focus {
+    outline: none;
+    }
+
+/* Info panel ============================= */
+.panel-info {
+    width: 30em !important;
+    }
+
+.panel-info.panel-dark>.panel-heading {
+    background: #eff0f9 !important;
+    padding: 1rem !important;
+    border: 0 !important;
+    border-left: 8px solid #033e58 !important;
+    color: #222 !important;
+    border-color: #033e58 !important;
+    }
+
+.bpm-info .panel-info.panel-dark>.panel-heading {
+    border-color: #033e58 !important;
+    }
+
+
+/* Error styling ============================= */
+
+.has-error .control-label,
+/* .has-error .input, */
+/* .has-error .form-control, */
+.has-error .form-control-feedback,
+.has-error .tooltip,
+.form-group.has-error .tooltip.alignRight,
+.form-group.has-error .tooltip.top,
+.has-error .fade,
+.has-error .in,
+.has-error .bottom,
+.has-error .alignRight,
+.has-error .validationError,
+.has-error .tooltip-arrow,
+.has-error .tooltip-inner {
+    all: unset !important;
+    }
+
+.has-error .form-group:before,
+.has-error .form-group:after,
+.has-error.form-group:before,
+.has-error.form-group:after {
+    display: none !important;
+    content: none !important;
+    }
+
+.form-group.has-error {
+    padding: 1rem 2em 1rem 1rem;
+    border: 0;
+    border-left: 8px solid #d0021b;
+    background: #fbecec;
+    color: #222;
+    }
+
+.form-group.has-error .control-label {
+    }
+
+.form-group.has-error .form-control-feedback {
+    display: none !important;
+    }
+
+.form-group.has-error .tooltip.top .tooltip-arrow {
+    display: none !important;
+    }
+
+.form-group.has-error .tooltip.alignRight>.tooltip-arrow {
+    display:none !important;
+    }
+
+.form-group.has-error .tooltip-inner {
+    font-size: 18px !important;
+    max-width: 30rem !important;
+    padding: 8px 0 !important;
+    color: #d0021b !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    }
+
+.form-group.has-error .tooltip.validationError {
+    display:block !important;
+    }
+
+.form-group.has-error .tooltip.top {
+    top:0 !important;
+    padding: 6px !important;
+    margin-top: 0px !important;
+    }
+
+/* NOTE PANELS  ============================= */
+.note h4,
+.note h1 {
+    font-size: 18px;
+    line-height: 28.8px;
+    margin: 0;
+    }
+
+.note {
+    width: 35em !important;
+    }
+
+/* TABS  ============================= */
+.nav-tabs>li>a {
+    text-decoration: underline !important;
+    padding-bottom:10px !important;
+}
+
+.spark-ui .nav-tabs>li.active>a {
+    border-bottom: 1px solid #fff !important;
+    border: 1px solid #222 !important;
+    text-decoration: none !important;
+}
+
+/* non-active tabs hover */
+.spark-ui .tabs-info.nav-tabs>li>a:hover {
+    background-color: #c3c3c3 !important;
+    border-color: #c3c3c3 !important;
+    color: #222 !important;
+    }
+
+/* tabs focus */
+.spark-ui .tabs-info.nav-tabs>li>:focus {
+    outline: none !important;
+    background-color: #fd0 !important;
+    border-color: #c3c3c3 !important;
+    color: #222 !important;
+    }
+
+
+/* Hide border below active table by covering it NOT WORKING */
+.spark-ui .nav-tabs>li.active>a:after {
+    position: absolute;
+    z-index: 3;
+    bottom: -2px;
+    right: 0;
+    left: 0;
+    height: .09rem;
+    background: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    content: "";
+}
+
+.tab-content.tab-content-bordered,
+.tab-content {
+    padding:0 !important;
+    }
+
+
+/* TABLES  ============================= */
+/* Remove padding on table and set number of entries message to correct font size */
+.ts-elegant .panel-body {
+    padding:0 !important
+    }
+
+.table-footer {
+    padding:0;
+    }
+
+.DT-label {
+   font-size: 14px !important;
+    }
+
+/* Table header border fix ============================= */
+.table>thead>tr>th {
+    border-bottom: 2px solid #595959 !important;
+    text-align: left !important;
+    vertical-align: top !important;
+    }
+
+.table>tbody>tr>td {
+    vertical-align: top !important;
+    }
+
+/* Prevent output text wrapping on every character */
+.Output_Text>.form-group>.input>p,
+.Output_Text * {
+    word-break: normal !important;
+    }
+
+
+/* Style an input field to display date and numbers from existing data */
+.bpm-output-field .form-control[disabled],
+.bpm-output-field .form-control[readonly] {
+    background: transparent !important;
+    border: none !important;
+    color: #222 !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    padding: 0 !important;
+    cursor: default !important;
+    }
+
+/* remove left padding for horizontal layouts and checkbox groups */
+.layoutSec.hChild {
+    padding: .5em 0 !important;
+    }
+
+.CoachView.Checkbox,
+.CoachView.Checkbox_Group {
+    padding-left: 0 !important;
+    }
+
+/* Fix display of add row icon */
+.table-footer {
+    padding: 0 !important;
+    }
+
+.SPARKTable .SPARKIcon.AddButton { 
+    width: 40px !important;
+ height: 40px !important; 
+    margin-right: 0 !important;
+    padding: 0 !important; 
+    top: 0 !important;
+    background-color: #d0d0d0 !important;
+    color: #222 !important;
+    }
+
+/* Move table sort icons next to text not right justified */
+th.sortable {
+    direction: rtl !important; /* swap display order */
+    white-space: nowrap !important;  /* prevent icon and text splitting over 2 lines */
+    }
+
+.SPARKTable th>button.sorter, 
+.SPARKTable>.ScrollTable th>button.sorter { 
+    padding-top: 0 !important;
+    float: none !important; 
+    position: static !important;
+    top: 0 !important; 
+    right: 0 !important; 
+    display: inline-block !important;
+    margin-left: 0 !important;
+    }
+
+.SPARKTable th.sortable>div {
+    padding-right: 0 !important;
+    display: inline-block !important;
+    }
+
+
+/* Remove border from status marker */
+.SPARKIcon.btn.btn-outline,
+.SPARKIcon.btn {
+    border: none !important;
+    }
+
+/* Create a link as a button */
+.bpm-link-button a {
+    border-bottom: .16666667em solid rgba(0,0,0,.6) !important;
+    border-radius: 3px !important;
+    margin: 0 !important;
+    font-weight: 400 !important;
+    padding: 5px 8px !important;
+    font-size: 14px !important;
+    color: #222;
+    background-color: #d0d0d0;
+    text-decoration: none;
+    white-space: nowrap;
+    }
+
+.bpm-link-button a:hover,
+.bpm-link-button a:active {
+    background: #c3c3c3;
+    text-decoration: none;
+    }
+
+/* Remove top margin for button in a table row */
+td button.btn {
+    margin-top:0 !important;
+    }
+
+/* Remove padding from status icons in case query */
+.bpm-status-icons .layoutSec.hChild,
+.bpm-status-icons .btn {
+    padding: 0 !important;
+    }
+
+/* Make colour contrast accessible for disabled inputs */
+.form-control[disabled] {
+    border-color: #888888 !important;
+    color: #222222 !important;
+    background: #f0f0f0 !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    }
+
+/* ONS overrides end ============================= */
+
+
+/* BAW overrides start ============================= */
+
+/* Status markers ============================= */
+.circle-icon-new {
+    color: #fd112e; /* red */
+    }
+.circle-icon-progress {
+    color: #4263c2; /* blue */
+    }
+.circle-icon-pending {
+    color: #fe934c; /* orange */
+    }
+.circle-icon-complete {
+    color: #12c864; /* green */
+    }
+.circle-icon-closed {
+    color: #888; /* grey */
+    }
+
+/* BAW overrides end ============================= */
